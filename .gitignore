@@ -1,5 +1,8 @@
 /**/*.lock
+/**/.idea
+/**/.vscode
 /**/node_modules
 /build
 /coverage
 /dist
+
