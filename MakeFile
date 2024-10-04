@@ -1,0 +1,16 @@
+install_dependencies:
+	cd ./frontend && bun install
+	cd ./backend && bun install
+
+run_frontend:
+	cd ./frontend && bun run dev
+
+run_backend:
+	cd ./backend && bun run develop
+
+
+build_frontend:
+	cd ./frontend && bun run build
+
+build_backend:
+	cd ./backend && bun run build
