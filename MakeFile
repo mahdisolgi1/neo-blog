@@ -1,16 +1,16 @@
 install_dependencies:
-	cd ./frontend && bun install
-	cd ./backend && bun install
+	cd ./frontend && pnpm install
+	cd ./backend && pnpm install
 
 run_frontend:
-	cd ./frontend && bun run dev
+	cd ./frontend && pnpm run dev
 
 run_backend:
-	cd ./backend && bun run develop
+	cd ./backend && pnpm run develop
 
 
 build_frontend:
-	cd ./frontend && bun run build
+	cd ./frontend && pnpm run build
 
 build_backend:
-	cd ./backend && bun run build
+	cd ./backend && pnpm run build
