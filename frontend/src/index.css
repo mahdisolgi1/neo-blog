@@ -11,3 +11,16 @@ html {
 body {
    font-family: sans-serif;
 }
+
+img,
+picture {
+   display: block;
+   max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+   font: inherit;
+}

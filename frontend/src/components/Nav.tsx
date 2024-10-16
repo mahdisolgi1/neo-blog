@@ -1,28 +1,26 @@
 import { NavLink } from "react-router-dom";
-import "./Nav.css"; 
+import styles from "./Nav.module.css"; // Adjust the path as necessary
 
-const Nav = () => {
-   return (
-      <nav className="navbar">
-         <ul className="nav-list">
-            <li className="nav-list-item">
-               <NavLink to="/blog" className={({ isActive }) => (isActive ? "active-link" : "")}>
-                  Blog
-               </NavLink>
-            </li>
-            <li className="nav-list-item">
-               <NavLink to="/posts" className={({ isActive }) => (isActive ? "active-link" : "")}>
-                  Posts
-               </NavLink>
-            </li>
-            <li className="nav-list-item">
-               <NavLink to="/post/241" className={({ isActive }) => (isActive ? "active-link" : "")}>
-                  Post
-               </NavLink>
-            </li>
-         </ul>
-      </nav>
-   );
-};
+const Navbar = () => (
+   <nav className={styles.navbar}>
+      <ul className={styles.navList}>
+         <li className={styles.navListItem}>
+            <NavLink to="/blog" className={({ isActive }) => (isActive ? styles.activeLink : "")}>
+               Blog
+            </NavLink>
+         </li>
+         <li className={styles.navListItem}>
+            <NavLink to="/posts" className={({ isActive }) => (isActive ? styles.activeLink : "")}>
+               Posts
+            </NavLink>
+         </li>
+         <li className={styles.navListItem}>
+            <NavLink to="/post/241" className={({ isActive }) => (isActive ? styles.activeLink : "")}>
+               Post
+            </NavLink>
+         </li>
+      </ul>
+   </nav>
+);
 
-export default Nav;
+export default Navbar;

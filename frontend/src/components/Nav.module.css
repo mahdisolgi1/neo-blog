@@ -8,29 +8,29 @@
    z-index: 1000;
 }
 
-.nav-list {
+.navList {
    list-style-type: none;
    display: flex;
    gap: 2rem;
    align-items: center;
 }
 
-.nav-list li {
+.navList li {
    margin: 0;
 }
 
-.nav-list a {
+.navList a {
    text-decoration: none;
    color: white;
    font-size: 3em;
    transition: color 0.3s ease;
 }
 
-.nav-list a:hover {
+.navList a:hover {
    color: #1abc9c;
 }
 
-.active-link {
+.activeLink {
    font-weight: bold;
    border-bottom: 2px solid #1abc9c;
 }
