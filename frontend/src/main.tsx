@@ -7,12 +7,11 @@ import Root from "./pages/Root";
 import Post from "./pages/Post";
 import Posts from "./pages/Posts";
 import Blog from "./pages/Blog";
-import NotFound from "./pages/ErrorPage";
-import App from "./App";
+import NotFound from "./pages/NotFound";
+import HomePage from "./pages/HomePage";
 import DevTools from "./pages/DevTools";
 
 const enableDevRoutes = import.meta.env.VITE_ENABLE_DEV_ROUTES === "true";
- 
 
 const router = createBrowserRouter([
    {
@@ -25,12 +24,12 @@ const router = createBrowserRouter([
          },
          {
             path: "home",
-            element: <App />,
+            element: <HomePage />,
          },
          { path: "blog", element: <Blog /> },
          { path: "posts", element: <Posts /> },
          { path: "post/:id", element: <Post /> },
-         ...(enableDevRoutes ? [{ path: "dev-tools", element: <DevTools /> }] : []), 
+         ...(enableDevRoutes ? [{ path: "dev-tools", element: <DevTools /> }] : []),
          {
             path: "*",
             element: <NotFound />,

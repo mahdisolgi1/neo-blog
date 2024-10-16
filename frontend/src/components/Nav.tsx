@@ -1,9 +1,13 @@
 import { NavLink } from "react-router-dom";
-import styles from "./Nav.module.css"; // Adjust the path as necessary
-
+import styles from "./Nav.module.css";
 const Navbar = () => (
    <nav className={styles.navbar}>
       <ul className={styles.navList}>
+         <li className={styles.navListItem}>
+            <NavLink to="/home" className={({ isActive }) => (isActive ? styles.activeLink : "")}>
+               Home
+            </NavLink>
+         </li>
          <li className={styles.navListItem}>
             <NavLink to="/blog" className={({ isActive }) => (isActive ? styles.activeLink : "")}>
                Blog

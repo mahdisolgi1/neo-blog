@@ -1,19 +1,12 @@
+import { FC } from "react";
 import Nav from "@/components/Nav";
 import { Outlet } from "react-router-dom";
-
-const Root = () => {
+import styles from "./Root.module.css";
+const Root: FC = () => {
    return (
       <>
          <Nav />
-         <div
-            style={{
-               marginTop: "30rem",
-               fontSize: "5rem",
-               display: "flex",
-               justifyContent: "center",
-               alignItems: "center",
-            }}
-         >
+         <div className={styles.container}>
             <Outlet />
          </div>
       </>
