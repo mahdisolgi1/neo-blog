@@ -3,13 +3,15 @@
 :root {
    --primary-background: #fff;
    --secondary-background: #fafafa;
+   --background-blue: #edf5fa;
+   --yellow-background: #ffeb00;
+
    --header-text: #000;
    --subheading-text: rgba(0, 0, 0, 0.8);
-   --background-blue: #edf5fa;
    --text-blue: #007be5;
+
    --arrow-down-fill-primary: #208be8;
    --arrow-down-fill-secondary: #18a0fb;
-   --yellow-background: #ffeb00;
 
    --button-primary: #56ccf2;
    --button-primary-hover: #359dd9;
