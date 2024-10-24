@@ -1,3 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+   --primary-background: #fff;
+   --secondary-background: #fafafa;
+   --background-blue: #edf5fa;
+   --yellow-background: #ffeb00;
+
+   --header-text: #000;
+   --subheading-text: rgba(0, 0, 0, 0.8);
+   --text-blue: #007be5;
+
+   --arrow-down-fill-primary: #208be8;
+   --arrow-down-fill-secondary: #18a0fb;
+
+   --button-primary: #56ccf2;
+   --button-primary-hover: #359dd9;
+   --padding: 3.2rem;
+}
+
 * {
    margin: 0;
    padding: 0;
@@ -9,7 +29,7 @@ html {
 }
 
 body {
-   font-family: sans-serif;
+   font-family: "Inter", sans-serif;
 }
 
 img,
