@@ -1,0 +1,124 @@
+.FutureTechnologyCardsIntro {
+   border-top: 1px solid var(--Dark-15, #262626);
+   border-bottom: 1px solid var(--Dark-15, #262626);
+   background: var(--Dark-10, #1a1a1a);
+   display: flex;
+   padding: 4rem 1.6rem;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+   gap: 1rem;
+   align-self: stretch;
+}
+.CardsIntroPBox {
+   border-radius: 0.4rem;
+   background: var(--Dark-20, #333);
+   display: flex;
+   padding: 0.4rem 0.8rem;
+   justify-content: center;
+   align-items: flex-start;
+   gap: 1rem;
+}
+.CardsIntroP {
+   color: var(--Absolute-White, #fff);
+   font-family: Inter;
+   font-size: 1.4rem;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 150%; /* 2.1rem */
+   letter-spacing: -0.042rem;
+}
+.CardsIntroHeading {
+   align-self: stretch;
+   color: var(--Absolute-White, #fff);
+   font-family: "Kumbh Sans";
+   font-size: 2.8rem;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 130%; /* 3.64rem */
+   letter-spacing: -0.084rem;
+}
+.futureTechnologyCards {
+   display: flex;
+   padding: 0rem 1.6rem;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+   align-self: stretch;
+}
+
+.futureTechnologyCard {
+   display: flex;
+   padding: 5rem 0rem;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+   gap: 2rem;
+   align-self: stretch;
+}
+.futureTechnologyCardIcon {
+   width: 5rem;
+   height: 5rem;
+}
+.futureTechnologyCardText {
+}
+.futureTechnologyCardHeading {
+   color: var(--Absolute-White, #fff);
+   font-family: "Kumbh Sans";
+   font-size: 2.4rem;
+   font-style: normal;
+   font-weight: 600;
+   line-height: 150%; /* 3.6rem */
+   letter-spacing: -0.072rem;
+   align-self: stretch;
+}
+.futureTechnologyCardP {
+   color: var(--Grey-60, #98989a);
+   font-family: Inter;
+   font-size: 1.4rem;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 150%; /* 2.1rem */
+   letter-spacing: -0.042rem;
+   align-self: stretch;
+}
+.futureTechnologyCardDetails {
+   display: flex;
+   padding: 3rem 1.6rem;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: 1rem;
+   border-top: 1px solid var(--Dark-15, #262626);
+   align-self: stretch;
+}
+.futureTechnologyCardDetail {
+   border-radius: 1rem;
+   border: 1px solid var(--Dark-15, #262626);
+   background: var(--Dark-10, #1a1a1a);
+   display: flex;
+   padding: 2.4rem;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: 0.4rem;
+   align-self: stretch;
+}
+.futureTechnologyCardDetailHeading {
+   color: var(--Absolute-White, #fff);
+   font-family: Inter;
+   font-size: 1.8rem;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 150%; /* 2.7rem */
+   letter-spacing: -0.054rem;
+   align-self: stretch;
+}
+.futureTechnologyCardDetailP {
+   color: var(--Grey-60, #98989a);
+   font-family: Inter;
+   font-size: 1.4rem;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 150%; /* 2.1rem */
+   letter-spacing: -0.042rem;
+   align-self: stretch;
+}

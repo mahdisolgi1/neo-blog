@@ -1,27 +1,71 @@
+/* Button.module.css */
 .button {
    border: none;
-   border-radius: 50px;
-   color: #fff;
-   font-family: sans-serif;
-   font-size: 2.2rem;
-   font-weight: 500;
    cursor: pointer;
-   padding: 1.1rem 1.3rem;
-
-   transition: background-color 0.3s, transform 0.3s;
+   transition: background 0.3s ease;
+   border-radius: 8px;
 }
 
-.primary {
-   background-color: var(--button-primary);
+/* Brand Default Button */
+.brand {
+   background: var(--Brand-Colors-600, #3328bf);
 }
 
-.primary:hover {
-   background-color: var(--button-primary-hover);
-   transform: scale(1.05);
+.brand:hover {
+   background: var(--Brand-Colors-800, #292099);
 }
 
-.secondary {
+/* Secondary Gray Default Button */
+.secondaryGray {
+   background: var(--Text-Colors-25, #fcfcfc);
 }
 
-.secondary:hover {
+.secondaryGray:hover {
+   background: var(--Text-Colors-50, #fafafa);
+}
+
+/* Brand Reduce Default Button */
+.brandReduce {
+   background: var(--Brand-Colors-600, #3328bf);
+}
+
+.brandReduce:hover {
+   background: var(--Brand-Colors-800, #292099);
+}
+
+/* Tertiary Gray Default Button */
+.tertiaryGray {
+   border-right: 1px dashed var(--Text-Colors-200, #d6d6d6);
+   border-bottom: 1px dashed var(--Text-Colors-200, #d6d6d6);
+}
+
+.tertiaryGray:hover {
+   background: var(--Brand-Colors-800);
+}
+
+/* Padding and Margin */
+.sm {
+   font-size: 14px;
+
+   padding: 8px 12px;
+}
+
+.md {
+   padding: 10px 14px;
+   font-size: 14px;
+}
+
+.lg {
+   padding: 10px var(--spacing-xl, 16px);
+   font-size: 16px;
+}
+
+.xl {
+   padding: 12px 18px;
+   font-size: 16px;
+}
+
+.xxl {
+   padding: var(--spacing-xl, 16px) 22px;
+   font-size: 18px;
 }

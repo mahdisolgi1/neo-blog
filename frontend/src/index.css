@@ -1,21 +1,113 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Kumbh+Sans:wght@400;700&display=swap");
 
 :root {
-   --primary-background: #fff;
-   --secondary-background: #fafafa;
-   --background-blue: #edf5fa;
-   --yellow-background: #ffeb00;
+   /* Background Colors */
+   --Absolute-White: #fff;
+   --Absolute-Black: #000;
 
-   --header-text: #000;
-   --subheading-text: rgba(0, 0, 0, 0.8);
-   --text-blue: #007be5;
+   --Yellow-55: #ffd11a;
+   --Yellow-60: #ffd633;
+   --Yellow-70: #ffe066;
+   --Yellow-80: #ffeb99;
 
-   --arrow-down-fill-primary: #208be8;
-   --arrow-down-fill-secondary: #18a0fb;
+   --Yellow-90: #fff5cc;
+   --Yellow-95: #fffae5;
+   --Yellow-97: #fffcf0;
+   --Yellow-99: #fffefa;
 
-   --button-primary: #56ccf2;
-   --button-primary-hover: #359dd9;
-   --padding: 3.2rem;
+   --Dark-08: #141414;
+   --Dark-10: #1a1a1a;
+   --Dark-15: #262626;
+   --Dark-20: #333;
+
+   --Dark-25: #404040;
+   --Dark-30: #4d4d4d;
+   --Dark-35: #595959;
+   --Dark-40: #666;
+
+   --Grey-50: #7e7e81;
+   --Grey-60: #98989a;
+   --Grey-70: #b3b3b3;
+   --Grey-80: #ccc;
+
+   --Grey-90: #e4e4e7;
+   --Grey-95: #f1f1f3;
+   --Grey-97: #f7f7f8;
+   --Grey-99: #fcfcfd;
+
+   --font-Inter: "Inter", sans-serif;
+   --font-Kumbh-Sans: "Kumbh Sans", sans-serif;
+
+   --Text-Colors-950: #0d0d0d;
+   --Text-Colors-25: #fcfcfc;
+   --Text-Colors-50: #fafafa;
+   --Text-Colors-200: #d6d6d6;
+   --Text-Colors-500: #808080;
+   --Text-Colors-600: #616161;
+
+   /* Brand Colors */
+   --Brand-Colors-25: #f5f5ff;
+   --Brand-Colors-600: #3328bf;
+   --Brand-Colors-800: #292099;
+
+   /* Action Colors */
+   --color-action-69: #638efe;
+   --color-action-39: #14b411;
+   --color-action-53: #f24e1e;
+
+   /* Display Font Sizes and Line Heights */
+   --display-2xl-font-size: 72px;
+   --display-2xl-line-height: 90px;
+   --display-2xl-letter-spacing: -1.44px;
+
+   --display-xl-font-size: 60px;
+   --display-xl-line-height: 72px;
+   --display-xl-letter-spacing: -1.2px;
+
+   --display-lg-font-size: 48px;
+   --display-lg-line-height: 60px;
+   --display-lg-letter-spacing: -0.96px;
+
+   --display-md-font-size: 36px;
+   --display-md-line-height: 44px;
+   --display-2xl-letter-spacing: -0.72px;
+
+   --display-sm-font-size: 30px;
+   --display-sm-line-height: 38px;
+
+   --display-xs-font-size: 24px;
+   --display-xs-line-height: 36px;
+
+   /* Text Font Sizes and Line Heights */
+   --text-xl-font-size: 20px;
+   --text-xl-line-height: 30px;
+
+   --text-lg-font-size: 18px;
+   --text-lg-line-height: 28px;
+
+   --text-md-font-size: 16px;
+   --text-md-line-height: 24px;
+
+   --text-sm-font-size: 14px;
+   --text-sm-line-height: 20px;
+
+   --text-xs-font-size: 12px;
+   --text-xs-line-height: 18px;
+   /* spacing */
+   --spacing-lg: 8px;
+   --spacing-xl: 16px;
+   --spacing-2xl: 20px;
+   --spacing-3xl: 24px;
+   /* box shadow */
+   --shadow-xs: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+   --shadow-xl: 0px 24px 48px -12px rgba(16, 24, 40, 0.18);
+   --shadow-2xl: 0px 24px 48px -12px rgba(16, 24, 40, 0.18);
+   --shadow-3xl: 0px 32px 64px -12px rgba(16, 24, 40, 0.14);
+   --shadow-sm: 0px 1px 3px 0px rgba(16, 24, 40, 0.1), 0px 1px 2px 0px rgba(16, 24, 40, 0.06);
+
+   --shadow-md: 0px 4px 8px -2px rgba(16, 24, 40, 0.1), 0px 2px 4px -2px rgba(16, 24, 40, 0.06);
+
+   --shadow-lg: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
 }
 
 * {
@@ -29,7 +121,8 @@ html {
 }
 
 body {
-   font-family: "Inter", sans-serif;
+   font-family: var(--font-Inter), var(--font-Kumbh-Sans), sans-serif;
+   background-color: var(--Dark-08);
 }
 
 img,

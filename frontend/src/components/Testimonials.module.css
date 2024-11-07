@@ -1,0 +1,93 @@
+.testimonials {
+   display: flex;
+   padding: 0rem 1.6rem;
+   flex-direction: column;
+   align-items: flex-start;
+   align-self: stretch;
+   border-bottom: 1px solid var(--Dark-15, #262626);
+}
+.testimonial {
+   display: flex;
+   padding: 4rem 0rem;
+   flex-direction: column;
+   align-items: center;
+   gap: 6rem;
+   align-self: stretch;
+}
+.testimonialProfile {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 1rem;
+   align-self: stretch;
+}
+.testimonialProfileImg {
+   width: 5rem;
+   height: 5rem;
+   border-radius: 5rem;
+}
+.testimonialProfileName {
+   align-self: stretch;
+   color: var(--Absolute-White, #fff);
+   font-family: Inter;
+   font-size: 1.8rem;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 150%; /* 2.7rem */
+}
+.testimonialProfileLocation {
+   color: var(--Dark-40, #666);
+   font-family: Inter;
+   font-size: 1.6rem;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 150%; /* 2.4rem */
+   align-self: stretch;
+}
+.testimonialText {
+   display: flex;
+   position: relative;
+   flex-direction: column;
+   align-items: center;
+   gap: -1.7rem;
+   margin-top: -1.7rem;
+   align-self: stretch;
+}
+.testimonialStars {
+   position: absolute;
+   border-radius: 10rem;
+   border: 1px solid var(--Dark-15, #262626);
+   background: var(--Dark-08, #141414);
+   top: -1.8rem;
+   left: 50%;
+   transform: translateX(-50%);
+
+   display: flex;
+   padding: 0.8rem 1.2rem;
+   align-items: flex-start;
+   gap: 0.4rem;
+}
+.testimonialStarImg {
+   width: 2rem;
+   height: 2rem;
+}
+.testimonialTextBox {
+   display: flex;
+   padding: 3rem 2rem 2rem 2rem;
+   align-items: flex-start;
+   gap: 1rem;
+   align-self: stretch;
+   border-radius: 1rem;
+   border: 1px solid var(--Dark-15, #262626);
+   background: var(--Dark-10, #1a1a1a);
+}
+.testimonialTextP {
+   flex: 1 0 0;
+   color: var(--Absolute-White, #fff);
+   text-align: center;
+   font-family: Inter;
+   font-size: 1.4rem;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 150%; /* 2.1rem */
+}
