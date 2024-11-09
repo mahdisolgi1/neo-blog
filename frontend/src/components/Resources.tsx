@@ -19,7 +19,7 @@ const Resources: FC = () => {
                   key={author?.id}
                   className={styles.facesBehindImg}
                   src={`${baseUrl}${author?.avatar?.url}`}
-                  alt="Ali-Smith"
+                  alt={author?.name}
                />
             ))}
          </div>

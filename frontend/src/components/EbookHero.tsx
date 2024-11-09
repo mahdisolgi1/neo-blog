@@ -45,7 +45,7 @@ const EbookHero: FC = () => {
                            key={author?.id}
                            className={styles.ebookHeroIntroInstalledUsersImg}
                            src={`${baseUrl}${author?.avatar?.url}`}
-                           alt="Ali-Smith"
+                           alt={author?.name}
                         />
                      ))}
                   </div>
@@ -122,7 +122,7 @@ const EbookHero: FC = () => {
                            key={author?.id}
                            className={styles.ebookHeroIntroInstalledUsersImg}
                            src={`${baseUrl}${author?.avatar?.url}`}
-                           alt="Ali-Smith"
+                           alt={author?.name}
                         />
                      ))}
                   </div>
