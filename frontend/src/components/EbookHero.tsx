@@ -1,7 +1,16 @@
 import { FC } from "react";
 import styles from "./EbookHero.module.css";
+import { useGetAuthors } from "@/services/generated/author/author";
+import getRandomObjects from "@/helpers/getRandomObjects";
 
 const EbookHero: FC = () => {
+   const { data } = useGetAuthors();
+   const res = data?.data?.data;
+
+   const fourRandomAuthors = getRandomObjects(res, 4);
+   console.log(fourRandomAuthors);
+
+   const baseUrl = import.meta.env.VITE_BACK_END_BASE_URL;
    return (
       <>
          <section className={styles.ebookHeroSection}>
@@ -31,22 +40,14 @@ const EbookHero: FC = () => {
                      <strong className={styles.ebookHeroIntroDetailHeadingText}>10k + Users</strong>
                   </div>
                   <div className={styles.ebookHeroIntroInstalledUsers}>
-                     <img className={styles.ebookHeroIntroInstalledUsersImg} src="/Ali-Smith.png" alt="Ali-Smith" />
-                     <img
-                        className={styles.ebookHeroIntroInstalledUsersImg}
-                        src="/Astronomer-X.png"
-                        alt="Astronomer-X"
-                     />
-                     <img
-                        className={styles.ebookHeroIntroInstalledUsersImg}
-                        src="/Sarah-Ethicist.png"
-                        alt="Sarah-Ethicist"
-                     />
-                     <img
-                        className={styles.ebookHeroIntroInstalledUsersImg}
-                        src="/John-Techson.png"
-                        alt="John-Techson"
-                     />
+                     {fourRandomAuthors.map((author) => (
+                        <img
+                           key={author?.id}
+                           className={styles.ebookHeroIntroInstalledUsersImg}
+                           src={`${baseUrl}${author?.avatar?.url}`}
+                           alt="Ali-Smith"
+                        />
+                     ))}
                   </div>
                </div>
             </div>
@@ -116,22 +117,14 @@ const EbookHero: FC = () => {
                      <strong className={styles.ebookHeroIntroDetailHeadingText}>10k + Users</strong>
                   </div>
                   <div className={styles.ebookHeroIntroInstalledUsers}>
-                     <img className={styles.ebookHeroIntroInstalledUsersImg} src="/Ali-Smith.png" alt="Ali-Smith" />
-                     <img
-                        className={styles.ebookHeroIntroInstalledUsersImg}
-                        src="/Astronomer-X.png"
-                        alt="Astronomer-X"
-                     />
-                     <img
-                        className={styles.ebookHeroIntroInstalledUsersImg}
-                        src="/Sarah-Ethicist.png"
-                        alt="Sarah-Ethicist"
-                     />
-                     <img
-                        className={styles.ebookHeroIntroInstalledUsersImg}
-                        src="/John-Techson.png"
-                        alt="John-Techson"
-                     />
+                     {fourRandomAuthors.map((author) => (
+                        <img
+                           key={author?.id}
+                           className={styles.ebookHeroIntroInstalledUsersImg}
+                           src={`${baseUrl}${author?.avatar?.url}`}
+                           alt="Ali-Smith"
+                        />
+                     ))}
                   </div>
                </div>
             </div>
