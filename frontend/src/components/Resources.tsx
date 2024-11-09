@@ -1,14 +1,27 @@
 import { FC } from "react";
 import styles from "./Resources.module.css";
+import { useGetAuthors } from "@/services/generated/author/author";
+import getRandomObjects from "@/helpers/getRandomObjects";
 
 const Resources: FC = () => {
+   const { data } = useGetAuthors();
+   const res = data?.data?.data;
+
+   const fourRandomAuthors = getRandomObjects(res, 4);
+   console.log(fourRandomAuthors);
+
+   const baseUrl = import.meta.env.VITE_BACK_END_BASE_URL;
    return (
       <section className={styles.container}>
          <div className={styles.facesBehind}>
-            <img className={styles.facesBehindImg} src="/Ali-Smith.png" alt="Ali-Smith" />
-            <img className={styles.facesBehindImg} src="/Astronomer-X.png" alt="Astronomer-X" />
-            <img className={styles.facesBehindImg} src="/Sarah-Ethicist.png" alt="Sarah-Ethicist" />
-            <img className={styles.facesBehindImg} src="/John-Techson.png" alt="John-Techson" />
+            {fourRandomAuthors.map((author) => (
+               <img
+                  key={author?.id}
+                  className={styles.facesBehindImg}
+                  src={`${baseUrl}${author?.avatar?.url}`}
+                  alt="Ali-Smith"
+               />
+            ))}
          </div>
          <div className={styles.title}>
             <h3 className={styles.titleHeading}>Explore 1000+ resources</h3>
