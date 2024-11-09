@@ -1,5 +1,5 @@
 import { FC } from "react";
-import styles from "./TopBanner.module.css";
+import styles from "./TopBanner.module.scss";
 
 const TopBanner: FC = () => {
    return (

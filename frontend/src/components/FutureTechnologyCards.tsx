@@ -1,5 +1,5 @@
 import { FC } from "react";
-import styles from "./FutureTechnologyCards.module.css";
+import styles from "./FutureTechnologyCards.module.scss";
 
 const FutureTechnologyCards: FC = () => {
    return (

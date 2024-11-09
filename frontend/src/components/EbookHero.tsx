@@ -1,5 +1,5 @@
 import { FC } from "react";
-import styles from "./EbookHero.module.css";
+import styles from "./EbookHero.module.scss";
 import { useGetAuthors } from "@/services/generated/author/author";
 import getRandomObjects from "@/helpers/getRandomObjects";
 

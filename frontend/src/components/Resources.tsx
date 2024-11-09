@@ -1,5 +1,5 @@
 import { FC } from "react";
-import styles from "./Resources.module.css";
+import styles from "./Resources.module.scss";
 import { useGetAuthors } from "@/services/generated/author/author";
 import getRandomObjects from "@/helpers/getRandomObjects";
 

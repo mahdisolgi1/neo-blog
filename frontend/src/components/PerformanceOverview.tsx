@@ -1,5 +1,5 @@
 import { FC } from "react";
-import styles from "./PerformanceOverview.module.css";
+import styles from "./PerformanceOverview.module.scss";
 
 const PerformanceOverview: FC = () => {
    return (

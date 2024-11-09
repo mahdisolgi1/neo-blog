@@ -1,5 +1,5 @@
 import { FC } from "react";
-import styles from "./BlogHighlightSection.module.css";
+import styles from "./BlogHighlightSection.module.scss";
 import { useGetArticles } from "@/services/generated/article/article";
 import getRandomObjects from "@/helpers/getRandomObjects";
 

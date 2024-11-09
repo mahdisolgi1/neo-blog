@@ -1,5 +1,5 @@
 import { FC } from "react";
-import styles from "./FutureTechRevolutionSection.module.css";
+import styles from "./FutureTechRevolutionSection.module.scss";
 
 const FutureTechRevolutionSection: FC = () => {
    return (

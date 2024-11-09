@@ -1,5 +1,5 @@
 import { FC } from "react";
-import styles from "./Testimonials.module.css";
+import styles from "./Testimonials.module.scss";
 
 const Testimonials: FC = () => {
    return (
