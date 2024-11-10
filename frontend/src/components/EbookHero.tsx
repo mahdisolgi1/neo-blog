@@ -10,7 +10,6 @@ const EbookHero: FC = () => {
    const res = data?.data?.data;
 
    const fourRandomAuthors = getRandomObjects(res, 4);
-   console.log(fourRandomAuthors);
 
    const baseUrl = import.meta.env.VITE_BACK_END_BASE_URL;
    return (
