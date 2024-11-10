@@ -1,0 +1,245 @@
+.BlogHighlightIntro {
+   display: flex;
+   padding: 4rem 1.6rem;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+   gap: 3rem;
+   align-self: stretch;
+   border-top: 1px solid var(--Dark-15);
+   border-bottom: 1px solid var(--Dark-15);
+   background: var(--Dark-10);
+}
+.BlogHighlightHeading {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+   gap: 1rem;
+   align-self: stretch;
+}
+.BlogHighlightTitleBox {
+   display: flex;
+   padding: 0.4rem 0.8rem;
+   justify-content: center;
+   align-items: flex-start;
+   gap: 1rem;
+   border-radius: 0.4rem;
+   background: var(--Dark-20);
+}
+.BlogHighlightP {
+   color: var(--Absolute-White);
+   font-family: Inter;
+   font-size: 1.4rem;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 150%; 
+   letter-spacing: -0.042rem;
+}
+.BlogHighlightHeadingHeader {
+   align-self: stretch;
+   color: var(--Absolute-White);
+   font-family: "Kumbh Sans";
+   font-size: 2.8rem;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 130%; 
+   letter-spacing: -0.084rem;
+}
+.BlogHighlightCta {
+   display: flex;
+   padding: 1.4rem 2rem;
+   justify-content: center;
+   align-items: center;
+   gap: 0.4rem;
+   align-self: stretch;
+   border-radius: 0.8rem;
+   border: 1px solid var(--Dark-15);
+   background: var(--Dark-08);
+}
+.Topics {
+   display: flex;
+
+   width: auto;
+
+   overflow-x: auto;
+
+   white-space: nowrap;
+   padding: 2rem 1.6rem;
+   align-items: center;
+   gap: 1.4rem;
+   border-bottom: 1px solid var(--Dark-15);
+}
+.Topic {
+   display: flex;
+   padding: 1.8rem 1.6rem;
+   justify-content: center;
+   align-items: center;
+   gap: 1rem;
+   flex: 1 0 0;
+   border-radius: 0.7rem;
+   border: 1px solid var(--Dark-15);
+   background: var(--Dark-10);
+}
+.TopicName {
+   color: var(--Absolute-White);
+   font-family: Inter;
+   font-size: 1.4rem;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 150%; 
+   letter-spacing: -0.042rem;
+}
+
+.tweet {
+   display: flex;
+   padding: 4rem 1.6rem;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: 3rem;
+   align-self: stretch;
+   border-bottom: 1px solid var(--Dark-15);
+}
+.tweetProfile {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   align-self: stretch;
+}
+.tweetProfileDetails {
+   display: flex;
+
+   align-items: center;
+   gap: 0.8rem;
+}
+.tweetProfileImg {
+   width: 6rem;
+   height: 6rem;
+   flex-shrink: 0;
+   border-radius: 4.2rem;
+}
+.tweetProfileName {
+   color: var(--Absolute-White);
+   font-family: Inter;
+   font-size: 1.8rem;
+   font-style: normal;
+   font-weight: 600;
+   line-height: 150%; 
+   letter-spacing: -0.054rem;
+}
+.tweetProfileTopic {
+   color: var(--Grey-60);
+   font-family: Inter;
+   font-size: 1.4rem;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 150%; 
+   letter-spacing: -0.042rem;
+}
+.tweetProfileCta {
+   display: flex;
+   padding: 1.4rem 2rem;
+   align-items: center;
+   gap: 0.4rem;
+   border-radius: 0.8rem;
+   border: 1px solid var(--Dark-15);
+   background: var(--Dark-08);
+}
+.tweetProfileIconText {
+   color: var(--Grey-60);
+   font-family: Inter;
+   font-size: 1.4rem;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 150%; 
+   letter-spacing: -0.042rem;
+}
+.tweetProfileIcon {
+   width: 2rem;
+   height: 2rem;
+}
+.tweetDetails {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: 2rem;
+   align-self: stretch;
+}
+.tweetDate {
+   color: var(--Grey-60);
+   font-family: Inter;
+   font-size: 1.6rem;
+   font-style: normal;
+   font-weight: 600;
+   line-height: 150%; 
+   letter-spacing: -0.048rem;
+   align-self: stretch;
+}
+.tweetText {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: 0.4rem;
+   align-self: stretch;
+}
+.tweetTextHeader {
+   color: var(--Absolute-White);
+   font-family: Inter;
+   font-size: 1.8rem;
+   font-style: normal;
+   font-weight: 600;
+   line-height: 150%; 
+   letter-spacing: -0.054rem;
+   align-self: stretch;
+}
+.tweetTextP {
+   color: var(--Grey-60);
+   font-family: Inter;
+   font-size: 1.4rem;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 150%; 
+   letter-spacing: -0.042rem;
+   align-self: stretch;
+}
+.tweetExtraInfos {
+   display: flex;
+   align-items: flex-start;
+   gap: 0.8rem;
+}
+.tweetExtraInfo {
+   display: flex;
+   padding: 0.6rem 1.2rem;
+   justify-content: center;
+   align-items: center;
+   gap: 0.2rem;
+   border-radius: 10rem;
+   border: 1px solid var(--Dark-15);
+   background: var(--Dark-10);
+}
+.tweetExtraInfoIcon {
+   width: 2rem;
+   height: 2rem;
+}
+.tweetExtraInfoIconNum {
+   color: var(--Grey-60);
+   font-family: "Kumbh Sans";
+   font-size: 1.4rem;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 150%; 
+   letter-spacing: -0.042rem;
+}
+.BlogHighlightCtaText {
+   color: var(--Grey-60);
+   font-family: Inter;
+   font-size: 1.4rem;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 150%; 
+   letter-spacing: -0.042rem;
+}
+.BlogHighlightCtaIcon {
+   width: 2rem;
+   height: 2rem;
+}

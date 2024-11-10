@@ -1,12 +1,14 @@
 import { FC } from "react";
 import Nav from "@/components/Nav";
 import { Outlet } from "react-router-dom";
-import styles from "./Root.module.css";
+import TopBanner from "@/components/TopBanner";
+
 const Root: FC = () => {
    return (
       <>
+         <TopBanner />
          <Nav />
-         <div className={styles.container}>
+         <div>
             <Outlet />
          </div>
       </>

@@ -1,0 +1,325 @@
+.ebookHeroSection {
+   display: flex;
+   padding: 4rem 1.6rem 0rem 1.6rem;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+   gap: 4rem;
+   align-self: stretch;
+}
+.ebookHeroIntro {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+   gap: 2.4rem;
+   align-self: stretch;
+}
+.ebookHeroIntroHeading {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+   gap: 2.4rem;
+   align-self: stretch;
+}
+.ebookHeroIntroIcon {
+   width: 5rem;
+   height: 5rem;
+}
+.ebookHeroIntroHeadingText {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: 0.4rem;
+   align-self: stretch;
+}
+.ebookHeroIntroHeadingHeader {
+   color: var(--Absolute-White);
+   font-family: "Kumbh Sans";
+   font-size: 2.4rem;
+   font-style: normal;
+   font-weight: 600;
+   line-height: 150%;
+   letter-spacing: -0.072rem;
+   align-self: stretch;
+}
+.ebookHeroIntroHeadingP {
+   color: var(--Grey-60);
+   font-family: Inter;
+   font-size: 1.4rem;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 150%;
+   letter-spacing: -0.042rem;
+   align-self: stretch;
+}
+.ebookHeroIntroHeadingCta {
+   border-radius: 0.6rem;
+   border: 1px solid var(--Dark-15);
+   background: var(--Dark-10);
+   display: flex;
+   padding: 1.8rem 2rem;
+   justify-content: center;
+   align-items: center;
+   gap: 0.4rem;
+   align-self: stretch;
+}
+.ebookHeroIntroHeadingCtaText {
+   color: var(--Grey-60);
+   font-family: Inter;
+   font-size: 1.4rem;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 150%;
+   letter-spacing: -0.042rem;
+}
+.ebookHeroIntroHeadingCtaIcon {
+   width: 2rem;
+   height: 2rem;
+}
+.ebookHeroIntroDetails {
+   align-self: center;
+   display: flex;
+   padding: 2rem 3rem;
+   align-items: center;
+   gap: 3rem;
+   border-radius: 0.8rem;
+   border: 1px solid var(--Dark-15);
+   background: var(--Dark-10);
+}
+.ebookHeroIntroDetailText {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: 0.2rem;
+}
+.ebookHeroIntroDetailSubText {
+   color: var(--Grey-60);
+   font-family: Inter;
+   font-size: 1.4rem;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 150%;
+   letter-spacing: -0.042rem;
+}
+.ebookHeroIntroDetailHeadingText {
+   color: var(--Absolute-White);
+   font-family: Inter;
+   font-size: 1.8rem;
+   font-style: normal;
+   font-weight: 600;
+   line-height: 150%;
+   letter-spacing: -0.054rem;
+}
+.ebookHeroIntroInstalledUsers {
+   display: flex;
+   padding: 0.8rem;
+   align-items: flex-start;
+
+   border-radius: 1.2rem;
+   background: var(--Dark-08);
+}
+.ebookHeroIntroInstalledUsersImg {
+   width: 4rem;
+   height: 4rem;
+   margin-left: -15px;
+   border-radius: 4.2rem;
+   border: 1px solid var(--Dark-40);
+}
+
+.ebookHero {
+   display: flex;
+   padding: 4rem 0rem;
+   flex-direction: column;
+   align-items: flex-end;
+   gap: 2.4rem;
+   align-self: stretch;
+   border-top: 1px solid var(--Dark-15);
+}
+.ebookHeroTitle {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+   gap: 1rem;
+   align-self: stretch;
+}
+.ebookHeroTitleHeading {
+   color: var(--Absolute-White);
+   font-family: Inter;
+   font-size: 1.8rem;
+   font-style: normal;
+   font-weight: 600;
+   line-height: 150%;
+   letter-spacing: -0.054rem;
+   align-self: stretch;
+}
+.ebookHeroTitleP {
+   color: var(--Grey-60);
+   font-family: Inter;
+   font-size: 1.4rem;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 150%;
+   letter-spacing: -0.042rem;
+   align-self: stretch;
+}
+.ebookHeroImg {
+   border-radius: 1rem;
+
+   align-self: stretch;
+}
+.ebookHeroDetails {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: 1.6rem;
+   align-self: stretch;
+}
+.ebookHeroDetail {
+   display: flex;
+   padding: 2rem;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+   gap: 0.2rem;
+   align-self: stretch;
+   border-radius: 0.8rem;
+   border: 1px solid var(--Dark-15);
+   background: var(--Dark-10);
+}
+.ebookHeroDetailSubText {
+   align-self: stretch;
+   color: var(--Grey-60);
+   font-family: Inter;
+   font-size: 1.4rem;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 150%;
+   letter-spacing: -0.042rem;
+}
+.ebookHeroDetailText {
+   align-self: stretch;
+   color: var(--Absolute-White);
+   font-family: Inter;
+   font-size: 1.6rem;
+   font-style: normal;
+   font-weight: 600;
+   line-height: 150%;
+   letter-spacing: -0.048rem;
+}
+.ebookHeroDetailWithPerview {
+   display: flex;
+   padding: 2rem;
+   align-items: center;
+   gap: 2rem;
+   align-self: stretch;
+   border-radius: 0.8rem;
+   border: 1px solid var(--Dark-15);
+   background: var(--Dark-10);
+}
+.ebookHeroDetailWithPerviewText {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+   gap: 0.2rem;
+   flex: 1 0 0;
+}
+
+.ebookHeroDetailWithPerviewLink {
+   display: flex;
+   padding: 1.4rem 2rem;
+   align-items: center;
+   gap: 0.4rem;
+   border-radius: 0.8rem;
+   border: 1px solid var(--Dark-15);
+   background: var(--Dark-08);
+}
+.ebookHeroDetailWithPerviewLinkText {
+   color: var(--Grey-60);
+   font-family: Inter;
+   font-size: 1.4rem;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 150%;
+   letter-spacing: -0.042rem;
+}
+.ebookHeroDetailWithPerviewLinkIcon {
+   width: 2rem;
+   height: 2rem;
+}
+
+.ourReadersSayCard {
+   border-top: 1px solid var(--Dark-15);
+   border-bottom: 1px solid var(--Dark-15);
+   background: var(--Dark-10);
+   display: flex;
+   padding: 4rem 1.6rem;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+   gap: 3rem;
+   align-self: stretch;
+}
+.ourReadersSayCardText {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+   gap: 1rem;
+   align-self: stretch;
+}
+.ourReadersSayCardSubHeaderBox {
+   display: flex;
+   padding: 0.4rem 0.8rem;
+   justify-content: center;
+   align-items: flex-start;
+   gap: 1rem;
+   border-radius: 0.4rem;
+   background: var(--Dark-20);
+}
+.ourReadersSayCardSubHeader {
+   color: var(--Absolute-White);
+   font-family: Inter;
+   font-size: 1.4rem;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 150%;
+   letter-spacing: -0.042rem;
+}
+.ourReadersSayCardHeader {
+   color: var(--Absolute-White);
+   font-family: "Kumbh Sans";
+   font-size: 2.8rem;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 130%;
+   letter-spacing: -0.084rem;
+   align-self: stretch;
+}
+.ourReadersSayCardCta {
+   border-radius: 0.8rem;
+   border: 1px solid var(--Dark-15);
+   background: var(--Dark-08);
+   display: flex;
+   padding: 1.4rem 2rem;
+   justify-content: center;
+   align-items: center;
+   gap: 0.4rem;
+   align-self: stretch;
+}
+.ourReadersSayCardCtaText {
+   color: var(--Grey-60);
+   font-family: Inter;
+   font-size: 1.4rem;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 150%;
+   letter-spacing: -0.042rem;
+}
+.ourReadersSayCardCtaIcon {
+   width: 2rem;
+   height: 2rem;
+}

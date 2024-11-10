@@ -1,30 +1,59 @@
-import { NavLink } from "react-router-dom";
-import styles from "./Nav.module.css";
-const Navbar = () => (
-   <nav className={styles.navbar}>
-      <ul className={styles.navList}>
-         <li className={styles.navListItem}>
-            <NavLink to="/home" className={({ isActive }) => (isActive ? styles.activeLink : "")}>
-               Home
-            </NavLink>
-         </li>
-         <li className={styles.navListItem}>
-            <NavLink to="/blog" className={({ isActive }) => (isActive ? styles.activeLink : "")}>
-               Blog
-            </NavLink>
-         </li>
-         <li className={styles.navListItem}>
-            <NavLink to="/posts" className={({ isActive }) => (isActive ? styles.activeLink : "")}>
-               Posts
-            </NavLink>
-         </li>
-         <li className={styles.navListItem}>
-            <NavLink to="/post/241" className={({ isActive }) => (isActive ? styles.activeLink : "")}>
-               Post
-            </NavLink>
-         </li>
-      </ul>
-   </nav>
-);
+import { FC } from "react";
+import styles from "./Nav.module.scss";
+import { Link, useLocation } from "react-router-dom";
+import { HiOutlineMenuAlt3 } from "react-icons/hi";
+import Button from "./Button";
 
-export default Navbar;
+const Nav: FC = () => {
+   const location = useLocation();
+
+   return (
+      <div className={styles.navBar}>
+         <img className={styles.logo} src="/logo.svg" alt="logo" />
+         <nav className={styles.navBarLinksBox}>
+            <ul className={styles.navBarLinks}>
+               <li className={styles.navBarLinkItem}>
+                  <Link
+                     to="/home"
+                     className={`${styles.navBarLink} ${location.pathname === "/home" ? styles.activeLink : ""}`}
+                  >
+                     Home
+                  </Link>
+               </li>
+               <li className={styles.navBarLinkItem}>
+                  <Link
+                     to="/news"
+                     className={`${styles.navBarLink} ${location.pathname === "/news" ? styles.activeLink : ""}`}
+                  >
+                     News
+                  </Link>
+               </li>
+               <li className={styles.navBarLinkItem}>
+                  <Link
+                     to="/podcasts"
+                     className={`${styles.navBarLink} ${location.pathname === "/podcasts" ? styles.activeLink : ""}`}
+                  >
+                     Podcasts
+                  </Link>
+               </li>
+               <li className={styles.navBarLinkItem}>
+                  <Link
+                     to="/resources"
+                     className={`${styles.navBarLink} ${location.pathname === "/resources" ? styles.activeLink : ""}`}
+                  >
+                     Resources
+                  </Link>
+               </li>
+            </ul>
+         </nav>
+
+         <HiOutlineMenuAlt3 color="white" className={styles.hamburgarMenu} aria-label="hamburgar-menu" />
+
+         <Button size="md" type="primary" className={styles.ctaBtn}>
+            Contact Us
+         </Button>
+      </div>
+   );
+};
+
+export default Nav;

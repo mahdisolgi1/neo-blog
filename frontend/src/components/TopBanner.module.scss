@@ -1,0 +1,33 @@
+.topBannerSection {
+   display: flex;
+   padding: 4rem 2.4rem 1.4rem 2.4rem;
+   justify-content: center;
+   align-items: center;
+   gap: 1rem;
+   align-self: stretch;
+   border-bottom: 1px solid var(--Dark-10);
+   background: var(--Dark-08);
+
+   @include respond(laptop) {
+      padding: 1.2rem 2.4rem;
+      border-bottom: 1px solid var(--Dark-15);
+   }
+}
+.topBannerP {
+   color: var(--Grey-60);
+   font-family: Inter;
+   font-size: 1.2rem;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 150%;
+   letter-spacing: -0.036rem;
+
+   @include respond(laptop) {
+      letter-spacing: -0.042rem;
+      font-size: 1.4rem;
+   }
+}
+.topBannerIcon {
+   width: 2rem;
+   height: 2rem;
+}
