@@ -1,14 +1,25 @@
 import { useState, useEffect, ChangeEvent } from "react";
-import "./DarkModeSwitch.css";
 
 const DarkModeSwitch: React.FC = () => {
-   const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
-      return localStorage.getItem("theme") === "dark";
-   });
+   const getInitialTheme = (): boolean => {
+      const savedMode = localStorage.getItem("theme");
+      try {
+         return savedMode ? JSON.parse(savedMode) : false;
+      } catch (error) {
+         console.error("Failed to parse theme from localStorage:", error);
+         return false;
+      }
+   };
+
+   const [isDarkMode, setIsDarkMode] = useState<boolean>(getInitialTheme);
 
    useEffect(() => {
       document.body.className = isDarkMode ? "dark" : "light";
-      localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+      try {
+         localStorage.setItem("theme", JSON.stringify(isDarkMode));
+      } catch (error) {
+         console.error("Failed to save theme to localStorage:", error);
+      }
    }, [isDarkMode]);
 
    const handleToggle = (e: ChangeEvent<HTMLInputElement>): void => {
