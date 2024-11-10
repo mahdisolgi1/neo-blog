@@ -1,6 +1,7 @@
 import { FC } from "react";
 import styles from "./Nav.module.scss";
 import { Link, useLocation } from "react-router-dom";
+import { HiOutlineMenuAlt3 } from "react-icons/hi";
 
 const Nav: FC = () => {
    const location = useLocation();
@@ -45,7 +46,7 @@ const Nav: FC = () => {
             </ul>
          </nav>
 
-         <img className={styles.hamburgarMenu} src="/hamburgar-menu.svg" alt="hamburgar-menu" />
+         <HiOutlineMenuAlt3 color="white" className={styles.hamburgarMenu} aria-label="hamburgar-menu" />
 
          <button className={styles.ctaBtn}>Contact Us</button>
       </div>

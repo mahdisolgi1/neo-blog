@@ -1,6 +1,9 @@
 import { FC } from "react";
 import styles from "./Footer.module.scss";
 import { Link } from "react-router-dom";
+import { PiArrowUpRight } from "react-icons/pi";
+import { FaLinkedin, FaTwitter } from "react-icons/fa";
+import { SiMedium } from "react-icons/si";
 
 const Footer: FC = () => {
    return (
@@ -159,28 +162,28 @@ const Footer: FC = () => {
                <div className={styles.resourcesConatiner}>
                   <div className={styles.resource}>
                      <span className={styles.resourceName}>Whitepapers</span>
-                     <img className={styles.resourceIcon} src="/arrow-to-up-right.svg" alt="arrow-to-up-right" />
+                     <PiArrowUpRight color="gold" className={styles.resourceIcon} aria-label="arrow-to-up-right" />
                   </div>
                   <div className={styles.resource}>
                      <span className={styles.resourceName}>Ebooks</span>
-                     <img className={styles.resourceIcon} src="/arrow-to-up-right.svg" alt="arrow-to-up-right" />
+                     <PiArrowUpRight color="gold" className={styles.resourceIcon} aria-label="arrow-to-up-right" />
                   </div>
                   <div className={styles.resource}>
                      <span className={styles.resourceName}>Reports</span>
-                     <img className={styles.resourceIcon} src="/arrow-to-up-right.svg" alt="arrow-to-up-right" />
+                     <PiArrowUpRight color="gold" className={styles.resourceIcon} aria-label="arrow-to-up-right" />
                   </div>
                   <div className={styles.resource}>
                      <span className={styles.resourceName}>Research Papers</span>
-                     <img className={styles.resourceIcon} src="/arrow-to-up-right.svg" alt="arrow-to-up-right" />
+                     <PiArrowUpRight color="gold" className={styles.resourceIcon} aria-label="arrow-to-up-right" />
                   </div>
                </div>
             </div>
          </div>
          <div className={styles.footerBar}>
             <div className={styles.icons}>
-               <img className={styles.icon} src="/twitter-icon.svg" alt="twitter-icon" />
-               <img className={styles.icon} src="/social2-icon.svg" alt="social2-icon" />
-               <img className={styles.icon} src="/linkdin-icon.svg" alt="linkdin-icon" />
+               <FaTwitter color="white" className={styles.icon} aria-label="twitter-icon" />
+               <SiMedium color="white" className={styles.icon} aria-label="social2-icon" />
+               <FaLinkedin color="white" className={styles.icon} aria-label="linkdin-icon" />
             </div>
             <div className={styles.plicies}>
                <span className={styles.pliciesLink}>Terms & Conditions</span>

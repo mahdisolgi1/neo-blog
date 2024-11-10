@@ -1,12 +1,12 @@
 import { FC } from "react";
 import styles from "./TopBanner.module.scss";
+import { PiArrowUpRight } from "react-icons/pi";
 
 const TopBanner: FC = () => {
    return (
       <section className={styles.topBannerSection}>
          <p className={styles.topBannerP}>Subscribe to our Newsletter For Blogs and Resources</p>
-         {/* <ArrowToUpRight width={24} height={24} fill="currentColor" /> */}
-         <img className={styles.topBannerIcon} src="arrow-to-up-right.svg" alt="arrow-to-up-right" />
+         <PiArrowUpRight className={styles.topBannerIcon} color="gold" aria-label="arrow-to-to-right-icon" />
       </section>
    );
 };

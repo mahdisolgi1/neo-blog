@@ -1,5 +1,6 @@
 import { FC } from "react";
 import styles from "./PerformanceOverview.module.scss";
+import { PiArrowUpRight } from "react-icons/pi";
 
 const PerformanceOverview: FC = () => {
    return (
@@ -13,7 +14,7 @@ const PerformanceOverview: FC = () => {
                      <p className={styles.overviewDetailP}>Stay Current</p>
                   </div>
                   <div className={styles.overviewIconBox}>
-                     <img className={styles.overviewIcon} src="/arrow-to-up-right-black.svg" alt="arrow-to-up-right" />
+                     <PiArrowUpRight aria-label="arrow-to-up-right-icon" className={styles.overviewIcon} />
                   </div>
                </div>
             </div>
@@ -28,7 +29,7 @@ const PerformanceOverview: FC = () => {
                      <p className={styles.overviewDetailP}>Trusted Insights</p>
                   </div>
                   <div className={styles.overviewIconBox}>
-                     <img className={styles.overviewIcon} src="/arrow-to-up-right-black.svg" alt="arrow-to-up-right" />
+                     <PiArrowUpRight aria-label="arrow-to-up-right-icon" className={styles.overviewIcon} />
                   </div>
                </div>
             </div>
@@ -43,7 +44,7 @@ const PerformanceOverview: FC = () => {
                      <p className={styles.overviewDetailP}>Worldwide Impact</p>
                   </div>
                   <div className={styles.overviewIconBox}>
-                     <img className={styles.overviewIcon} src="/arrow-to-up-right-black.svg" alt="arrow-to-up-right" />
+                     <PiArrowUpRight aria-label="arrow-to-up-right-icon" className={styles.overviewIcon} />
                   </div>
                </div>
             </div>

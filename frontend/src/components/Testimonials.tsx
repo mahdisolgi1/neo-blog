@@ -1,6 +1,8 @@
 import { FC } from "react";
 import styles from "./Testimonials.module.scss";
 
+import { FaStar } from "react-icons/fa";
+
 const Testimonials: FC = () => {
    return (
       <section className={styles.testimonials}>
@@ -14,10 +16,10 @@ const Testimonials: FC = () => {
             </div>
             <div className={styles.testimonialText}>
                <div className={styles.testimonialStars}>
-                  <img className={styles.testimonialStarImg} src="/Star.svg" alt="Star" />
-                  <img className={styles.testimonialStarImg} src="/Star.svg" alt="Star" />
-                  <img className={styles.testimonialStarImg} src="/Star.svg" alt="Star" />
-                  <img className={styles.testimonialStarImg} src="/Star.svg" alt="Star" />
+                  <FaStar color="gold" className={styles.testimonialStarImg} aria-label="star" />
+                  <FaStar color="gold" className={styles.testimonialStarImg} aria-label="star" />
+                  <FaStar color="gold" className={styles.testimonialStarImg} aria-label="star" />
+                  <FaStar color="gold" className={styles.testimonialStarImg} aria-label="star" />
                </div>
                <div className={styles.testimonialTextBox}>
                   <p className={styles.testimonialTextP}>
@@ -37,10 +39,10 @@ const Testimonials: FC = () => {
             </div>
             <div className={styles.testimonialText}>
                <div className={styles.testimonialStars}>
-                  <img className={styles.testimonialStarImg} src="/Star.svg" alt="Star" />
-                  <img className={styles.testimonialStarImg} src="/Star.svg" alt="Star" />
-                  <img className={styles.testimonialStarImg} src="/Star.svg" alt="Star" />
-                  <img className={styles.testimonialStarImg} src="/Star.svg" alt="Star" />
+                  <FaStar color="gold" className={styles.testimonialStarImg} aria-label="star" />
+                  <FaStar color="gold" className={styles.testimonialStarImg} aria-label="star" />
+                  <FaStar color="gold" className={styles.testimonialStarImg} aria-label="star" />
+                  <FaStar color="gold" className={styles.testimonialStarImg} aria-label="star" />
                </div>
                <div className={styles.testimonialTextBox}>
                   <p className={styles.testimonialTextP}>
@@ -60,10 +62,10 @@ const Testimonials: FC = () => {
             </div>
             <div className={styles.testimonialText}>
                <div className={styles.testimonialStars}>
-                  <img className={styles.testimonialStarImg} src="/Star.svg" alt="Star" />
-                  <img className={styles.testimonialStarImg} src="/Star.svg" alt="Star" />
-                  <img className={styles.testimonialStarImg} src="/Star.svg" alt="Star" />
-                  <img className={styles.testimonialStarImg} src="/Star.svg" alt="Star" />
+                  <FaStar color="gold" className={styles.testimonialStarImg} aria-label="star" />
+                  <FaStar color="gold" className={styles.testimonialStarImg} aria-label="star" />
+                  <FaStar color="gold" className={styles.testimonialStarImg} aria-label="star" />
+                  <FaStar color="gold" className={styles.testimonialStarImg} aria-label="star" />
                </div>
                <div className={styles.testimonialTextBox}>
                   <p className={styles.testimonialTextP}>

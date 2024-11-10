@@ -1,5 +1,6 @@
 import { FC } from "react";
 import styles from "./FutureTechRevolutionSection.module.scss";
+import { PiArrowUpRight } from "react-icons/pi";
 
 const FutureTechRevolutionSection: FC = () => {
    return (
@@ -23,10 +24,10 @@ const FutureTechRevolutionSection: FC = () => {
                <div className={styles.futureTechRevolutionCardDetailHeading}>
                   <strong className={styles.futureTechRevolutionCardDetailHeadingHeader}>Resource Access</strong>
                   <div className={styles.futureTechRevolutionCardDetailIconBox}>
-                     <img
+                     <PiArrowUpRight
+                        color="black"
                         className={styles.futureTechRevolutionCardDetailIcon}
-                        src="/arrow-to-up-right-black.svg"
-                        alt="arrow-to-up-right-black"
+                        aria-label="arrow-to-up-right-black"
                      />
                   </div>
                </div>
@@ -38,10 +39,10 @@ const FutureTechRevolutionSection: FC = () => {
                <div className={styles.futureTechRevolutionCardDetailHeading}>
                   <strong className={styles.futureTechRevolutionCardDetailHeadingHeader}>Community Forum</strong>
                   <div className={styles.futureTechRevolutionCardDetailIconBox}>
-                     <img
+                     <PiArrowUpRight
+                        color="black"
                         className={styles.futureTechRevolutionCardDetailIcon}
-                        src="/arrow-to-up-right-black.svg"
-                        alt="arrow-to-up-right-black"
+                        aria-label="arrow-to-up-right-black"
                      />
                   </div>
                </div>
@@ -53,10 +54,10 @@ const FutureTechRevolutionSection: FC = () => {
                <div className={styles.futureTechRevolutionCardDetailHeading}>
                   <strong className={styles.futureTechRevolutionCardDetailHeadingHeader}>Tech Events</strong>
                   <div className={styles.futureTechRevolutionCardDetailIconBox}>
-                     <img
+                     <PiArrowUpRight
+                        color="black"
                         className={styles.futureTechRevolutionCardDetailIcon}
-                        src="/arrow-to-up-right-black.svg"
-                        alt="arrow-to-up-right-black"
+                        aria-label="arrow-to-up-right-black"
                      />
                   </div>
                </div>

@@ -2,6 +2,7 @@ import { FC } from "react";
 import styles from "./Resources.module.scss";
 import { useGetAuthors } from "@/services/generated/author/author";
 import getRandomObjects from "@/helpers/getRandomObjects";
+import { PiArrowUpRight } from "react-icons/pi";
 
 const Resources: FC = () => {
    const { data } = useGetAuthors();
@@ -28,8 +29,8 @@ const Resources: FC = () => {
             <p className={styles.titleP}>Over 1,000 articles on emerging tech trends and breakthroughs.</p>
          </div>
          <div className={styles.cta}>
-            <p className={styles.ctaP}>Explore Resources</p>
-            <img className={styles.ctaIcon} src="/arrow-to-up-right.svg" alt="arrow-to-up-right" />
+            <p className={styles.ctaP}>Explore Resources</p>{" "}
+            <PiArrowUpRight className={styles.ctaIcon} color="gold" aria-label="arrow-to-up-right-icon" />
          </div>
       </section>
    );

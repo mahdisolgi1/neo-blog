@@ -2,6 +2,8 @@ import { FC } from "react";
 import styles from "./EbookHero.module.scss";
 import { useGetAuthors } from "@/services/generated/author/author";
 import getRandomObjects from "@/helpers/getRandomObjects";
+import { PiArrowUpRight } from "react-icons/pi";
+import { IoEyeOutline } from "react-icons/io5";
 
 const EbookHero: FC = () => {
    const { data } = useGetAuthors();
@@ -26,11 +28,10 @@ const EbookHero: FC = () => {
                   <div className={styles.ebookHeroIntroHeadingCta}>
                      {" "}
                      <span className={styles.ebookHeroIntroHeadingCtaText}>Download Ebooks Now</span>
-                     <img
+                     <PiArrowUpRight
                         className={styles.ebookHeroIntroHeadingCtaIcon}
-                        src="/arrow-to-up-right.svg"
-                        alt="arrow-to-up-right.svg"
-                     />{" "}
+                        aria-label="arrow-to-up-right.svg"
+                     />
                   </div>
                </div>
                <div className={styles.ebookHeroIntroDetails}>
@@ -75,10 +76,10 @@ const EbookHero: FC = () => {
                      </div>
                      <div className={styles.ebookHeroDetailWithPerviewLink}>
                         <span className={styles.ebookHeroDetailWithPerviewLinkText}>Preview</span>
-                        <img
+                        <IoEyeOutline
                            className={styles.ebookHeroDetailWithPerviewLinkIcon}
-                           src="/yellow-eye.svg"
-                           alt="yellow-eye"
+                           color="gold"
+                           aria-label="yellow-eye"
                         />
                      </div>
                   </div>
@@ -103,11 +104,11 @@ const EbookHero: FC = () => {
                   </div>
                   <div className={styles.ebookHeroIntroHeadingCta}>
                      <span className={styles.ebookHeroIntroHeadingCtaText}> Download Ebooks Now</span>
-                     <img
+                     <PiArrowUpRight
                         className={styles.ebookHeroIntroHeadingCtaIcon}
-                        src="/arrow-to-up-right.svg"
-                        alt="arrow-to-up-right.svg"
-                     />{" "}
+                        color="gold"
+                        aria-label="arrow-to-up-right.svg"
+                     />
                   </div>
                </div>
                <div className={styles.ebookHeroIntroDetails}>
@@ -152,10 +153,10 @@ const EbookHero: FC = () => {
                      </div>
                      <div className={styles.ebookHeroDetailWithPerviewLink}>
                         <span className={styles.ebookHeroDetailWithPerviewLinkText}>Preview</span>
-                        <img
+                        <IoEyeOutline
                            className={styles.ebookHeroDetailWithPerviewLinkIcon}
-                           src="/yellow-eye.svg"
-                           alt="yellow-eye"
+                           color="gold"
+                           aria-label="yellow-eye"
                         />
                      </div>
                   </div>
@@ -178,7 +179,11 @@ const EbookHero: FC = () => {
             </div>
             <div className={styles.ourReadersSayCardCta}>
                <span className={styles.ourReadersSayCardCtaText}>View All Testimonials</span>
-               <img className={styles.ourReadersSayCardCtaIcon} src="/arrow-to-up-right.svg" alt="arrow-to-up-right" />
+               <PiArrowUpRight
+                  color="gold"
+                  className={styles.ourReadersSayCardCtaIcon}
+                  aria-label="arrow-to-up-right"
+               />
             </div>
          </div>
       </>

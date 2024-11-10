@@ -2,6 +2,9 @@ import { FC } from "react";
 import styles from "./BlogHighlightSection.module.scss";
 import { useGetArticles } from "@/services/generated/article/article";
 import getRandomObjects from "@/helpers/getRandomObjects";
+import { PiArrowUpRight } from "react-icons/pi";
+import { FaRegComment, FaRegHeart } from "react-icons/fa";
+import { BsSend } from "react-icons/bs";
 
 const BlogHighlightSection: FC = () => {
    const { data } = useGetArticles();
@@ -32,7 +35,8 @@ const BlogHighlightSection: FC = () => {
             </div>
             <div className={styles.BlogHighlightCta}>
                <span className={styles.BlogHighlightCtaText}>View All Blogs</span>
-               <img className={styles.BlogHighlightCtaIcon} src="/arrow-to-up-right.svg" alt="arrow-to-up-right" />
+
+               <PiArrowUpRight className={styles.BlogHighlightCtaIcon} color="gold" aria-label="arrow-icon" />
             </div>
          </div>
          <div className={styles.Topics}>
@@ -71,8 +75,8 @@ const BlogHighlightSection: FC = () => {
                         </div>
                      </div>
                      <div className={styles.tweetProfileCta}>
-                        <span className={styles.tweetProfileIconText}>View Blog</span>
-                        <img className={styles.tweetProfileIcon} src="/arrow-to-up-right.svg" alt="arrow-to-up-right" />
+                        <span className={styles.tweetProfileIconText}>View Blog</span>{" "}
+                        <PiArrowUpRight className={styles.tweetProfileIcon} color="gold" aria-label="arrow-icon" />
                      </div>
                   </div>
                   <div className={styles.tweetDetails}>
@@ -83,7 +87,7 @@ const BlogHighlightSection: FC = () => {
                      </div>
                      <div className={styles.tweetExtraInfos}>
                         <div className={styles.tweetExtraInfo}>
-                           <img className={styles.tweetExtraInfoIcon} src="/heart-icon.svg" alt="heart-icon" />{" "}
+                           <FaRegHeart className={styles.tweetExtraInfoIcon} color="grey" aria-label="heart-icon" />{" "}
                            <span className={styles.tweetExtraInfoIconNum}>
                               {article?.likes > 1000
                                  ? `${
@@ -95,7 +99,7 @@ const BlogHighlightSection: FC = () => {
                            </span>
                         </div>
                         <div className={styles.tweetExtraInfo}>
-                           <img className={styles.tweetExtraInfoIcon} src="/comment-icon.svg" alt="comment-icon" />{" "}
+                           <FaRegComment className={styles.tweetExtraInfoIcon} color="grey" aria-label="comment-icon" />{" "}
                            <span className={styles.tweetExtraInfoIconNum}>
                               {" "}
                               {article?.comments > 1000
@@ -108,7 +112,7 @@ const BlogHighlightSection: FC = () => {
                            </span>
                         </div>
                         <div className={styles.tweetExtraInfo}>
-                           <img className={styles.tweetExtraInfoIcon} src="/share-icon.svg" alt="share-icon" />{" "}
+                           <BsSend className={styles.tweetExtraInfoIcon} color="grey" aria-label="share-icon" />{" "}
                            <span className={styles.tweetExtraInfoIconNum}>
                               {" "}
                               {article?.shares > 1000
@@ -135,8 +139,8 @@ const BlogHighlightSection: FC = () => {
                </h2>
             </div>
             <div className={styles.BlogHighlightCta}>
-               <span className={styles.BlogHighlightCtaText}>View All Resources</span>
-               <img className={styles.BlogHighlightCtaIcon} src="/arrow-to-up-right.svg" alt="arrow-to-up-right" />
+               <span className={styles.BlogHighlightCtaText}>View All Resources</span>{" "}
+               <PiArrowUpRight className={styles.BlogHighlightCtaIcon} color="gold" aria-label="arrow-icon" />
             </div>
          </div>
       </>
