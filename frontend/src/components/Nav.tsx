@@ -2,6 +2,7 @@ import { FC } from "react";
 import styles from "./Nav.module.scss";
 import { Link, useLocation } from "react-router-dom";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
+import Button from "./Button";
 
 const Nav: FC = () => {
    const location = useLocation();
@@ -48,7 +49,9 @@ const Nav: FC = () => {
 
          <HiOutlineMenuAlt3 color="white" className={styles.hamburgarMenu} aria-label="hamburgar-menu" />
 
-         <button className={styles.ctaBtn}>Contact Us</button>
+         <Button size="md" type="primary" className={styles.ctaBtn}>
+            Contact Us
+         </Button>
       </div>
    );
 };
