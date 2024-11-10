@@ -15,7 +15,7 @@
    align-self: stretch;
 }
 .containerSubHeading {
-   color: var(--Dark-40, #666);
+   color: var(--Dark-40);
    font-family: "Kumbh Sans";
    font-size: 1.8rem;
    font-style: normal;
@@ -24,7 +24,7 @@
    letter-spacing: -0.054rem;
 }
 .containerHeading {
-   color: var(--Absolute-White, #fff);
+   color: var(--Absolute-White);
    font-family: "Kumbh Sans";
    font-size: 3rem;
    font-style: normal;
@@ -34,7 +34,7 @@
    align-self: stretch;
 }
 .containerP {
-   color: var(--Grey-50, #7e7e81);
+   color: var(--Grey-50);
    font-family: Inter;
    font-size: 1.4rem;
    font-style: normal;
@@ -44,7 +44,7 @@
    align-self: stretch;
 }
 .containerDetails {
-   border-top: 1px solid var(--Dark-15, #262626);
+   border-top: 1px solid var(--Dark-15);
    display: flex;
    padding-left: 1.6rem;
    align-items: flex-start;
@@ -69,7 +69,7 @@
    background-color: #262626;
 }
 .containerDetailHeading {
-   color: var(--Absolute-White, #fff);
+   color: var(--Absolute-White);
    font-family: Inter;
    display: inline;
    font-size: 2.4rem;
@@ -79,7 +79,7 @@
    letter-spacing: -0.072rem;
 }
 .containerDetailPlus {
-   color: var(--Yellow-55, #ffd11a);
+   color: var(--Yellow-55);
    font-family: Inter;
    font-size: 2.4rem;
    font-style: normal;
@@ -88,7 +88,7 @@
    letter-spacing: -0.072rem;
 }
 .containerDetailP {
-   color: var(--Grey-60, #98989a);
+   color: var(--Grey-60);
    font-family: Inter;
    font-size: 1.4rem;
    font-style: normal;

@@ -1,7 +1,7 @@
 .FutureTechnologyCardsIntro {
-   border-top: 1px solid var(--Dark-15, #262626);
-   border-bottom: 1px solid var(--Dark-15, #262626);
-   background: var(--Dark-10, #1a1a1a);
+   border-top: 1px solid var(--Dark-15);
+   border-bottom: 1px solid var(--Dark-15);
+   background: var(--Dark-10);
    display: flex;
    padding: 4rem 1.6rem;
    flex-direction: column;
@@ -12,7 +12,7 @@
 }
 .CardsIntroPBox {
    border-radius: 0.4rem;
-   background: var(--Dark-20, #333);
+   background: var(--Dark-20);
    display: flex;
    padding: 0.4rem 0.8rem;
    justify-content: center;
@@ -20,7 +20,7 @@
    gap: 1rem;
 }
 .CardsIntroP {
-   color: var(--Absolute-White, #fff);
+   color: var(--Absolute-White);
    font-family: Inter;
    font-size: 1.4rem;
    font-style: normal;
@@ -30,7 +30,7 @@
 }
 .CardsIntroHeading {
    align-self: stretch;
-   color: var(--Absolute-White, #fff);
+   color: var(--Absolute-White);
    font-family: "Kumbh Sans";
    font-size: 2.8rem;
    font-style: normal;
@@ -63,7 +63,7 @@
 .futureTechnologyCardText {
 }
 .futureTechnologyCardHeading {
-   color: var(--Absolute-White, #fff);
+   color: var(--Absolute-White);
    font-family: "Kumbh Sans";
    font-size: 2.4rem;
    font-style: normal;
@@ -73,7 +73,7 @@
    align-self: stretch;
 }
 .futureTechnologyCardP {
-   color: var(--Grey-60, #98989a);
+   color: var(--Grey-60);
    font-family: Inter;
    font-size: 1.4rem;
    font-style: normal;
@@ -88,13 +88,13 @@
    flex-direction: column;
    align-items: flex-start;
    gap: 1rem;
-   border-top: 1px solid var(--Dark-15, #262626);
+   border-top: 1px solid var(--Dark-15);
    align-self: stretch;
 }
 .futureTechnologyCardDetail {
    border-radius: 1rem;
-   border: 1px solid var(--Dark-15, #262626);
-   background: var(--Dark-10, #1a1a1a);
+   border: 1px solid var(--Dark-15);
+   background: var(--Dark-10);
    display: flex;
    padding: 2.4rem;
    flex-direction: column;
@@ -103,7 +103,7 @@
    align-self: stretch;
 }
 .futureTechnologyCardDetailHeading {
-   color: var(--Absolute-White, #fff);
+   color: var(--Absolute-White);
    font-family: Inter;
    font-size: 1.8rem;
    font-style: normal;
@@ -113,7 +113,7 @@
    align-self: stretch;
 }
 .futureTechnologyCardDetailP {
-   color: var(--Grey-60, #98989a);
+   color: var(--Grey-60);
    font-family: Inter;
    font-size: 1.4rem;
    font-style: normal;

@@ -11,7 +11,7 @@
    align-items: flex-start;
    gap: 2rem;
    align-self: stretch;
-   border-left: 1px solid var(--Dark-15, #262626);
+   border-left: 1px solid var(--Dark-15);
 }
 .facesBehind {
    display: flex;
@@ -19,24 +19,24 @@
    align-items: flex-start;
 
    border-radius: 10rem;
-   border: 1px solid var(--Dark-15, #262626);
-   background: var(--Dark-10, #1a1a1a);
+   border: 1px solid var(--Dark-15);
+   background: var(--Dark-10);
 }
 .facesBehindImg {
    border-radius: 4.2rem;
-   border: 1px solid var(--Dark-40, #666);
+   border: 1px solid var(--Dark-40);
 
    width: 4rem;
    height: 4rem;
 
-   border-radius: 50%; /* Make images circular */
-   margin-left: -15px; /* Negative margin to create overlap */
+   border-radius: 50%;
+   margin-left: -15px;
    border: 2px solid #fff;
 }
 
 .titleHeading {
    align-self: stretch;
-   color: var(--Absolute-White, #fff);
+   color: var(--Absolute-White);
    font-family: Inter;
    font-size: 1.8rem;
    font-style: normal;
@@ -45,7 +45,7 @@
    letter-spacing: -0.054rem;
 }
 .titleP {
-   color: var(--Grey-60, #98989a);
+   color: var(--Grey-60);
    font-family: Inter;
    font-size: 1.4rem;
    font-style: normal;
@@ -62,11 +62,11 @@
    gap: 0.4rem;
    align-self: stretch;
    border-radius: 0.8rem;
-   border: 1px solid var(--Dark-15, #262626);
-   background: var(--Dark-08, #141414);
+   border: 1px solid var(--Dark-15);
+   background: var(--Dark-08);
 }
 .ctaP {
-   color: var(--Grey-60, #98989a);
+   color: var(--Grey-60);
    font-family: Inter;
    font-size: 1.4rem;
    font-style: normal;

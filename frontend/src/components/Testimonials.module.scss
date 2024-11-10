@@ -4,7 +4,7 @@
    flex-direction: column;
    align-items: flex-start;
    align-self: stretch;
-   border-bottom: 1px solid var(--Dark-15, #262626);
+   border-bottom: 1px solid var(--Dark-15);
 }
 .testimonial {
    display: flex;
@@ -28,7 +28,7 @@
 }
 .testimonialProfileName {
    align-self: stretch;
-   color: var(--Absolute-White, #fff);
+   color: var(--Absolute-White);
    font-family: Inter;
    font-size: 1.8rem;
    font-style: normal;
@@ -36,7 +36,7 @@
    line-height: 150%; /* 2.7rem */
 }
 .testimonialProfileLocation {
-   color: var(--Dark-40, #666);
+   color: var(--Dark-40);
    font-family: Inter;
    font-size: 1.6rem;
    font-style: normal;
@@ -56,8 +56,8 @@
 .testimonialStars {
    position: absolute;
    border-radius: 10rem;
-   border: 1px solid var(--Dark-15, #262626);
-   background: var(--Dark-08, #141414);
+   border: 1px solid var(--Dark-15);
+   background: var(--Dark-08);
    top: -1.8rem;
    left: 50%;
    transform: translateX(-50%);
@@ -78,12 +78,12 @@
    gap: 1rem;
    align-self: stretch;
    border-radius: 1rem;
-   border: 1px solid var(--Dark-15, #262626);
-   background: var(--Dark-10, #1a1a1a);
+   border: 1px solid var(--Dark-15);
+   background: var(--Dark-10);
 }
 .testimonialTextP {
    flex: 1 0 0;
-   color: var(--Absolute-White, #fff);
+   color: var(--Absolute-White);
    text-align: center;
    font-family: Inter;
    font-size: 1.4rem;

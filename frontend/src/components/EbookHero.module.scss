@@ -36,7 +36,7 @@
    align-self: stretch;
 }
 .ebookHeroIntroHeadingHeader {
-   color: var(--Absolute-White, #fff);
+   color: var(--Absolute-White);
    font-family: "Kumbh Sans";
    font-size: 2.4rem;
    font-style: normal;
@@ -46,7 +46,7 @@
    align-self: stretch;
 }
 .ebookHeroIntroHeadingP {
-   color: var(--Grey-60, #98989a);
+   color: var(--Grey-60);
    font-family: Inter;
    font-size: 1.4rem;
    font-style: normal;
@@ -57,8 +57,8 @@
 }
 .ebookHeroIntroHeadingCta {
    border-radius: 0.6rem;
-   border: 1px solid var(--Dark-15, #262626);
-   background: var(--Dark-10, #1a1a1a);
+   border: 1px solid var(--Dark-15);
+   background: var(--Dark-10);
    display: flex;
    padding: 1.8rem 2rem;
    justify-content: center;
@@ -67,7 +67,7 @@
    align-self: stretch;
 }
 .ebookHeroIntroHeadingCtaText {
-   color: var(--Grey-60, #98989a);
+   color: var(--Grey-60);
    font-family: Inter;
    font-size: 1.4rem;
    font-style: normal;
@@ -86,8 +86,8 @@
    align-items: center;
    gap: 3rem;
    border-radius: 0.8rem;
-   border: 1px solid var(--Dark-15, #262626);
-   background: var(--Dark-10, #1a1a1a);
+   border: 1px solid var(--Dark-15);
+   background: var(--Dark-10);
 }
 .ebookHeroIntroDetailText {
    display: flex;
@@ -96,7 +96,7 @@
    gap: 0.2rem;
 }
 .ebookHeroIntroDetailSubText {
-   color: var(--Grey-60, #98989a);
+   color: var(--Grey-60);
    font-family: Inter;
    font-size: 1.4rem;
    font-style: normal;
@@ -105,7 +105,7 @@
    letter-spacing: -0.042rem;
 }
 .ebookHeroIntroDetailHeadingText {
-   color: var(--Absolute-White, #fff);
+   color: var(--Absolute-White);
    font-family: Inter;
    font-size: 1.8rem;
    font-style: normal;
@@ -119,14 +119,14 @@
    align-items: flex-start;
 
    border-radius: 1.2rem;
-   background: var(--Dark-08, #141414);
+   background: var(--Dark-08);
 }
 .ebookHeroIntroInstalledUsersImg {
    width: 4rem;
    height: 4rem;
    margin-left: -15px;
    border-radius: 4.2rem;
-   border: 1px solid var(--Dark-40, #666);
+   border: 1px solid var(--Dark-40);
 }
 
 .ebookHero {
@@ -136,7 +136,7 @@
    align-items: flex-end;
    gap: 2.4rem;
    align-self: stretch;
-   border-top: 1px solid var(--Dark-15, #262626);
+   border-top: 1px solid var(--Dark-15);
 }
 .ebookHeroTitle {
    display: flex;
@@ -147,7 +147,7 @@
    align-self: stretch;
 }
 .ebookHeroTitleHeading {
-   color: var(--Absolute-White, #fff);
+   color: var(--Absolute-White);
    font-family: Inter;
    font-size: 1.8rem;
    font-style: normal;
@@ -157,7 +157,7 @@
    align-self: stretch;
 }
 .ebookHeroTitleP {
-   color: var(--Grey-60, #98989a);
+   color: var(--Grey-60);
    font-family: Inter;
    font-size: 1.4rem;
    font-style: normal;
@@ -187,12 +187,12 @@
    gap: 0.2rem;
    align-self: stretch;
    border-radius: 0.8rem;
-   border: 1px solid var(--Dark-15, #262626);
-   background: var(--Dark-10, #1a1a1a);
+   border: 1px solid var(--Dark-15);
+   background: var(--Dark-10);
 }
 .ebookHeroDetailSubText {
    align-self: stretch;
-   color: var(--Grey-60, #98989a);
+   color: var(--Grey-60);
    font-family: Inter;
    font-size: 1.4rem;
    font-style: normal;
@@ -202,7 +202,7 @@
 }
 .ebookHeroDetailText {
    align-self: stretch;
-   color: var(--Absolute-White, #fff);
+   color: var(--Absolute-White);
    font-family: Inter;
    font-size: 1.6rem;
    font-style: normal;
@@ -217,8 +217,8 @@
    gap: 2rem;
    align-self: stretch;
    border-radius: 0.8rem;
-   border: 1px solid var(--Dark-15, #262626);
-   background: var(--Dark-10, #1a1a1a);
+   border: 1px solid var(--Dark-15);
+   background: var(--Dark-10);
 }
 .ebookHeroDetailWithPerviewText {
    display: flex;
@@ -235,11 +235,11 @@
    align-items: center;
    gap: 0.4rem;
    border-radius: 0.8rem;
-   border: 1px solid var(--Dark-15, #262626);
-   background: var(--Dark-08, #141414);
+   border: 1px solid var(--Dark-15);
+   background: var(--Dark-08);
 }
 .ebookHeroDetailWithPerviewLinkText {
-   color: var(--Grey-60, #98989a);
+   color: var(--Grey-60);
    font-family: Inter;
    font-size: 1.4rem;
    font-style: normal;
@@ -253,9 +253,9 @@
 }
 
 .ourReadersSayCard {
-   border-top: 1px solid var(--Dark-15, #262626);
-   border-bottom: 1px solid var(--Dark-15, #262626);
-   background: var(--Dark-10, #1a1a1a);
+   border-top: 1px solid var(--Dark-15);
+   border-bottom: 1px solid var(--Dark-15);
+   background: var(--Dark-10);
    display: flex;
    padding: 4rem 1.6rem;
    flex-direction: column;
@@ -279,10 +279,10 @@
    align-items: flex-start;
    gap: 1rem;
    border-radius: 0.4rem;
-   background: var(--Dark-20, #333);
+   background: var(--Dark-20);
 }
 .ourReadersSayCardSubHeader {
-   color: var(--Absolute-White, #fff);
+   color: var(--Absolute-White);
    font-family: Inter;
    font-size: 1.4rem;
    font-style: normal;
@@ -291,7 +291,7 @@
    letter-spacing: -0.042rem;
 }
 .ourReadersSayCardHeader {
-   color: var(--Absolute-White, #fff);
+   color: var(--Absolute-White);
    font-family: "Kumbh Sans";
    font-size: 2.8rem;
    font-style: normal;
@@ -302,8 +302,8 @@
 }
 .ourReadersSayCardCta {
    border-radius: 0.8rem;
-   border: 1px solid var(--Dark-15, #262626);
-   background: var(--Dark-08, #141414);
+   border: 1px solid var(--Dark-15);
+   background: var(--Dark-08);
    display: flex;
    padding: 1.4rem 2rem;
    justify-content: center;
@@ -312,7 +312,7 @@
    align-self: stretch;
 }
 .ourReadersSayCardCtaText {
-   color: var(--Grey-60, #98989a);
+   color: var(--Grey-60);
    font-family: Inter;
    font-size: 1.4rem;
    font-style: normal;

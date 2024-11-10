@@ -4,7 +4,7 @@
    flex-direction: column;
    align-items: flex-start;
    align-self: stretch;
-   border-top: 1px solid var(--Dark-15, #262626);
+   border-top: 1px solid var(--Dark-15);
 }
 .overviewDetail {
    display: flex;
@@ -14,8 +14,8 @@
    gap: 1rem;
    border-radius: 1.2rem;
    align-self: stretch;
-   border-top: 1px solid var(--Dark-15, #262626);
-   border-bottom: 1px solid var(--Dark-15, #262626);
+   border-top: 1px solid var(--Dark-15);
+   border-bottom: 1px solid var(--Dark-15);
 }
 .overviewDetailTitle {
    display: flex;
@@ -36,7 +36,7 @@
 }
 
 .overviewDetailHeading {
-   color: var(--Absolute-White, #fff);
+   color: var(--Absolute-White);
    font-family: Inter;
    font-size: 1.6rem;
    font-style: normal;
@@ -46,7 +46,7 @@
    align-self: stretch;
 }
 .overviewDetailP {
-   color: var(--Grey-50, #7e7e81);
+   color: var(--Grey-50);
    font-family: Inter;
    font-size: 1.4rem;
    font-style: normal;
@@ -57,7 +57,7 @@
 }
 .overviewIconBox {
    border-radius: 10rem;
-   background: var(--Yellow-55, #ffd11a);
+   background: var(--Yellow-55);
    display: flex;
    padding: 1rem;
    align-items: flex-start;
@@ -69,7 +69,7 @@
    z-index: 9999;
 }
 .overviewP {
-   color: var(--Grey-60, #98989a);
+   color: var(--Grey-60);
    font-family: "Kumbh Sans";
    font-size: 1.4rem;
    font-style: normal;
