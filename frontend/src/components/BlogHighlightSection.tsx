@@ -90,11 +90,7 @@ const BlogHighlightSection: FC = () => {
                            <FaRegHeart className={styles.tweetExtraInfoIcon} color="grey" aria-label="heart-icon" />{" "}
                            <span className={styles.tweetExtraInfoIconNum}>
                               {article?.likes > 1000
-                                 ? `${
-                                      article.likes % 1000 === 0
-                                         ? article.likes / 1000
-                                         : (article.likes / 1000).toFixed(1)
-                                   }k`
+                                 ? `${(article.likes / 1000).toFixed(article.likes % 1000 === 0 ? 0 : 1)}k`
                                  : article?.likes}
                            </span>
                         </div>
@@ -103,11 +99,7 @@ const BlogHighlightSection: FC = () => {
                            <span className={styles.tweetExtraInfoIconNum}>
                               {" "}
                               {article?.comments > 1000
-                                 ? `${
-                                      article.comments % 1000 === 0
-                                         ? article.comments / 1000
-                                         : (article.comments / 1000).toFixed(1)
-                                   }k`
+                                 ? `${(article.comments / 1000).toFixed(article.comments % 1000 === 0 ? 0 : 1)}k`
                                  : article?.comments}
                            </span>
                         </div>
@@ -116,11 +108,7 @@ const BlogHighlightSection: FC = () => {
                            <span className={styles.tweetExtraInfoIconNum}>
                               {" "}
                               {article?.shares > 1000
-                                 ? `${
-                                      article.shares % 1000 === 0
-                                         ? article.shares / 1000
-                                         : (article.shares / 1000).toFixed(1)
-                                   }k`
+                                 ? `${(article.shares / 1000).toFixed(article.shares % 1000 === 0 ? 0 : 1)}k`
                                  : article?.shares}
                            </span>
                         </div>
