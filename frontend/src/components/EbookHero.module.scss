@@ -6,14 +6,29 @@
    align-items: flex-start;
    gap: 4rem;
    align-self: stretch;
+   @include respond(laptop) {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+
+      align-self: stretch;
+      padding: 0rem 8rem;
+      gap: 6rem;
+   }
 }
+
 .ebookHeroIntro {
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: flex-start;
-   gap: 2.4rem;
+   gap: 2rem;
    align-self: stretch;
+   @include respond(laptop) {
+      width: 31.3%;
+      gap: 4rem;
+      align-self: auto;
+   }
 }
 .ebookHeroIntroHeading {
    display: flex;
@@ -22,10 +37,17 @@
    align-items: flex-start;
    gap: 2.4rem;
    align-self: stretch;
+   @include respond(laptop) {
+      gap: 3rem;
+   }
 }
 .ebookHeroIntroIcon {
    width: 5rem;
    height: 5rem;
+   @include respond(laptop) {
+      width: 6rem;
+      height: 6rem;
+   }
 }
 .ebookHeroIntroHeadingText {
    display: flex;
@@ -33,6 +55,9 @@
    align-items: flex-start;
    gap: 0.4rem;
    align-self: stretch;
+   @include respond(laptop) {
+      gap: 1rem;
+   }
 }
 .ebookHeroIntroHeadingHeader {
    color: var(--Absolute-White);
@@ -43,6 +68,10 @@
    line-height: 150%;
    letter-spacing: -0.072rem;
    align-self: stretch;
+   @include respond(laptop) {
+      font-size: 3rem;
+      letter-spacing: -0.09rem;
+   }
 }
 .ebookHeroIntroHeadingP {
    color: var(--Grey-60);
@@ -53,6 +82,10 @@
    line-height: 150%;
    letter-spacing: -0.042rem;
    align-self: stretch;
+   @include respond(laptop) {
+      font-size: 1.6rem;
+      letter-spacing: -0.048rem;
+   }
 }
 .ebookHeroIntroHeadingCta {
    border-radius: 0.6rem;
@@ -79,7 +112,6 @@
    height: 2rem;
 }
 .ebookHeroIntroDetails {
-   align-self: center;
    display: flex;
    padding: 2rem 3rem;
    align-items: center;
@@ -87,6 +119,9 @@
    border-radius: 0.8rem;
    border: 1px solid var(--Dark-15);
    background: var(--Dark-10);
+   @include respond(laptop) {
+      padding: 2rem;
+   }
 }
 .ebookHeroIntroDetailText {
    display: flex;
@@ -111,6 +146,10 @@
    font-weight: 600;
    line-height: 150%;
    letter-spacing: -0.054rem;
+   @include respond(laptop) {
+      font-size: 2rem;
+      letter-spacing: -0.06rem;
+   }
 }
 .ebookHeroIntroInstalledUsers {
    display: flex;
@@ -136,7 +175,14 @@
    gap: 2.4rem;
    align-self: stretch;
    border-top: 1px solid var(--Dark-15);
+   @include respond(laptop) {
+      padding: 6rem 0rem 6rem 6rem;
+      flex: 1 0 0;
+      border-left: 1px solid var(--Dark-15, #262626);
+      border-top: none;
+   }
 }
+
 .ebookHeroTitle {
    display: flex;
    flex-direction: column;
@@ -144,6 +190,12 @@
    align-items: flex-start;
    gap: 1rem;
    align-self: stretch;
+   @include respond(laptop) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 3.6rem;
+   }
 }
 .ebookHeroTitleHeading {
    color: var(--Absolute-White);
@@ -154,6 +206,10 @@
    line-height: 150%;
    letter-spacing: -0.054rem;
    align-self: stretch;
+   @include respond(laptop) {
+      font-size: 2rem;
+      letter-spacing: -0.06rem;
+   }
 }
 .ebookHeroTitleP {
    color: var(--Grey-60);
@@ -164,11 +220,19 @@
    line-height: 150%;
    letter-spacing: -0.042rem;
    align-self: stretch;
+   @include respond(laptop) {
+      font-size: 1.6rem;
+      letter-spacing: -0.048rem;
+      flex: 1 0 0;
+   }
 }
 .ebookHeroImg {
    border-radius: 1rem;
 
    align-self: stretch;
+   @include respond(laptop) {
+      align-self: stretch;
+   }
 }
 .ebookHeroDetails {
    display: flex;
@@ -176,6 +240,11 @@
    align-items: flex-start;
    gap: 1.6rem;
    align-self: stretch;
+   @include respond(laptop) {
+      display: grid;
+      grid-template-columns: 31% 1fr;
+      gap: 2rem;
+   }
 }
 .ebookHeroDetail {
    display: flex;
@@ -188,6 +257,13 @@
    border-radius: 0.8rem;
    border: 1px solid var(--Dark-15);
    background: var(--Dark-10);
+   @include respond(laptop) {
+      gap: 0.4rem;
+      padding: 3rem;
+   }
+}
+.ebookHeroDetail:nth-of-type(3) {
+   grid-column: 1 / span 2;
 }
 .ebookHeroDetailSubText {
    align-self: stretch;
@@ -198,6 +274,10 @@
    font-weight: 400;
    line-height: 150%;
    letter-spacing: -0.042rem;
+   @include respond(laptop) {
+      font-size: 1.6rem;
+      letter-spacing: -0.048rem;
+   }
 }
 .ebookHeroDetailText {
    align-self: stretch;
@@ -208,6 +288,11 @@
    font-weight: 600;
    line-height: 150%;
    letter-spacing: -0.048rem;
+   @include respond(laptop) {
+      font-size: 1.8rem;
+
+      letter-spacing: -0.054rem;
+   }
 }
 .ebookHeroDetailWithPerview {
    display: flex;
@@ -218,6 +303,12 @@
    border-radius: 0.8rem;
    border: 1px solid var(--Dark-15);
    background: var(--Dark-10);
+   @include respond(laptop) {
+      align-self: auto;
+      gap: 2rem;
+      flex: 1 0 0;
+      padding: 2.4rem;
+   }
 }
 .ebookHeroDetailWithPerviewText {
    display: flex;
@@ -262,6 +353,17 @@
    align-items: flex-start;
    gap: 3rem;
    align-self: stretch;
+   @include respond(laptop) {
+      border-top: 1px solid var(--Dark-15, #262626);
+      border-bottom: 1px solid var(--Dark-15, #262626);
+      background: var(--Dark-10, #1a1a1a);
+
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 20rem;
+      padding: 8rem;
+   }
 }
 .ourReadersSayCardText {
    display: flex;
@@ -270,6 +372,10 @@
    align-items: flex-start;
    gap: 1rem;
    align-self: stretch;
+   @include respond(laptop) {
+      align-self: auto;
+      flex: 1 0 0;
+   }
 }
 .ourReadersSayCardSubHeaderBox {
    display: flex;
@@ -288,6 +394,10 @@
    font-weight: 500;
    line-height: 150%;
    letter-spacing: -0.042rem;
+   @include respond(laptop) {
+      font-size: 1.6rem;
+      letter-spacing: -0.048rem;
+   }
 }
 .ourReadersSayCardHeader {
    color: var(--Absolute-White);
@@ -298,6 +408,10 @@
    line-height: 130%;
    letter-spacing: -0.084rem;
    align-self: stretch;
+   @include respond(laptop) {
+      font-size: 4.4rem;
+      letter-spacing: -0.132rem;
+   }
 }
 .ourReadersSayCardCta {
    border-radius: 0.8rem;
@@ -309,6 +423,9 @@
    align-items: center;
    gap: 0.4rem;
    align-self: stretch;
+   @include respond(laptop) {
+      align-self: auto;
+   }
 }
 .ourReadersSayCardCtaText {
    color: var(--Grey-60);
@@ -318,8 +435,12 @@
    font-weight: 400;
    line-height: 150%;
    letter-spacing: -0.042rem;
+   @include respond(laptop) {
+   }
 }
 .ourReadersSayCardCtaIcon {
    width: 2rem;
    height: 2rem;
+   @include respond(laptop) {
+   }
 }

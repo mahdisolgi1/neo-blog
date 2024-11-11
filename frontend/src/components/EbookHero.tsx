@@ -28,6 +28,7 @@ const EbookHero: FC = () => {
                      {" "}
                      <span className={styles.ebookHeroIntroHeadingCtaText}>Download Ebooks Now</span>
                      <PiArrowUpRight
+                        color="gold"
                         className={styles.ebookHeroIntroHeadingCtaIcon}
                         aria-label="arrow-to-up-right.svg"
                      />
