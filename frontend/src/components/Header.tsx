@@ -5,7 +5,7 @@ import Resources from "./Resources";
 const Header: FC = () => {
    return (
       <>
-         <header>
+         <header className={styles.header}>
             <div className={styles.container}>
                <div className={styles.containerHeader}>
                   <h3 className={styles.containerSubHeading}>Your Journey to Tomorrow Begins Here</h3>
