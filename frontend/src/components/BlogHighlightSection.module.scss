@@ -9,6 +9,15 @@
    border-top: 1px solid var(--Dark-15);
    border-bottom: 1px solid var(--Dark-15);
    background: var(--Dark-10);
+
+   @include respond(laptop) {
+      align-items: center;
+      justify-content: flex-start;
+      flex-direction: row;
+
+      gap: 20rem;
+      padding: 8rem;
+   }
 }
 .BlogHighlightHeading {
    display: flex;
@@ -17,6 +26,9 @@
    align-items: flex-start;
    gap: 1rem;
    align-self: stretch;
+   @include respond(laptop) {
+      flex: 1 0 0;
+   }
 }
 .BlogHighlightTitleBox {
    display: flex;
@@ -33,8 +45,12 @@
    font-size: 1.4rem;
    font-style: normal;
    font-weight: 500;
-   line-height: 150%; 
+   line-height: 150%;
    letter-spacing: -0.042rem;
+   @include respond(laptop) {
+      font-size: 1.6rem;
+      letter-spacing: -0.048rem;
+   }
 }
 .BlogHighlightHeadingHeader {
    align-self: stretch;
@@ -43,8 +59,12 @@
    font-size: 2.8rem;
    font-style: normal;
    font-weight: 500;
-   line-height: 130%; 
+   line-height: 130%;
    letter-spacing: -0.084rem;
+   @include respond(laptop) {
+      font-size: 4.4rem;
+      letter-spacing: -0.132rem;
+   }
 }
 .BlogHighlightCta {
    display: flex;
@@ -56,19 +76,24 @@
    border-radius: 0.8rem;
    border: 1px solid var(--Dark-15);
    background: var(--Dark-08);
+   @include respond(laptop) {
+      align-self: auto;
+   }
 }
 .Topics {
    display: flex;
 
-   width: auto;
-
    overflow-x: auto;
-
    white-space: nowrap;
    padding: 2rem 1.6rem;
    align-items: center;
    gap: 1.4rem;
    border-bottom: 1px solid var(--Dark-15);
+   align-self: stretch;
+   @include respond(laptop) {
+      padding: 4rem 8rem;
+      align-items: flex-start;
+   }
 }
 .Topic {
    display: flex;
@@ -79,16 +104,26 @@
    flex: 1 0 0;
    border-radius: 0.7rem;
    border: 1px solid var(--Dark-15);
-   background: var(--Dark-10);
+
+   &.activelink {
+      background: var(--Dark-10);
+   }
+   @include respond(laptop) {
+      padding: 2.4rem 2rem;
+   }
 }
 .TopicName {
-   color: var(--Absolute-White);
+   color: var(--Grey-60);
    font-family: Inter;
    font-size: 1.4rem;
    font-style: normal;
-   font-weight: 500;
-   line-height: 150%; 
+   font-weight: 400;
+   line-height: 150%;
    letter-spacing: -0.042rem;
+   &.activelink {
+      color: var(--Absolute-White);
+      font-weight: 500;
+   }
 }
 
 .tweet {
@@ -99,24 +134,42 @@
    gap: 3rem;
    align-self: stretch;
    border-bottom: 1px solid var(--Dark-15);
+   @include respond(laptop) {
+      flex-direction: row;
+
+      gap: 4rem;
+
+      padding: 6rem 8rem;
+      gap: 4rem;
+   }
 }
 .tweetProfile {
    display: flex;
    justify-content: space-between;
    align-items: center;
    align-self: stretch;
+   @include respond(laptop) {
+   }
 }
 .tweetProfileDetails {
    display: flex;
 
    align-items: center;
    gap: 0.8rem;
+   @include respond(laptop) {
+      display: flex;
+      width: 30.5rem;
+
+      gap: 1rem;
+   }
 }
 .tweetProfileImg {
    width: 6rem;
    height: 6rem;
    flex-shrink: 0;
    border-radius: 4.2rem;
+   @include respond(laptop) {
+   }
 }
 .tweetProfileName {
    color: var(--Absolute-White);
@@ -124,7 +177,7 @@
    font-size: 1.8rem;
    font-style: normal;
    font-weight: 600;
-   line-height: 150%; 
+   line-height: 150%;
    letter-spacing: -0.054rem;
 }
 .tweetProfileTopic {
@@ -133,8 +186,12 @@
    font-size: 1.4rem;
    font-style: normal;
    font-weight: 400;
-   line-height: 150%; 
+   line-height: 150%;
    letter-spacing: -0.042rem;
+   @include respond(laptop) {
+      font-size: 1.6rem;
+      letter-spacing: -0.048rem;
+   }
 }
 .tweetProfileCta {
    display: flex;
@@ -144,6 +201,9 @@
    border-radius: 0.8rem;
    border: 1px solid var(--Dark-15);
    background: var(--Dark-08);
+   @include respond(laptop) {
+      display: none;
+   }
 }
 .tweetProfileIconText {
    color: var(--Grey-60);
@@ -151,7 +211,7 @@
    font-size: 1.4rem;
    font-style: normal;
    font-weight: 400;
-   line-height: 150%; 
+   line-height: 150%;
    letter-spacing: -0.042rem;
 }
 .tweetProfileIcon {
@@ -164,6 +224,11 @@
    align-items: flex-start;
    gap: 2rem;
    align-self: stretch;
+   @include respond(laptop) {
+      flex: 1 0 0;
+      gap: 2.4rem;
+      align-self: auto;
+   }
 }
 .tweetDate {
    color: var(--Grey-60);
@@ -171,9 +236,13 @@
    font-size: 1.6rem;
    font-style: normal;
    font-weight: 600;
-   line-height: 150%; 
+   line-height: 150%;
    letter-spacing: -0.048rem;
    align-self: stretch;
+   @include respond(laptop) {
+      font-size: 1.8rem;
+      letter-spacing: -0.054rem;
+   }
 }
 .tweetText {
    display: flex;
@@ -181,6 +250,9 @@
    align-items: flex-start;
    gap: 0.4rem;
    align-self: stretch;
+   @include respond(laptop) {
+      gap: 0.6rem;
+   }
 }
 .tweetTextHeader {
    color: var(--Absolute-White);
@@ -188,9 +260,13 @@
    font-size: 1.8rem;
    font-style: normal;
    font-weight: 600;
-   line-height: 150%; 
+   line-height: 150%;
    letter-spacing: -0.054rem;
    align-self: stretch;
+   @include respond(laptop) {
+      font-size: 2.2rem;
+      letter-spacing: -0.066rem;
+   }
 }
 .tweetTextP {
    color: var(--Grey-60);
@@ -198,9 +274,13 @@
    font-size: 1.4rem;
    font-style: normal;
    font-weight: 400;
-   line-height: 150%; 
+   line-height: 150%;
    letter-spacing: -0.042rem;
    align-self: stretch;
+   @include respond(laptop) {
+      font-size: 1.6rem;
+      letter-spacing: -0.048rem;
+   }
 }
 .tweetExtraInfos {
    display: flex;
@@ -227,7 +307,7 @@
    font-size: 1.4rem;
    font-style: normal;
    font-weight: 400;
-   line-height: 150%; 
+   line-height: 150%;
    letter-spacing: -0.042rem;
 }
 .BlogHighlightCtaText {
@@ -236,10 +316,30 @@
    font-size: 1.4rem;
    font-style: normal;
    font-weight: 400;
-   line-height: 150%; 
+   line-height: 150%;
    letter-spacing: -0.042rem;
 }
 .BlogHighlightCtaIcon {
    width: 2rem;
    height: 2rem;
+}
+.tweetDetailsBiggerScreen {
+   @include respond(laptop) {
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+      flex: 1 0 0;
+   }
+}
+.tweetProfileCtaBiggerScreen {
+   display: none;
+   @include respond(laptop) {
+      display: flex;
+      padding: 1.4rem 2rem;
+      align-items: center;
+      gap: 0.4rem;
+      border-radius: 0.8rem;
+      border: 1px solid var(--Dark-15);
+      background: var(--Dark-08);
+   }
 }

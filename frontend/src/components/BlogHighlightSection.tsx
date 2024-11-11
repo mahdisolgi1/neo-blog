@@ -29,7 +29,7 @@ const BlogHighlightSection: FC = () => {
          <div className={styles.BlogHighlightIntro}>
             <div className={styles.BlogHighlightHeading}>
                <div className={styles.BlogHighlightTitleBox}>
-                  <p className={styles.BlogHighlightP}>A Knowledge Treasure Trove</p>
+                  <span className={styles.BlogHighlightP}>A Knowledge Treasure Trove</span>
                </div>
                <h2 className={styles.BlogHighlightHeadingHeader}>Explore FutureTech's In-Depth Blog Posts</h2>
             </div>
@@ -79,39 +79,49 @@ const BlogHighlightSection: FC = () => {
                         <PiArrowUpRight className={styles.tweetProfileIcon} color="gold" aria-label="arrow-icon" />
                      </div>
                   </div>
-                  <div className={styles.tweetDetails}>
-                     <span className={styles.tweetDate}>{formatDate(article?.createdAt)}</span>
-                     <div className={styles.tweetText}>
-                        <h3 className={styles.tweetTextHeader}>{article?.title}</h3>
-                        <p className={styles.tweetTextP}>{article?.description}</p>
+                  <div className={styles.tweetDetailsBiggerScreen}>
+                     <div className={styles.tweetDetails}>
+                        <span className={styles.tweetDate}>{formatDate(article?.createdAt)}</span>
+                        <div className={styles.tweetText}>
+                           <h3 className={styles.tweetTextHeader}>{article?.title}</h3>
+                           <p className={styles.tweetTextP}>{article?.description}</p>
+                        </div>
+                        <div className={styles.tweetExtraInfos}>
+                           <div className={styles.tweetExtraInfo}>
+                              <FaRegHeart className={styles.tweetExtraInfoIcon} color="grey" aria-label="heart-icon" />{" "}
+                              <span className={styles.tweetExtraInfoIconNum}>
+                                 {article?.likes > 1000
+                                    ? `${(article.likes / 1000).toFixed(article.likes % 1000 === 0 ? 0 : 1)}k`
+                                    : article?.likes}
+                              </span>
+                           </div>
+                           <div className={styles.tweetExtraInfo}>
+                              <FaRegComment
+                                 className={styles.tweetExtraInfoIcon}
+                                 color="grey"
+                                 aria-label="comment-icon"
+                              />{" "}
+                              <span className={styles.tweetExtraInfoIconNum}>
+                                 {" "}
+                                 {article?.comments > 1000
+                                    ? `${(article.comments / 1000).toFixed(article.comments % 1000 === 0 ? 0 : 1)}k`
+                                    : article?.comments}
+                              </span>
+                           </div>
+                           <div className={styles.tweetExtraInfo}>
+                              <BsSend className={styles.tweetExtraInfoIcon} color="grey" aria-label="share-icon" />{" "}
+                              <span className={styles.tweetExtraInfoIconNum}>
+                                 {" "}
+                                 {article?.shares > 1000
+                                    ? `${(article.shares / 1000).toFixed(article.shares % 1000 === 0 ? 0 : 1)}k`
+                                    : article?.shares}
+                              </span>
+                           </div>
+                        </div>
                      </div>
-                     <div className={styles.tweetExtraInfos}>
-                        <div className={styles.tweetExtraInfo}>
-                           <FaRegHeart className={styles.tweetExtraInfoIcon} color="grey" aria-label="heart-icon" />{" "}
-                           <span className={styles.tweetExtraInfoIconNum}>
-                              {article?.likes > 1000
-                                 ? `${(article.likes / 1000).toFixed(article.likes % 1000 === 0 ? 0 : 1)}k`
-                                 : article?.likes}
-                           </span>
-                        </div>
-                        <div className={styles.tweetExtraInfo}>
-                           <FaRegComment className={styles.tweetExtraInfoIcon} color="grey" aria-label="comment-icon" />{" "}
-                           <span className={styles.tweetExtraInfoIconNum}>
-                              {" "}
-                              {article?.comments > 1000
-                                 ? `${(article.comments / 1000).toFixed(article.comments % 1000 === 0 ? 0 : 1)}k`
-                                 : article?.comments}
-                           </span>
-                        </div>
-                        <div className={styles.tweetExtraInfo}>
-                           <BsSend className={styles.tweetExtraInfoIcon} color="grey" aria-label="share-icon" />{" "}
-                           <span className={styles.tweetExtraInfoIconNum}>
-                              {" "}
-                              {article?.shares > 1000
-                                 ? `${(article.shares / 1000).toFixed(article.shares % 1000 === 0 ? 0 : 1)}k`
-                                 : article?.shares}
-                           </span>
-                        </div>
+                     <div className={styles.tweetProfileCtaBiggerScreen}>
+                        <span className={styles.tweetProfileIconText}>View Blog</span>{" "}
+                        <PiArrowUpRight className={styles.tweetProfileIcon} color="gold" aria-label="arrow-icon" />
                      </div>
                   </div>
                </div>
@@ -120,7 +130,7 @@ const BlogHighlightSection: FC = () => {
          <div className={styles.BlogHighlightIntro}>
             <div className={styles.BlogHighlightHeading}>
                <div className={styles.BlogHighlightTitleBox}>
-                  <p className={styles.BlogHighlightP}>Your Gateway to In-Depth Information</p>
+                  <span className={styles.BlogHighlightP}>Your Gateway to In-Depth Information</span>
                </div>
                <h2 className={styles.BlogHighlightHeadingHeader}>
                   Unlock Valuable Knowledge with FutureTech's Resources
