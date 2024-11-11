@@ -12,6 +12,10 @@
    gap: 2rem;
    align-self: stretch;
    border-left: 1px solid var(--Dark-15);
+   @include respond(laptop) {
+      width: 40%;
+      padding: 15rem 0rem 5rem 5rem;
+   }
 }
 .facesBehind {
    display: flex;
@@ -29,9 +33,15 @@
    width: 4rem;
    height: 4rem;
 
-   border-radius: 50%;
+   border-radius: 4.2rem;
    margin-left: -15px;
-   border: 2px solid #fff;
+   border: 1px solid var(--Dark-40);
+
+   @include respond(laptop) {
+      width: 5rem;
+      height: 5rem;
+      margin-left: -15px;
+   }
 }
 
 .titleHeading {
@@ -43,6 +53,10 @@
    font-weight: 500;
    line-height: 150%;
    letter-spacing: -0.054rem;
+   @include respond(laptop) {
+      font-size: 2rem;
+      letter-spacing: -0.06rem;
+   }
 }
 .titleP {
    color: var(--Grey-60);
@@ -53,6 +67,10 @@
    line-height: 150%;
    letter-spacing: -0.042rem;
    align-self: stretch;
+   @include respond(laptop) {
+      font-size: 1.6rem;
+      letter-spacing: -0.048rem;
+   }
 }
 .cta {
    display: flex;
@@ -64,6 +82,10 @@
    border-radius: 0.8rem;
    border: 1px solid var(--Dark-15);
    background: var(--Dark-08);
+   @include respond(laptop) {
+      justify-content: flex-start;
+      align-self: auto;
+   }
 }
 .ctaP {
    color: var(--Grey-60);
