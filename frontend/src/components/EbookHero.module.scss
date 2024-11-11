@@ -228,10 +228,12 @@
 }
 .ebookHeroImg {
    border-radius: 1rem;
+   height: 28vh;
 
    align-self: stretch;
    @include respond(laptop) {
       align-self: stretch;
+      height: 33.5vh;
    }
 }
 .ebookHeroDetails {
