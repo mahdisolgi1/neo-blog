@@ -107,6 +107,18 @@
 
    &.activelink {
       background: var(--Dark-10);
+
+      .TopicName {
+         font-family: Inter;
+         font-size: 1.4rem;
+         font-style: normal;
+
+         line-height: 150%;
+         letter-spacing: -0.042rem;
+
+         color: var(--Absolute-White);
+         font-weight: 500;
+      }
    }
    @include respond(laptop) {
       padding: 2.4rem 2rem;
@@ -120,10 +132,6 @@
    font-weight: 400;
    line-height: 150%;
    letter-spacing: -0.042rem;
-   &.activelink {
-      color: var(--Absolute-White);
-      font-weight: 500;
-   }
 }
 
 .tweet {
