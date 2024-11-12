@@ -131,33 +131,26 @@
    }
 }
 .futureTechnologyCardDetails {
-   display: flex;
+   display: grid;
+   grid-template-columns: 1fr;
+
    padding: 3rem 1.6rem;
-   flex-direction: column;
-   align-items: flex-start;
+   justify-content: center;
+   align-items: center;
    gap: 1rem;
    border-top: 1px solid var(--Dark-15);
    align-self: stretch;
+
    @include respond(laptop) {
       gap: 2rem;
-      flex: 1 0 0;
+      width: 70%;
+      grid-template-columns: repeat(2, 1fr);
       border-top: none;
       border-left: 1px solid var(--Dark-15, #262626);
       padding: 6rem 0rem 6rem 6rem;
    }
 }
-.futureTechnologyCardDetailsTwo {
-   display: flex;
-   flex-direction: column;
-   align-items: flex-start;
-   gap: 1rem;
-   align-self: stretch;
-   @include respond(laptop) {
-      display: flex;
-      flex-direction: row;
-      gap: 2rem;
-   }
-}
+
 .futureTechnologyCardDetail {
    border-radius: 1rem;
    border: 1px solid var(--Dark-15);

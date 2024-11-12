@@ -22,33 +22,30 @@ const FutureTechnologyCards: FC = () => {
                </div>
             </div>
             <div className={styles.futureTechnologyCardDetails}>
-               <div className={styles.futureTechnologyCardDetailsTwo}>
-                  <div className={styles.futureTechnologyCardDetail}>
-                     <h4 className={styles.futureTechnologyCardDetailHeading}>Quantity</h4>
-                     <p className={styles.futureTechnologyCardDetailP}>
-                        Over 1,000 articles on emerging tech trends and breakthroughs.
-                     </p>
-                  </div>
-                  <div className={styles.futureTechnologyCardDetail}>
-                     <h4 className={styles.futureTechnologyCardDetailHeading}>Variety</h4>
-                     <p className={styles.futureTechnologyCardDetailP}>
-                        Articles cover fields like AI, robotics, biotechnology, and more.
-                     </p>
-                  </div>
+               <div className={styles.futureTechnologyCardDetail}>
+                  <h4 className={styles.futureTechnologyCardDetailHeading}>Quantity</h4>
+                  <p className={styles.futureTechnologyCardDetailP}>
+                     Over 1,000 articles on emerging tech trends and breakthroughs.
+                  </p>
                </div>
-               <div className={styles.futureTechnologyCardDetailsTwo}>
-                  <div className={styles.futureTechnologyCardDetail}>
-                     <h4 className={styles.futureTechnologyCardDetailHeading}>Frequency</h4>
-                     <p className={styles.futureTechnologyCardDetailP}>
-                        Fresh content added daily to keep you up to date.
-                     </p>
-                  </div>
-                  <div className={styles.futureTechnologyCardDetail}>
-                     <h4 className={styles.futureTechnologyCardDetailHeading}>Authoritative</h4>
-                     <p className={styles.futureTechnologyCardDetailP}>
-                        Written by our team of tech experts and industry professionals.
-                     </p>
-                  </div>
+               <div className={styles.futureTechnologyCardDetail}>
+                  <h4 className={styles.futureTechnologyCardDetailHeading}>Variety</h4>
+                  <p className={styles.futureTechnologyCardDetailP}>
+                     Articles cover fields like AI, robotics, biotechnology, and more.
+                  </p>
+               </div>
+
+               <div className={styles.futureTechnologyCardDetail}>
+                  <h4 className={styles.futureTechnologyCardDetailHeading}>Frequency</h4>
+                  <p className={styles.futureTechnologyCardDetailP}>
+                     Fresh content added daily to keep you up to date.
+                  </p>
+               </div>
+               <div className={styles.futureTechnologyCardDetail}>
+                  <h4 className={styles.futureTechnologyCardDetailHeading}>Authoritative</h4>
+                  <p className={styles.futureTechnologyCardDetailP}>
+                     Written by our team of tech experts and industry professionals.
+                  </p>
                </div>
             </div>
          </section>
@@ -64,33 +61,30 @@ const FutureTechnologyCards: FC = () => {
                </div>
             </div>
             <div className={styles.futureTechnologyCardDetails}>
-               <div className={styles.futureTechnologyCardDetailsTwo}>
-                  <div className={styles.futureTechnologyCardDetail}>
-                     <h4 className={styles.futureTechnologyCardDetailHeading}>Depth</h4>
-                     <p className={styles.futureTechnologyCardDetailP}>
-                        500+ research articles for in-depth understanding.
-                     </p>
-                  </div>
-                  <div className={styles.futureTechnologyCardDetail}>
-                     <h4 className={styles.futureTechnologyCardDetailHeading}>Graphics</h4>
-                     <p className={styles.futureTechnologyCardDetailP}>
-                        Visual aids and infographics to enhance comprehension.
-                     </p>
-                  </div>
+               <div className={styles.futureTechnologyCardDetail}>
+                  <h4 className={styles.futureTechnologyCardDetailHeading}>Depth</h4>
+                  <p className={styles.futureTechnologyCardDetailP}>
+                     500+ research articles for in-depth understanding.
+                  </p>
                </div>
-               <div className={styles.futureTechnologyCardDetailsTwo}>
-                  <div className={styles.futureTechnologyCardDetail}>
-                     <h4 className={styles.futureTechnologyCardDetailHeading}>Trends</h4>
-                     <p className={styles.futureTechnologyCardDetailP}>
-                        Explore emerging trends in future technology research.
-                     </p>
-                  </div>
-                  <div className={styles.futureTechnologyCardDetail}>
-                     <h4 className={styles.futureTechnologyCardDetailHeading}>Contributors</h4>
-                     <p className={styles.futureTechnologyCardDetailP}>
-                        Contributions from tech researchers and academics.
-                     </p>
-                  </div>
+               <div className={styles.futureTechnologyCardDetail}>
+                  <h4 className={styles.futureTechnologyCardDetailHeading}>Graphics</h4>
+                  <p className={styles.futureTechnologyCardDetailP}>
+                     Visual aids and infographics to enhance comprehension.
+                  </p>
+               </div>
+
+               <div className={styles.futureTechnologyCardDetail}>
+                  <h4 className={styles.futureTechnologyCardDetailHeading}>Trends</h4>
+                  <p className={styles.futureTechnologyCardDetailP}>
+                     Explore emerging trends in future technology research.
+                  </p>
+               </div>
+               <div className={styles.futureTechnologyCardDetail}>
+                  <h4 className={styles.futureTechnologyCardDetailHeading}>Contributors</h4>
+                  <p className={styles.futureTechnologyCardDetailP}>
+                     Contributions from tech researchers and academics.
+                  </p>
                </div>
             </div>
          </section>
