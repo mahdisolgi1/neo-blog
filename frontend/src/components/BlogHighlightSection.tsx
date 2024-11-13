@@ -6,17 +6,21 @@ import { PiArrowUpRight } from "react-icons/pi";
 import { FaRegComment, FaRegHeart } from "react-icons/fa";
 import { BsSend } from "react-icons/bs";
 import { Article } from "@/services/generated/models";
+import { useGetCategories } from "@/services/generated/category/category";
 
 const BlogHighlightSection: FC = () => {
    const [selectedCategory, setSelectedCategory] = useState<string>("All");
    const [filteredArticles, setFilteredArticles] = useState<Article[]>([]);
 
-   const { data, isLoading, error } = useGetArticles();
+   const { data: categoriesData } = useGetCategories();
+   const categories = categoriesData?.data?.data;
+
+   const { data: articlesData, isLoading, error } = useGetArticles();
 
    const handleTopicClick = (categoryName: string) => {
       setSelectedCategory(categoryName);
 
-      const res = data?.data?.data;
+      const res = articlesData?.data?.data;
       if (!res) {
          return;
       }
@@ -38,12 +42,12 @@ const BlogHighlightSection: FC = () => {
    };
 
    useEffect(() => {
-      const res = data?.data?.data;
+      const res = articlesData?.data?.data;
       if (res) {
          const initialArticles = getRandomObjects(res, 3);
          setFilteredArticles(initialArticles);
       }
-   }, [data]);
+   }, [articlesData]);
 
    const baseUrl = import.meta.env.VITE_BACK_END_BASE_URL;
 
@@ -79,36 +83,15 @@ const BlogHighlightSection: FC = () => {
             >
                <p className={styles.TopicName}>All</p>
             </div>
-            <div
-               className={`${styles.Topic} ${selectedCategory === "Quantum Computing" ? styles.activelink : ""}`}
-               onClick={() => handleTopicClick("Quantum Computing")}
-            >
-               <p className={styles.TopicName}>Quantum Computing</p>
-            </div>
-            <div
-               className={`${styles.Topic} ${selectedCategory === "AI Ethics" ? styles.activelink : ""}`}
-               onClick={() => handleTopicClick("AI Ethics")}
-            >
-               <p className={styles.TopicName}>AI Ethics</p>
-            </div>
-            <div
-               className={`${styles.Topic} ${selectedCategory === "Space Exploration" ? styles.activelink : ""}`}
-               onClick={() => handleTopicClick("Space Exploration")}
-            >
-               <p className={styles.TopicName}>Space Exploration</p>
-            </div>
-            <div
-               className={`${styles.Topic} ${selectedCategory === "Biotechnology" ? styles.activelink : ""}`}
-               onClick={() => handleTopicClick("Biotechnology")}
-            >
-               <p className={styles.TopicName}>Biotechnology</p>
-            </div>
-            <div
-               className={`${styles.Topic} ${selectedCategory === "Renewable Energy" ? styles.activelink : ""}`}
-               onClick={() => handleTopicClick("Renewable Energy")}
-            >
-               <p className={styles.TopicName}>Renewable Energy</p>
-            </div>
+            {categories?.map((category) => (
+               <div
+                  key={category?.id}
+                  className={`${styles.Topic} ${selectedCategory === category?.name ? styles.activelink : ""}`}
+                  onClick={() => handleTopicClick(category?.name || "")}
+               >
+                  <p className={styles.TopicName}>{category?.name}</p>
+               </div>
+            ))}
          </div>
          <div className={styles.tweets}>
             {filteredArticles.map((article) => (
