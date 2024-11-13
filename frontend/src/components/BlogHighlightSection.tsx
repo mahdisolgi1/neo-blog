@@ -1,16 +1,49 @@
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import styles from "./BlogHighlightSection.module.scss";
 import { useGetArticles } from "@/services/generated/article/article";
 import getRandomObjects from "@/helpers/getRandomObjects";
 import { PiArrowUpRight } from "react-icons/pi";
 import { FaRegComment, FaRegHeart } from "react-icons/fa";
 import { BsSend } from "react-icons/bs";
+import { Article } from "@/services/generated/models";
 
 const BlogHighlightSection: FC = () => {
-   const { data } = useGetArticles();
-   const res = data?.data?.data;
+   const [selectedCategory, setSelectedCategory] = useState<string>("All");
+   const [filteredArticles, setFilteredArticles] = useState<Article[]>([]);
 
-   const threeRandomArticle = getRandomObjects(res, 3);
+   const { data, isLoading, error } = useGetArticles();
+
+   const handleTopicClick = (categoryName: string) => {
+      setSelectedCategory(categoryName);
+
+      const res = data?.data?.data;
+      if (!res) {
+         return;
+      }
+      if (isLoading) {
+         return;
+      }
+      if (error) {
+         console.error(error);
+         return;
+      }
+
+      if (categoryName === "All") {
+         const threeRandomArticles = getRandomObjects(res, 3);
+         setFilteredArticles(threeRandomArticles);
+      } else {
+         const filtered = res.filter((article) => article?.category?.name === categoryName);
+         setFilteredArticles(filtered);
+      }
+   };
+
+   useEffect(() => {
+      const res = data?.data?.data;
+      if (res) {
+         const initialArticles = getRandomObjects(res, 3);
+         setFilteredArticles(initialArticles);
+      }
+   }, [data]);
 
    const baseUrl = import.meta.env.VITE_BACK_END_BASE_URL;
 
@@ -40,27 +73,45 @@ const BlogHighlightSection: FC = () => {
             </div>
          </div>
          <div className={styles.Topics}>
-            <div className={styles.Topic}>
+            <div
+               className={`${styles.Topic} ${selectedCategory === "All" ? styles.activelink : ""}`}
+               onClick={() => handleTopicClick("All")}
+            >
                <p className={styles.TopicName}>All</p>
             </div>
-            <div className={styles.Topic}>
+            <div
+               className={`${styles.Topic} ${selectedCategory === "Quantum Computing" ? styles.activelink : ""}`}
+               onClick={() => handleTopicClick("Quantum Computing")}
+            >
                <p className={styles.TopicName}>Quantum Computing</p>
             </div>
-            <div className={styles.Topic}>
+            <div
+               className={`${styles.Topic} ${selectedCategory === "AI Ethics" ? styles.activelink : ""}`}
+               onClick={() => handleTopicClick("AI Ethics")}
+            >
                <p className={styles.TopicName}>AI Ethics</p>
             </div>
-            <div className={styles.Topic}>
+            <div
+               className={`${styles.Topic} ${selectedCategory === "Space Exploration" ? styles.activelink : ""}`}
+               onClick={() => handleTopicClick("Space Exploration")}
+            >
                <p className={styles.TopicName}>Space Exploration</p>
             </div>
-            <div className={styles.Topic}>
+            <div
+               className={`${styles.Topic} ${selectedCategory === "Biotechnology" ? styles.activelink : ""}`}
+               onClick={() => handleTopicClick("Biotechnology")}
+            >
                <p className={styles.TopicName}>Biotechnology</p>
             </div>
-            <div className={styles.Topic}>
+            <div
+               className={`${styles.Topic} ${selectedCategory === "Renewable Energy" ? styles.activelink : ""}`}
+               onClick={() => handleTopicClick("Renewable Energy")}
+            >
                <p className={styles.TopicName}>Renewable Energy</p>
             </div>
          </div>
          <div className={styles.tweets}>
-            {threeRandomArticle.map((article) => (
+            {filteredArticles.map((article) => (
                <div key={article.id} className={styles.tweet}>
                   <div className={styles.tweetProfile}>
                      <div className={styles.tweetProfileDetails}>
