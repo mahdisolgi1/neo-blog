@@ -11,6 +11,10 @@
       gap: 5rem;
       padding: 0rem 8rem;
    }
+   @include respond(desktop) {
+      padding: 0rem 16.2rem;
+      gap: 8rem;
+   }
 }
 .overviewDetail {
    display: flex;
@@ -26,6 +30,13 @@
       padding: 4rem 0rem;
       gap: 2rem;
       flex: 1 0 0;
+      &:not(:last-child) {
+         border-right: 1px solid #262626;
+      }
+   }
+   @include respond(desktop) {
+      padding: 5rem 0rem;
+      gap: 3rem;
    }
 }
 .overviewDetailTitle {
@@ -37,6 +48,9 @@
    @include respond(laptop) {
       gap: 2rem;
    }
+   @include respond(desktop) {
+      gap: 3rem;
+   }
 }
 .overviewDetailTitleIcon {
    width: 2.9996rem;
@@ -44,6 +58,10 @@
    @include respond(laptop) {
       width: 4rem;
       height: 4rem;
+   }
+   @include respond(desktop) {
+      width: 5rem;
+      height: 5rem;
    }
 }
 .overviewDetailHeadingBox {
@@ -63,6 +81,9 @@
    align-items: flex-start;
    gap: 0.2rem;
    flex: 1 0 0;
+   @include respond(desktop) {
+      gap: 0.4rem;
+   }
 }
 
 .overviewDetailHeading {
@@ -78,6 +99,10 @@
       font-size: 1.8rem;
       letter-spacing: -0.054rem;
    }
+   @include respond(desktop) {
+      font-size: 2rem;
+      letter-spacing: -0.06rem;
+   }
 }
 .overviewDetailP {
    color: var(--Grey-50);
@@ -92,22 +117,34 @@
       font-size: 1.6rem;
       letter-spacing: -0.048rem;
    }
+   @include respond(desktop) {
+      font-size: 1.8rem;
+      letter-spacing: -0.054rem;
+   }
 }
 .overviewIconBox {
    border-radius: 10rem;
    background: var(--Yellow-55);
    display: flex;
+   cursor: pointer;
    padding: 1rem;
    align-items: flex-start;
    gap: 1rem;
    @include respond(laptop) {
       padding: 1.2rem;
    }
+   @include respond(desktop) {
+      padding: 1.4rem;
+   }
 }
 .overviewIcon {
    width: 2rem;
    height: 2rem;
    z-index: 9999;
+   @include respond(desktop) {
+      width: 2.4rem;
+      height: 2.4rem;
+   }
 }
 .overviewP {
    color: var(--Grey-60);
@@ -121,5 +158,9 @@
    @include respond(laptop) {
       font-size: 1.6rem;
       letter-spacing: -0.048rem;
+   }
+   @include respond(desktop) {
+      font-size: 2rem;
+      letter-spacing: -0.06rem;
    }
 }
