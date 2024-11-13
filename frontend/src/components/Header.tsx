@@ -9,11 +9,13 @@ const Header: FC = () => {
             <div className={styles.container}>
                <div className={styles.containerHeader}>
                   <h3 className={styles.containerSubHeading}>Your Journey to Tomorrow Begins Here</h3>
-                  <h1 className={styles.containerHeading}>Explore the Frontiers of Artificial Intelligence</h1>
-                  <p className={styles.containerP}>
-                     Welcome to the epicenter of AI innovation. FutureTech AI News is your passport to a world where
-                     machines think, learn, and reshape the future.
-                  </p>
+                  <div className={styles.containerHeadingText}>
+                     <h1 className={styles.containerHeading}>Explore the Frontiers of Artificial Intelligence</h1>
+                     <p className={styles.containerP}>
+                        Welcome to the epicenter of AI innovation. FutureTech AI News is your passport to a world where
+                        machines think, learn, and reshape the future.
+                     </p>
+                  </div>
                </div>
                <div className={styles.containerDetails}>
                   <div className={styles.containerDetail}>
