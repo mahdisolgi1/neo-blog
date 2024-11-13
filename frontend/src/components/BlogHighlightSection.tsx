@@ -6,16 +6,26 @@ import { PiArrowUpRight } from "react-icons/pi";
 import { FaRegComment, FaRegHeart } from "react-icons/fa";
 import { BsSend } from "react-icons/bs";
 import { Article } from "@/services/generated/models";
+import { Category } from "@/services/generated/models";
+
 import { useGetCategories } from "@/services/generated/category/category";
 
 const BlogHighlightSection: FC = () => {
    const [selectedCategory, setSelectedCategory] = useState<string>("All");
    const [filteredArticles, setFilteredArticles] = useState<Article[]>([]);
+   const [categories, setCategories] = useState<Category[]>([]);
 
-   const { data: categoriesData } = useGetCategories();
-   const categories = categoriesData?.data?.data;
+   const { data: categoriesData, error: categoriesError } = useGetCategories();
 
-   const { data: articlesData, isLoading, error } = useGetArticles();
+   useEffect(() => {
+      if (categoriesError) {
+         console.error(categoriesError);
+      } else if (categoriesData?.data?.data) {
+         setCategories(categoriesData.data.data);
+      }
+   }, [categoriesData, categoriesError]);
+
+   const { data: articlesData, isLoading: articleIsLoading, error: articleError } = useGetArticles();
 
    const handleTopicClick = (categoryName: string) => {
       setSelectedCategory(categoryName);
@@ -24,11 +34,11 @@ const BlogHighlightSection: FC = () => {
       if (!res) {
          return;
       }
-      if (isLoading) {
+      if (articleIsLoading) {
          return;
       }
-      if (error) {
-         console.error(error);
+      if (articleError) {
+         console.error(articleError);
          return;
       }
 
