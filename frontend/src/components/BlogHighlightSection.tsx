@@ -126,7 +126,7 @@ const BlogHighlightSection: FC = () => {
                         </div>
                      </div>
                      <div className={styles.tweetProfileCta}>
-                        <span className={styles.tweetProfileIconText}>View Blog</span>{" "}
+                        <span className={styles.tweetProfileIconText}>View Blog</span>
                         <PiArrowUpRight className={styles.tweetProfileIcon} color="gold" aria-label="arrow-icon" />
                      </div>
                   </div>
@@ -139,7 +139,7 @@ const BlogHighlightSection: FC = () => {
                         </div>
                         <div className={styles.tweetExtraInfos}>
                            <div className={styles.tweetExtraInfo}>
-                              <FaRegHeart className={styles.tweetExtraInfoIcon} color="grey" aria-label="heart-icon" />{" "}
+                              <FaRegHeart className={styles.tweetExtraInfoIcon} color="grey" aria-label="heart-icon" />
                               <span className={styles.tweetExtraInfoIconNum}>
                                  {article?.likes > 1000
                                     ? `${(article.likes / 1000).toFixed(article.likes % 1000 === 0 ? 0 : 1)}k`
@@ -151,18 +151,16 @@ const BlogHighlightSection: FC = () => {
                                  className={styles.tweetExtraInfoIcon}
                                  color="grey"
                                  aria-label="comment-icon"
-                              />{" "}
+                              />
                               <span className={styles.tweetExtraInfoIconNum}>
-                                 {" "}
                                  {article?.comments > 1000
                                     ? `${(article.comments / 1000).toFixed(article.comments % 1000 === 0 ? 0 : 1)}k`
                                     : article?.comments}
                               </span>
                            </div>
                            <div className={styles.tweetExtraInfo}>
-                              <BsSend className={styles.tweetExtraInfoIcon} color="grey" aria-label="share-icon" />{" "}
+                              <BsSend className={styles.tweetExtraInfoIcon} color="grey" aria-label="share-icon" />
                               <span className={styles.tweetExtraInfoIconNum}>
-                                 {" "}
                                  {article?.shares > 1000
                                     ? `${(article.shares / 1000).toFixed(article.shares % 1000 === 0 ? 0 : 1)}k`
                                     : article?.shares}
@@ -171,13 +169,13 @@ const BlogHighlightSection: FC = () => {
                         </div>
                      </div>
                      <div className={styles.tweetProfileCtaBiggerScreen}>
-                        <span className={styles.tweetProfileIconText}>View Blog</span>{" "}
+                        <span className={styles.tweetProfileIconText}>View Blog</span>
                         <PiArrowUpRight className={styles.tweetProfileIcon} color="gold" aria-label="arrow-icon" />
                      </div>
                   </div>
                </div>
             ))}
-         </div>{" "}
+         </div>
          <div className={styles.BlogHighlightIntro}>
             <div className={styles.BlogHighlightHeading}>
                <div className={styles.BlogHighlightTitleBox}>
@@ -188,7 +186,7 @@ const BlogHighlightSection: FC = () => {
                </h2>
             </div>
             <div className={styles.BlogHighlightCta}>
-               <span className={styles.BlogHighlightCtaText}>View All Resources</span>{" "}
+               <span className={styles.BlogHighlightCtaText}>View All Resources</span>
                <PiArrowUpRight className={styles.BlogHighlightCtaIcon} color="gold" aria-label="arrow-icon" />
             </div>
          </div>
