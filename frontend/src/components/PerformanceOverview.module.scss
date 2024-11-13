@@ -5,6 +5,12 @@
    align-items: flex-start;
    align-self: stretch;
    border-top: 1px solid var(--Dark-15);
+
+   @include respond(laptop) {
+      flex-direction: row;
+      gap: 5rem;
+      padding: 0rem 8rem;
+   }
 }
 .overviewDetail {
    display: flex;
@@ -16,6 +22,11 @@
    align-self: stretch;
    border-top: 1px solid var(--Dark-15);
    border-bottom: 1px solid var(--Dark-15);
+   @include respond(laptop) {
+      padding: 4rem 0rem;
+      gap: 2rem;
+      flex: 1 0 0;
+   }
 }
 .overviewDetailTitle {
    display: flex;
@@ -23,16 +34,35 @@
    align-items: flex-start;
    gap: 1.6rem;
    align-self: stretch;
+   @include respond(laptop) {
+      gap: 2rem;
+   }
 }
 .overviewDetailTitleIcon {
    width: 2.9996rem;
    height: 3rem;
+   @include respond(laptop) {
+      width: 4rem;
+      height: 4rem;
+   }
 }
 .overviewDetailHeadingBox {
    display: flex;
    align-items: center;
-   justify-content: space-between;
+   gap: 1.4rem;
+   justify-content: center;
    align-self: stretch;
+   @include respond(laptop) {
+      align-self: auto;
+      gap: 23.5rem;
+   }
+}
+.overviewDetailHeadingTextBox {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: 0.2rem;
+   flex: 1 0 0;
 }
 
 .overviewDetailHeading {
@@ -44,6 +74,10 @@
    line-height: 150%;
    letter-spacing: -0.048rem;
    align-self: stretch;
+   @include respond(laptop) {
+      font-size: 1.8rem;
+      letter-spacing: -0.054rem;
+   }
 }
 .overviewDetailP {
    color: var(--Grey-50);
@@ -54,6 +88,10 @@
    line-height: 150%;
    letter-spacing: -0.042rem;
    align-self: stretch;
+   @include respond(laptop) {
+      font-size: 1.6rem;
+      letter-spacing: -0.048rem;
+   }
 }
 .overviewIconBox {
    border-radius: 10rem;
@@ -62,6 +100,9 @@
    padding: 1rem;
    align-items: flex-start;
    gap: 1rem;
+   @include respond(laptop) {
+      padding: 1.2rem;
+   }
 }
 .overviewIcon {
    width: 2rem;
@@ -77,4 +118,8 @@
    line-height: 150%;
    letter-spacing: -0.042rem;
    align-self: stretch;
+   @include respond(laptop) {
+      font-size: 1.6rem;
+      letter-spacing: -0.048rem;
+   }
 }

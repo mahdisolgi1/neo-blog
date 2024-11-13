@@ -34,6 +34,7 @@ const FutureTechnologyCards: FC = () => {
                      Articles cover fields like AI, robotics, biotechnology, and more.
                   </p>
                </div>
+
                <div className={styles.futureTechnologyCardDetail}>
                   <h4 className={styles.futureTechnologyCardDetailHeading}>Frequency</h4>
                   <p className={styles.futureTechnologyCardDetailP}>
@@ -72,6 +73,7 @@ const FutureTechnologyCards: FC = () => {
                      Visual aids and infographics to enhance comprehension.
                   </p>
                </div>
+
                <div className={styles.futureTechnologyCardDetail}>
                   <h4 className={styles.futureTechnologyCardDetailHeading}>Trends</h4>
                   <p className={styles.futureTechnologyCardDetailP}>

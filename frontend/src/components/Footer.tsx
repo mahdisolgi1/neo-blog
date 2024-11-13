@@ -9,154 +9,152 @@ const Footer: FC = () => {
    return (
       <footer className={styles.footer}>
          <div className={styles.footerLinks}>
-            <div className={styles.footerLinksTwoColumn}>
-               <div className={styles.footerLinksColumn}>
-                  <h5 className={styles.footerLinksHeader}>Home</h5>
-                  <ul className={styles.footerLinksGroup}>
-                     <li className={styles.footerLinkItem}>
-                        <Link className={styles.footerLinkItemLink} to="">
-                           Features
-                        </Link>
-                     </li>
-                     <li className={styles.footerLinkItem}>
-                        <Link className={styles.footerLinkItemLink} to="">
-                           Blogs
-                        </Link>
-                     </li>
-                     <li className={styles.footerLinkItem}>
-                        <Link className={styles.footerLinkItemLink} to="">
-                           Resources
-                        </Link>
-                        <div className={styles.footerLinkItemLinkNewBox}>
-                           <span className={styles.footerLinkItemNew}>New</span>
-                        </div>
-                     </li>
-                     <li className={styles.footerLinkItem}>
-                        <Link className={styles.footerLinkItemLink} to="">
-                           Testimonials
-                        </Link>
-                     </li>
-                     <li className={styles.footerLinkItem}>
-                        <Link className={styles.footerLinkItemLink} to="">
-                           Contact Us
-                        </Link>
-                     </li>
-                     <li className={styles.footerLinkItem}>
-                        <Link className={styles.footerLinkItemLink} to="">
-                           Newsletter
-                        </Link>
-                     </li>
-                  </ul>
-               </div>
-               <div className={styles.footerLinksColumn}>
-                  <h5 className={styles.footerLinksHeader}>News</h5>
-                  <ul className={styles.footerLinksGroup}>
-                     <li className={styles.footerLinkItem}>
-                        <Link className={styles.footerLinkItemLink} to="">
-                           Trending Stories
-                        </Link>
-                     </li>
-                     <li className={styles.footerLinkItem}>
-                        <Link className={styles.footerLinkItemLink} to="">
-                           Featured Videos
-                        </Link>
-                     </li>
-                     <li className={styles.footerLinkItem}>
-                        <Link className={styles.footerLinkItemLink} to="">
-                           Technology
-                        </Link>
-                     </li>
-                     <li className={styles.footerLinkItem}>
-                        <Link className={styles.footerLinkItemLink} to="">
-                           Health
-                        </Link>
-                     </li>
-                     <li className={styles.footerLinkItem}>
-                        <Link className={styles.footerLinkItemLink} to="">
-                           Politics
-                        </Link>
-                     </li>
-                     <li className={styles.footerLinkItem}>
-                        <Link className={styles.footerLinkItemLink} to="">
-                           Environment
-                        </Link>
-                     </li>
-                  </ul>
-               </div>
+            <div className={styles.footerLinksColumn}>
+               <h5 className={styles.footerLinksHeader}>Home</h5>
+               <ul className={styles.footerLinksGroup}>
+                  <li className={styles.footerLinkItem}>
+                     <Link className={styles.footerLinkItemLink} to="">
+                        Features
+                     </Link>
+                  </li>
+                  <li className={styles.footerLinkItem}>
+                     <Link className={styles.footerLinkItemLink} to="">
+                        Blogs
+                     </Link>
+                  </li>
+                  <li className={styles.footerLinkItem}>
+                     <Link className={styles.footerLinkItemLink} to="">
+                        Resources
+                     </Link>
+                     <div className={styles.footerLinkItemLinkNewBox}>
+                        <span className={styles.footerLinkItemNew}>New</span>
+                     </div>
+                  </li>
+                  <li className={styles.footerLinkItem}>
+                     <Link className={styles.footerLinkItemLink} to="">
+                        Testimonials
+                     </Link>
+                  </li>
+                  <li className={styles.footerLinkItem}>
+                     <Link className={styles.footerLinkItemLink} to="">
+                        Contact Us
+                     </Link>
+                  </li>
+                  <li className={styles.footerLinkItem}>
+                     <Link className={styles.footerLinkItemLink} to="">
+                        Newsletter
+                     </Link>
+                  </li>
+               </ul>
             </div>
-            <div className={styles.footerLinksTwoColumn}>
-               <div className={styles.footerLinksColumn}>
-                  <h5 className={styles.footerLinksHeader}>Podcasts</h5>
-                  <ul className={styles.footerLinksGroup}>
-                     <li className={styles.footerLinkItem}>
-                        <Link className={styles.footerLinkItemLink} to="">
-                           AI Revolution
-                        </Link>
-                     </li>
-                     <li className={styles.footerLinkItem}>
-                        <Link className={styles.footerLinkItemLink} to="">
-                           AI Revolution
-                        </Link>
-                        <div className={styles.footerLinkItemLinkNewBox}>
-                           <span className={styles.footerLinkItemNew}>New</span>
-                        </div>
-                     </li>
-                     <li className={styles.footerLinkItem}>
-                        <Link className={styles.footerLinkItemLink} to="">
-                           TechTalk AI
-                        </Link>
-                     </li>
-                     <li className={styles.footerLinkItem}>
-                        <Link className={styles.footerLinkItemLink} to="">
-                           TechTalk AI
-                        </Link>
-                     </li>
-                     <li className={styles.footerLinkItem}>
-                        <Link className={styles.footerLinkItemLink} to="">
-                           AI Conversations
-                        </Link>
-                     </li>
-                  </ul>
-               </div>
-               <div className={styles.footerLinksColumn}>
-                  <h5 className={styles.footerLinksHeader}>Blogs</h5>
-                  <ul className={styles.footerLinksGroup}>
-                     <li className={styles.footerLinkItem}>
-                        <Link className={styles.footerLinkItemLink} to="">
-                           Quantum Computing
-                        </Link>
-                     </li>
-                     <li className={styles.footerLinkItem}>
-                        <Link className={styles.footerLinkItemLink} to="">
-                           AI Ethics
-                        </Link>
-                     </li>
-                     <li className={styles.footerLinkItem}>
-                        <Link className={styles.footerLinkItemLink} to="">
-                           Space Exploration
-                        </Link>
-                     </li>
-                     <li className={styles.footerLinkItem}>
-                        <Link className={styles.footerLinkItemLink} to="">
-                           Biotechnology
-                        </Link>{" "}
-                        <div className={styles.footerLinkItemLinkNewBox}>
-                           <span className={styles.footerLinkItemNew}>New</span>
-                        </div>
-                     </li>
-                     <li className={styles.footerLinkItem}>
-                        <Link className={styles.footerLinkItemLink} to="">
-                           Renewable Energy
-                        </Link>
-                     </li>
-                     <li className={styles.footerLinkItem}>
-                        <Link className={styles.footerLinkItemLink} to="">
-                           Biohacking
-                        </Link>
-                     </li>
-                  </ul>
-               </div>
+            <div className={styles.footerLinksColumn}>
+               <h5 className={styles.footerLinksHeader}>News</h5>
+               <ul className={styles.footerLinksGroup}>
+                  <li className={styles.footerLinkItem}>
+                     <Link className={styles.footerLinkItemLink} to="">
+                        Trending Stories
+                     </Link>
+                  </li>
+                  <li className={styles.footerLinkItem}>
+                     <Link className={styles.footerLinkItemLink} to="">
+                        Featured Videos
+                     </Link>
+                  </li>
+                  <li className={styles.footerLinkItem}>
+                     <Link className={styles.footerLinkItemLink} to="">
+                        Technology
+                     </Link>
+                  </li>
+                  <li className={styles.footerLinkItem}>
+                     <Link className={styles.footerLinkItemLink} to="">
+                        Health
+                     </Link>
+                  </li>
+                  <li className={styles.footerLinkItem}>
+                     <Link className={styles.footerLinkItemLink} to="">
+                        Politics
+                     </Link>
+                  </li>
+                  <li className={styles.footerLinkItem}>
+                     <Link className={styles.footerLinkItemLink} to="">
+                        Environment
+                     </Link>
+                  </li>
+               </ul>
             </div>
+
+            <div className={styles.footerLinksColumn}>
+               <h5 className={styles.footerLinksHeader}>Podcasts</h5>
+               <ul className={styles.footerLinksGroup}>
+                  <li className={styles.footerLinkItem}>
+                     <Link className={styles.footerLinkItemLink} to="">
+                        AI Revolution
+                     </Link>
+                  </li>
+                  <li className={styles.footerLinkItem}>
+                     <Link className={styles.footerLinkItemLink} to="">
+                        AI Revolution
+                     </Link>
+                     <div className={styles.footerLinkItemLinkNewBox}>
+                        <span className={styles.footerLinkItemNew}>New</span>
+                     </div>
+                  </li>
+                  <li className={styles.footerLinkItem}>
+                     <Link className={styles.footerLinkItemLink} to="">
+                        TechTalk AI
+                     </Link>
+                  </li>
+                  <li className={styles.footerLinkItem}>
+                     <Link className={styles.footerLinkItemLink} to="">
+                        TechTalk AI
+                     </Link>
+                  </li>
+                  <li className={styles.footerLinkItem}>
+                     <Link className={styles.footerLinkItemLink} to="">
+                        AI Conversations
+                     </Link>
+                  </li>
+               </ul>
+            </div>
+            <div className={styles.footerLinksColumn}>
+               <h5 className={styles.footerLinksHeader}>Blogs</h5>
+               <ul className={styles.footerLinksGroup}>
+                  <li className={styles.footerLinkItem}>
+                     <Link className={styles.footerLinkItemLink} to="">
+                        Quantum Computing
+                     </Link>
+                  </li>
+                  <li className={styles.footerLinkItem}>
+                     <Link className={styles.footerLinkItemLink} to="">
+                        AI Ethics
+                     </Link>
+                  </li>
+                  <li className={styles.footerLinkItem}>
+                     <Link className={styles.footerLinkItemLink} to="">
+                        Space Exploration
+                     </Link>
+                  </li>
+                  <li className={styles.footerLinkItem}>
+                     <Link className={styles.footerLinkItemLink} to="">
+                        Biotechnology
+                     </Link>{" "}
+                     <div className={styles.footerLinkItemLinkNewBox}>
+                        <span className={styles.footerLinkItemNew}>New</span>
+                     </div>
+                  </li>
+                  <li className={styles.footerLinkItem}>
+                     <Link className={styles.footerLinkItemLink} to="">
+                        Renewable Energy
+                     </Link>
+                  </li>
+                  <li className={styles.footerLinkItem}>
+                     <Link className={styles.footerLinkItemLink} to="">
+                        Biohacking
+                     </Link>
+                  </li>
+               </ul>
+            </div>
+
             <div className={styles.resources}>
                <h5 className={styles.resourcesHeader}>Resources</h5>
                <div className={styles.resourcesConatiner}>

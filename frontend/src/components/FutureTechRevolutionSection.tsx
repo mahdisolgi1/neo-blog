@@ -7,16 +7,36 @@ const FutureTechRevolutionSection: FC = () => {
       <section className={styles.futureTechRevolutionSection}>
          <div className={styles.futureTechRevolutionCard}>
             <div className={styles.futureTechRevolutionCardHeader}>
-               <img src="/futureTechRevolutionCard-icon.svg" alt="futureTechRevolutionCard-Icon" />
+               <img
+                  className={styles.futureTechRevolutionCardHeaderIcon}
+                  src="/futureTechRevolutionCard-icon.svg"
+                  alt="futureTechRevolutionCard-Icon"
+               />
                <div className={styles.futureTechRevolutionCardHeaderTextBox}>
                   <p className={styles.futureTechRevolutionCardHeaderText}>Learn, Connect, and Innovate</p>
                </div>
             </div>
             <div className={styles.futureTechRevolutionCardTextBox}>
-               <h3 className={styles.futureTechRevolutionCardHeading}>Be Part of the Future Tech Revolution</h3>
-               <p className={styles.futureTechRevolutionCardP}>
-                  Immerse yourself in the world of future technology. Explore our comprehensive resources.
-               </p>
+               <img
+                  className={styles.futureTechRevolutionCardHeaderIconBiggerScreen}
+                  src="/futureTechRevolutionCard-icon.svg"
+                  alt="futureTechRevolutionCard-Icon"
+               />
+               <div className={styles.futureTechRevolutionCardHeaderTextBoxDetail}>
+                  {" "}
+                  <div className={styles.futureTechRevolutionCardHeaderTextBoxTitleBiggerScreen}>
+                     <div className={styles.futureTechRevolutionCardHeaderTextBoxBiggerScreen}>
+                        <p className={styles.futureTechRevolutionCardHeaderText}>Learn, Connect, and Innovate</p>
+                     </div>
+                     <h3 className={styles.futureTechRevolutionCardHeadingBiggerScreen}>
+                        Be Part of the Future Tech Revolution
+                     </h3>
+                  </div>
+                  <h3 className={styles.futureTechRevolutionCardHeading}>Be Part of the Future Tech Revolution</h3>
+                  <p className={styles.futureTechRevolutionCardP}>
+                     Immerse yourself in the world of future technology. Explore our comprehensive resources.
+                  </p>
+               </div>
             </div>
          </div>
          <div className={styles.futureTechRevolutionCardDetails}>

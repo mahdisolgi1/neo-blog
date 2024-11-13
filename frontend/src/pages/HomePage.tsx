@@ -1,6 +1,5 @@
 import { FC } from "react";
 
-import Resources from "@/components/Resources";
 import PerformanceOverview from "@/components/PerformanceOverview";
 import FutureTechnologyCards from "@/components/FutureTechnologyCards";
 import Footer from "@/components/Footer";
@@ -14,7 +13,6 @@ const HomePage: FC = () => {
    return (
       <>
          <Header />
-         <Resources />
          <PerformanceOverview />
          <FutureTechnologyCards />
          <BlogHighlightSection />

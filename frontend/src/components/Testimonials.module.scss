@@ -5,6 +5,11 @@
    align-items: flex-start;
    align-self: stretch;
    border-bottom: 1px solid var(--Dark-15);
+   @include respond(laptop) {
+      padding: 0rem 8rem;
+      flex-direction: row;
+      gap: 4rem;
+   }
 }
 .testimonial {
    display: flex;
@@ -13,6 +18,11 @@
    align-items: center;
    gap: 6rem;
    align-self: stretch;
+   @include respond(laptop) {
+      padding: 6rem 0rem;
+
+      flex: 1 0 0;
+   }
 }
 .testimonialProfile {
    display: flex;
@@ -49,7 +59,7 @@
    position: relative;
    flex-direction: column;
    align-items: center;
-   gap: -1.7rem;
+
    margin-top: -1.7rem;
    align-self: stretch;
 }
@@ -70,6 +80,8 @@
 .testimonialStarImg {
    width: 2rem;
    height: 2rem;
+   @include respond(laptop) {
+   }
 }
 .testimonialTextBox {
    display: flex;
@@ -80,6 +92,10 @@
    border-radius: 1rem;
    border: 1px solid var(--Dark-15);
    background: var(--Dark-10);
+   @include respond(laptop) {
+      padding: 4rem 2.4rem 2.4rem 2.4rem;
+      border-radius: 1.2rem;
+   }
 }
 .testimonialTextP {
    flex: 1 0 0;
@@ -90,4 +106,7 @@
    font-style: normal;
    font-weight: 400;
    line-height: 150%;
+   @include respond(laptop) {
+      font-size: 1.6rem;
+   }
 }
