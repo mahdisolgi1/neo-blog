@@ -14,7 +14,6 @@ const FutureTechnologyCards: FC = () => {
             <div className={styles.futureTechnologyCard}>
                <img className={styles.futureTechnologyCardIcon} src="/FutureTechnologyCards1-icon.svg" alt="Icon4" />
                <div className={styles.futureTechnologyCardText}>
-                  {" "}
                   <h3 className={styles.futureTechnologyCardHeading}>Future Technology Blog</h3>
                   <p className={styles.futureTechnologyCardP}>
                      Stay informed with our blog section dedicated to future technology.
@@ -53,7 +52,6 @@ const FutureTechnologyCards: FC = () => {
             <div className={styles.futureTechnologyCard}>
                <img className={styles.futureTechnologyCardIcon} src="/FutureTechnologyCards2-icon.svg" alt="Icon5" />
                <div className={styles.futureTechnologyCardText}>
-                  {" "}
                   <h3 className={styles.futureTechnologyCardHeading}>Research Insights Blogs</h3>
                   <p className={styles.futureTechnologyCardP}>
                      Dive deep into future technology concepts with our research section.

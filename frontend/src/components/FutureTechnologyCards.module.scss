@@ -12,6 +12,10 @@
    @include respond(laptop) {
       padding: 8rem;
    }
+   @include respond(desktop) {
+      padding: 12rem 16.2rem;
+      gap: 1.6rem;
+   }
 }
 .CardsIntroPBox {
    border-radius: 0.4rem;
@@ -21,6 +25,9 @@
    justify-content: center;
    align-items: flex-start;
    gap: 1rem;
+   @include respond(desktop) {
+      padding: 0.6rem 1rem;
+   }
 }
 .CardsIntroP {
    color: var(--Absolute-White);
@@ -33,6 +40,10 @@
    @include respond(laptop) {
       font-size: 1.6rem;
       letter-spacing: -0.048rem;
+   }
+   @include respond(desktop) {
+      font-size: 2rem;
+      letter-spacing: -0.06rem;
    }
 }
 .CardsIntroHeading {
@@ -48,6 +59,10 @@
       font-size: 4.4rem;
       letter-spacing: -0.132rem;
    }
+   @include respond(desktop) {
+      font-size: 5.8rem;
+      letter-spacing: -0.174rem;
+   }
 }
 .futureTechnologyCards {
    display: flex;
@@ -61,9 +76,12 @@
       flex-direction: row;
       justify-content: flex-start;
       align-items: center;
-
-      gap: 6rem;
       padding: 0rem 8rem;
+      gap: 6rem;
+   }
+   @include respond(desktop) {
+      padding: 0rem 16.2rem;
+      gap: 8rem;
    }
 }
 .futureTechnologyCards:nth-of-type(2) {
@@ -83,6 +101,9 @@
       gap: 4rem;
       align-self: auto;
    }
+   @include respond(desktop) {
+      gap: 5rem;
+   }
 }
 .futureTechnologyCardIcon {
    width: 5rem;
@@ -90,6 +111,10 @@
    @include respond(laptop) {
       width: 6rem;
       height: 6rem;
+   }
+   @include respond(desktop) {
+      width: 8rem;
+      height: 8rem;
    }
 }
 .futureTechnologyCardText {
@@ -100,6 +125,9 @@
    align-self: stretch;
    @include respond(laptop) {
       gap: 1rem;
+   }
+   @include respond(desktop) {
+      gap: 1.6rem;
    }
 }
 .futureTechnologyCardHeading {
@@ -115,6 +143,10 @@
       font-size: 3rem;
       letter-spacing: -0.09rem;
    }
+   @include respond(desktop) {
+      font-size: 4rem;
+      letter-spacing: -0.12rem;
+   }
 }
 .futureTechnologyCardP {
    color: var(--Grey-60);
@@ -129,6 +161,10 @@
       font-size: 1.6rem;
       letter-spacing: -0.048rem;
    }
+   @include respond(desktop) {
+      font-size: 1.8rem;
+      letter-spacing: -0.054rem;
+   }
 }
 .futureTechnologyCardDetails {
    display: grid;
@@ -142,12 +178,16 @@
    align-self: stretch;
 
    @include respond(laptop) {
+      padding: 6rem 0rem 6rem 6rem;
       gap: 2rem;
       width: 70%;
       grid-template-columns: repeat(2, 1fr);
       border-top: none;
       border-left: 1px solid var(--Dark-15, #262626);
-      padding: 6rem 0rem 6rem 6rem;
+   }
+   @include respond(desktop) {
+      padding: 8rem 0rem 8rem 8rem;
+      gap: 3rem;
    }
 }
 
@@ -166,6 +206,11 @@
       gap: 1.6rem;
       flex: 1 0 0;
    }
+   @include respond(desktop) {
+      border-radius: 1.2rem;
+      padding: 4rem;
+      gap: 2rem;
+   }
 }
 .futureTechnologyCardDetailHeading {
    color: var(--Absolute-White);
@@ -180,6 +225,10 @@
       font-size: 2rem;
       letter-spacing: -0.06rem;
    }
+   @include respond(desktop) {
+      font-size: 2.4rem;
+      letter-spacing: -0.072rem;
+   }
 }
 .futureTechnologyCardDetailP {
    color: var(--Grey-60);
@@ -193,5 +242,9 @@
    @include respond(laptop) {
       font-size: 1.6rem;
       letter-spacing: -0.048rem;
+   }
+   @include respond(desktop) {
+      font-size: 1.8rem;
+      letter-spacing: -0.054rem;
    }
 }
