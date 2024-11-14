@@ -25,38 +25,28 @@ const BlogHighlightSection: FC = () => {
       }
    }, [categoriesData, categoriesError]);
 
-   const { data: articlesData, isLoading: articleIsLoading, error: articleError } = useGetArticles();
+   const { data: articlesData, error: articleError } = useGetArticles();
 
    const handleTopicClick = (categoryName: string) => {
       setSelectedCategory(categoryName);
 
-      const res = articlesData?.data?.data;
-      if (!res) {
-         return;
-      }
-      if (articleIsLoading) {
-         return;
-      }
       if (articleError) {
          console.error(articleError);
          return;
       }
 
-      if (categoryName === "All") {
-         const threeRandomArticles = getRandomObjects(res, 3);
-         setFilteredArticles(threeRandomArticles);
-      } else {
-         const filtered = res.filter((article) => article?.category?.name === categoryName);
-         setFilteredArticles(filtered);
-      }
+      const articles = articlesData?.data?.data ?? [];
+      const filteredArticles =
+         categoryName === "All"
+            ? getRandomObjects(articles, 3)
+            : articles.filter((article) => article?.category?.name === categoryName);
+
+      setFilteredArticles(filteredArticles);
    };
 
    useEffect(() => {
       const res = articlesData?.data?.data;
-      if (res) {
-         const initialArticles = getRandomObjects(res, 3);
-         setFilteredArticles(initialArticles);
-      }
+      if (res) setFilteredArticles(getRandomObjects(res, 3));
    }, [articlesData]);
 
    const baseUrl = import.meta.env.VITE_BACK_END_BASE_URL;
