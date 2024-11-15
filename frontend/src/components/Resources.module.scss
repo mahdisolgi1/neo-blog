@@ -16,6 +16,10 @@
       width: 40%;
       padding: 15rem 0rem 5rem 5rem;
    }
+   @include respond(desktop) {
+      padding: 15rem 0rem 8rem 8rem;
+      gap: 3rem;
+   }
 }
 .facesBehind {
    display: flex;
@@ -25,6 +29,9 @@
    border-radius: 10rem;
    border: 1px solid var(--Dark-15);
    background: var(--Dark-10);
+   @include respond(desktop) {
+      padding: 1rem;
+   }
 }
 .facesBehindImg {
    border-radius: 4.2rem;
@@ -40,7 +47,10 @@
    @include respond(laptop) {
       width: 5rem;
       height: 5rem;
-      margin-left: -15px;
+   }
+   @include respond(desktop) {
+      width: 6rem;
+      height: 6rem;
    }
 }
 
@@ -57,6 +67,10 @@
       font-size: 2rem;
       letter-spacing: -0.06rem;
    }
+   @include respond(desktop) {
+      font-size: 2.4rem;
+      letter-spacing: -0.072rem;
+   }
 }
 .titleP {
    color: var(--Grey-60);
@@ -70,6 +84,10 @@
    @include respond(laptop) {
       font-size: 1.6rem;
       letter-spacing: -0.048rem;
+   }
+   @include respond(desktop) {
+      font-size: 1.8rem;
+      letter-spacing: -0.054rem;
    }
 }
 .cta {
@@ -86,6 +104,11 @@
       justify-content: flex-start;
       align-self: auto;
    }
+   @include respond(desktop) {
+      padding: 1.8rem 2.4rem;
+      border-radius: 1.2rem;
+      gap: 1rem;
+   }
 }
 .ctaP {
    color: var(--Grey-60);
@@ -95,8 +118,16 @@
    font-weight: 400;
    line-height: 150%;
    letter-spacing: -0.042rem;
+   @include respond(desktop) {
+      font-size: 1.8rem;
+      letter-spacing: -0.054rem;
+   }
 }
 .ctaIcon {
    width: 2rem;
    height: 2rem;
+   @include respond(desktop) {
+      width: 2.4rem;
+      height: 2.4rem;
+   }
 }

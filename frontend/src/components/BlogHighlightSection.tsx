@@ -6,25 +6,39 @@ import { PiArrowUpRight } from "react-icons/pi";
 import { FaRegComment, FaRegHeart } from "react-icons/fa";
 import { BsSend } from "react-icons/bs";
 import { Article } from "@/services/generated/models";
+import { Category } from "@/services/generated/models";
+
+import { useGetCategories } from "@/services/generated/category/category";
 
 const BlogHighlightSection: FC = () => {
    const [selectedCategory, setSelectedCategory] = useState<string>("All");
    const [filteredArticles, setFilteredArticles] = useState<Article[]>([]);
+   const [categories, setCategories] = useState<Category[]>([]);
 
-   const { data, isLoading, error } = useGetArticles();
+   const { data: categoriesData, error: categoriesError } = useGetCategories();
+
+   useEffect(() => {
+      if (categoriesError) {
+         console.error(categoriesError);
+      } else if (categoriesData?.data?.data) {
+         setCategories(categoriesData.data.data);
+      }
+   }, [categoriesData, categoriesError]);
+
+   const { data: articlesData, isLoading: articleIsLoading, error: articleError } = useGetArticles();
 
    const handleTopicClick = (categoryName: string) => {
       setSelectedCategory(categoryName);
 
-      const res = data?.data?.data;
+      const res = articlesData?.data?.data;
       if (!res) {
          return;
       }
-      if (isLoading) {
+      if (articleIsLoading) {
          return;
       }
-      if (error) {
-         console.error(error);
+      if (articleError) {
+         console.error(articleError);
          return;
       }
 
@@ -38,12 +52,12 @@ const BlogHighlightSection: FC = () => {
    };
 
    useEffect(() => {
-      const res = data?.data?.data;
+      const res = articlesData?.data?.data;
       if (res) {
          const initialArticles = getRandomObjects(res, 3);
          setFilteredArticles(initialArticles);
       }
-   }, [data]);
+   }, [articlesData]);
 
    const baseUrl = import.meta.env.VITE_BACK_END_BASE_URL;
 
@@ -79,36 +93,15 @@ const BlogHighlightSection: FC = () => {
             >
                <p className={styles.TopicName}>All</p>
             </div>
-            <div
-               className={`${styles.Topic} ${selectedCategory === "Quantum Computing" ? styles.activelink : ""}`}
-               onClick={() => handleTopicClick("Quantum Computing")}
-            >
-               <p className={styles.TopicName}>Quantum Computing</p>
-            </div>
-            <div
-               className={`${styles.Topic} ${selectedCategory === "AI Ethics" ? styles.activelink : ""}`}
-               onClick={() => handleTopicClick("AI Ethics")}
-            >
-               <p className={styles.TopicName}>AI Ethics</p>
-            </div>
-            <div
-               className={`${styles.Topic} ${selectedCategory === "Space Exploration" ? styles.activelink : ""}`}
-               onClick={() => handleTopicClick("Space Exploration")}
-            >
-               <p className={styles.TopicName}>Space Exploration</p>
-            </div>
-            <div
-               className={`${styles.Topic} ${selectedCategory === "Biotechnology" ? styles.activelink : ""}`}
-               onClick={() => handleTopicClick("Biotechnology")}
-            >
-               <p className={styles.TopicName}>Biotechnology</p>
-            </div>
-            <div
-               className={`${styles.Topic} ${selectedCategory === "Renewable Energy" ? styles.activelink : ""}`}
-               onClick={() => handleTopicClick("Renewable Energy")}
-            >
-               <p className={styles.TopicName}>Renewable Energy</p>
-            </div>
+            {categories?.map((category) => (
+               <div
+                  key={category?.id}
+                  className={`${styles.Topic} ${selectedCategory === category?.name ? styles.activelink : ""}`}
+                  onClick={() => handleTopicClick(category?.name || "")}
+               >
+                  <p className={styles.TopicName}>{category?.name}</p>
+               </div>
+            ))}
          </div>
          <div className={styles.tweets}>
             {filteredArticles.map((article) => (
@@ -126,7 +119,7 @@ const BlogHighlightSection: FC = () => {
                         </div>
                      </div>
                      <div className={styles.tweetProfileCta}>
-                        <span className={styles.tweetProfileIconText}>View Blog</span>{" "}
+                        <span className={styles.tweetProfileIconText}>View Blog</span>
                         <PiArrowUpRight className={styles.tweetProfileIcon} color="gold" aria-label="arrow-icon" />
                      </div>
                   </div>
@@ -139,7 +132,7 @@ const BlogHighlightSection: FC = () => {
                         </div>
                         <div className={styles.tweetExtraInfos}>
                            <div className={styles.tweetExtraInfo}>
-                              <FaRegHeart className={styles.tweetExtraInfoIcon} color="grey" aria-label="heart-icon" />{" "}
+                              <FaRegHeart className={styles.tweetExtraInfoIcon} color="grey" aria-label="heart-icon" />
                               <span className={styles.tweetExtraInfoIconNum}>
                                  {article?.likes > 1000
                                     ? `${(article.likes / 1000).toFixed(article.likes % 1000 === 0 ? 0 : 1)}k`
@@ -151,18 +144,16 @@ const BlogHighlightSection: FC = () => {
                                  className={styles.tweetExtraInfoIcon}
                                  color="grey"
                                  aria-label="comment-icon"
-                              />{" "}
+                              />
                               <span className={styles.tweetExtraInfoIconNum}>
-                                 {" "}
                                  {article?.comments > 1000
                                     ? `${(article.comments / 1000).toFixed(article.comments % 1000 === 0 ? 0 : 1)}k`
                                     : article?.comments}
                               </span>
                            </div>
                            <div className={styles.tweetExtraInfo}>
-                              <BsSend className={styles.tweetExtraInfoIcon} color="grey" aria-label="share-icon" />{" "}
+                              <BsSend className={styles.tweetExtraInfoIcon} color="grey" aria-label="share-icon" />
                               <span className={styles.tweetExtraInfoIconNum}>
-                                 {" "}
                                  {article?.shares > 1000
                                     ? `${(article.shares / 1000).toFixed(article.shares % 1000 === 0 ? 0 : 1)}k`
                                     : article?.shares}
@@ -171,13 +162,13 @@ const BlogHighlightSection: FC = () => {
                         </div>
                      </div>
                      <div className={styles.tweetProfileCtaBiggerScreen}>
-                        <span className={styles.tweetProfileIconText}>View Blog</span>{" "}
+                        <span className={styles.tweetProfileIconText}>View Blog</span>
                         <PiArrowUpRight className={styles.tweetProfileIcon} color="gold" aria-label="arrow-icon" />
                      </div>
                   </div>
                </div>
             ))}
-         </div>{" "}
+         </div>
          <div className={styles.BlogHighlightIntro}>
             <div className={styles.BlogHighlightHeading}>
                <div className={styles.BlogHighlightTitleBox}>
@@ -188,7 +179,7 @@ const BlogHighlightSection: FC = () => {
                </h2>
             </div>
             <div className={styles.BlogHighlightCta}>
-               <span className={styles.BlogHighlightCtaText}>View All Resources</span>{" "}
+               <span className={styles.BlogHighlightCtaText}>View All Resources</span>
                <PiArrowUpRight className={styles.BlogHighlightCtaIcon} color="gold" aria-label="arrow-icon" />
             </div>
          </div>

@@ -20,6 +20,7 @@ const Testimonials: FC = () => {
                   <FaStar color="gold" className={styles.testimonialStarImg} aria-label="star" />
                   <FaStar color="gold" className={styles.testimonialStarImg} aria-label="star" />
                   <FaStar color="gold" className={styles.testimonialStarImg} aria-label="star" />
+                  <FaStar color="gold" className={styles.testimonialStarImg} aria-label="star" />
                </div>
                <div className={styles.testimonialTextBox}>
                   <p className={styles.testimonialTextP}>
@@ -43,6 +44,7 @@ const Testimonials: FC = () => {
                   <FaStar color="gold" className={styles.testimonialStarImg} aria-label="star" />
                   <FaStar color="gold" className={styles.testimonialStarImg} aria-label="star" />
                   <FaStar color="gold" className={styles.testimonialStarImg} aria-label="star" />
+                  <FaStar color="gold" className={styles.testimonialStarImg} aria-label="star" />
                </div>
                <div className={styles.testimonialTextBox}>
                   <p className={styles.testimonialTextP}>
@@ -62,6 +64,7 @@ const Testimonials: FC = () => {
             </div>
             <div className={styles.testimonialText}>
                <div className={styles.testimonialStars}>
+                  <FaStar color="gold" className={styles.testimonialStarImg} aria-label="star" />
                   <FaStar color="gold" className={styles.testimonialStarImg} aria-label="star" />
                   <FaStar color="gold" className={styles.testimonialStarImg} aria-label="star" />
                   <FaStar color="gold" className={styles.testimonialStarImg} aria-label="star" />

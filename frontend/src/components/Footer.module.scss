@@ -7,6 +7,9 @@
    @include respond(laptop) {
       padding: 0rem 8rem;
    }
+   @include respond(desktop) {
+      padding: 0rem 16.2rem;
+   }
 }
 
 .footerLinks {
@@ -22,6 +25,10 @@
       gap: 5rem;
       padding: 6rem 0rem;
    }
+   @include respond(desktop) {
+      padding: 8rem 0rem;
+      gap: 8rem;
+   }
 }
 .footerLinksColumn {
    display: flex;
@@ -32,20 +39,27 @@
    @include respond(laptop) {
       gap: 2.8rem;
    }
+   @include respond(desktop) {
+      gap: 3.6rem;
+   }
 }
 
 .footerLinksHeader {
+   align-self: stretch;
    color: var(--Absolute-White);
    font-family: Inter;
    font-size: 1.6rem;
    font-style: normal;
-   align-self: stretch;
    font-weight: 500;
    line-height: 130%;
    letter-spacing: -0.048rem;
    @include respond(laptop) {
       font-size: 1.8rem;
       letter-spacing: -0.054rem;
+   }
+   @include respond(desktop) {
+      font-size: 2rem;
+      letter-spacing: -0.06rem;
    }
 }
 .footerLinksGroup {
@@ -54,6 +68,12 @@
    align-items: flex-start;
    gap: 0.8rem;
    align-self: stretch;
+   @include respond(laptop) {
+      gap: 1.2rem;
+   }
+   @include respond(desktop) {
+      gap: 1.8rem;
+   }
 }
 
 .footerLinkItem {
@@ -72,6 +92,10 @@
    font-weight: 400;
    line-height: 150%;
    letter-spacing: -0.036rem;
+   @include respond(desktop) {
+      font-size: 1.6rem;
+      letter-spacing: -0.048rem;
+   }
 }
 .footerLinkItemLinkNewBox {
    border-radius: 0.4rem;
@@ -82,6 +106,10 @@
    align-items: center;
    gap: 1rem;
    @include respond(laptop) {
+   }
+   @include respond(desktop) {
+      padding: 0.4rem 1.2rem;
+      border-radius: 0.6rem;
    }
 }
 .footerLinkItemLink {
@@ -94,6 +122,10 @@
    line-height: 130%;
    letter-spacing: -0.042rem;
    align-self: stretch;
+   @include respond(desktop) {
+      font-size: 1.8rem;
+      letter-spacing: -0.054rem;
+   }
 }
 .resources {
    grid-column: 1/2 span;
@@ -108,9 +140,13 @@
       gap: 2.8rem;
       flex: 1 0 0;
    }
+   @include respond(desktop) {
+      gap: 3.6rem;
+   }
 }
 
 .resource {
+   cursor: pointer;
    border-radius: 0.6rem;
    border: 1px solid var(--Dark-15);
    background: var(--Dark-08);
@@ -118,20 +154,25 @@
    padding: 0.8rem 1.4rem;
    align-items: center;
    gap: 0.4rem;
+   @include respond(desktop) {
+      border-radius: 0.8rem;
+      padding: 1rem 1.6rem;
+      gap: 1rem;
+   }
 }
 .resourcesConatiner {
    display: flex;
    align-items: flex-start;
-
    gap: 1.2rem;
    align-self: stretch;
    flex-wrap: wrap;
    @include respond(laptop) {
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
       gap: 1.2rem;
-      align-self: stretch;
+   }
+   @include respond(desktop) {
+      gap: 1.8rem;
    }
 }
 .resourcesHeader {
@@ -147,6 +188,10 @@
       font-size: 1.8rem;
       letter-spacing: -0.054rem;
    }
+   @include respond(desktop) {
+      font-size: 2rem;
+      letter-spacing: -0.06rem;
+   }
 }
 .resourceName {
    color: var(--Grey-60);
@@ -156,10 +201,18 @@
    font-weight: 400;
    line-height: 150%;
    letter-spacing: -0.042rem;
+   @include respond(desktop) {
+      font-size: 1.8rem;
+      letter-spacing: -0.054rem;
+   }
 }
 .resourceIcon {
    width: 1.8rem;
    height: 1.8rem;
+   @include respond(desktop) {
+      width: 2rem;
+      height: 2rem;
+   }
 }
 .footerBar {
    display: flex;
@@ -170,10 +223,12 @@
    gap: 2rem;
    align-self: stretch;
    @include respond(laptop) {
-      display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-start;
+   }
+   @include respond(desktop) {
+      padding: 4rem 0rem;
    }
 }
 
@@ -181,10 +236,18 @@
    display: flex;
    align-items: flex-start;
    gap: 1.4rem;
+   @include respond(desktop) {
+      gap: 2rem;
+   }
 }
 .icon {
    width: 2rem;
+   cursor: pointer;
    height: 2rem;
+   @include respond(desktop) {
+      width: 2.4rem;
+      height: 2.4rem;
+   }
 }
 
 .plicies {
@@ -195,6 +258,9 @@
    @include respond(laptop) {
       order: -1;
    }
+   @include respond(desktop) {
+      gap: 1.1rem;
+   }
 }
 .pliciesLink {
    color: var(--Dark-40);
@@ -204,6 +270,10 @@
    font-weight: 400;
    line-height: 130%;
    letter-spacing: -0.042rem;
+   @include respond(desktop) {
+      font-size: 1.8rem;
+      letter-spacing: -0.054rem;
+   }
 }
 .plicies:not(:last-child)::after {
    content: "";
@@ -225,4 +295,8 @@
    font-weight: 400;
    line-height: 130%;
    letter-spacing: -0.042rem;
+   @include respond(desktop) {
+      font-size: 1.8rem;
+      letter-spacing: -0.054rem;
+   }
 }

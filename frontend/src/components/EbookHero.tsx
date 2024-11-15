@@ -25,7 +25,6 @@ const EbookHero: FC = () => {
                      </p>
                   </div>
                   <div className={styles.ebookHeroIntroHeadingCta}>
-                     {" "}
                      <span className={styles.ebookHeroIntroHeadingCtaText}>Download Ebooks Now</span>
                      <PiArrowUpRight
                         color="gold"
@@ -36,7 +35,6 @@ const EbookHero: FC = () => {
                </div>
                <div className={styles.ebookHeroIntroDetails}>
                   <div className={styles.ebookHeroIntroDetailText}>
-                     {" "}
                      <span className={styles.ebookHeroIntroDetailSubText}>Downloaded By</span>
                      <strong className={styles.ebookHeroIntroDetailHeadingText}>10k + Users</strong>
                   </div>
@@ -70,7 +68,6 @@ const EbookHero: FC = () => {
                   </div>
                   <div className={styles.ebookHeroDetailWithPerview}>
                      <div className={styles.ebookHeroDetailWithPerviewText}>
-                        {" "}
                         <span className={styles.ebookHeroDetailSubText}>Download Formats</span>
                         <strong className={styles.ebookHeroDetailText}>PDF format for access.</strong>
                      </div>
@@ -113,7 +110,6 @@ const EbookHero: FC = () => {
                </div>
                <div className={styles.ebookHeroIntroDetails}>
                   <div className={styles.ebookHeroIntroDetailText}>
-                     {" "}
                      <span className={styles.ebookHeroIntroDetailSubText}>Downloaded By</span>
                      <strong className={styles.ebookHeroIntroDetailHeadingText}>10k + Users</strong>
                   </div>
@@ -147,7 +143,6 @@ const EbookHero: FC = () => {
                   </div>
                   <div className={styles.ebookHeroDetailWithPerview}>
                      <div className={styles.ebookHeroDetailWithPerviewText}>
-                        {" "}
                         <span className={styles.ebookHeroDetailSubText}>Download Formats</span>
                         <strong className={styles.ebookHeroDetailText}>PDF format for access.</strong>
                      </div>

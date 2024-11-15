@@ -11,6 +11,9 @@
    @include respond(laptop) {
       padding: 2rem 8rem;
    }
+   @include respond(desktop) {
+      padding: 2.4rem 16.2rem;
+   }
 }
 .navBarLinksBox {
    display: none;
@@ -23,8 +26,11 @@
    list-style: none;
    justify-content: center;
    align-items: center;
-
+   border-radius: 1.2rem;
    gap: 2.4rem;
+   @include respond(desktop) {
+      gap: 4rem;
+   }
 }
 
 .navBarLink {
@@ -34,14 +40,25 @@
    font-size: 1.4rem;
    font-style: normal;
    font-weight: 400;
-   line-height: 150%; 
-   &.activeLink {
-      padding: 1rem 1.8rem;
-      border-radius: 0.6rem;
-      border: 1px solid var(--Dark-20);
-      background: var(--Dark-08);
-      color: var(--Absolute-White);
-      font-weight: 500;
+   line-height: 150%;
+   @include respond(laptop) {
+      &.activeLink {
+         padding: 1rem 1.8rem;
+         border-radius: 0.6rem;
+         border: 1px solid var(--Dark-20);
+         background: var(--Dark-08);
+         color: var(--Absolute-White);
+         font-weight: 500;
+      }
+   }
+   @include respond(desktop) {
+      font-size: 1.8rem;
+
+      &.activeLink {
+         padding: 1.4rem 2.4rem;
+         border-radius: 1rem;
+         font-weight: 500;
+      }
    }
 }
 .logo {
@@ -50,6 +67,10 @@
    @include respond(laptop) {
       width: 14.3125rem;
       height: 4rem;
+   }
+   @include respond(desktop) {
+      width: 17.8906rem;
+      height: 5rem;
    }
 }
 .hamburgarMenu {
@@ -64,14 +85,5 @@
    display: none;
    @include respond(laptop) {
       display: inline-block;
-      border-radius: 0.6rem;
-      background: var(--Yellow-55);
-      padding: 1rem 1.4rem;
-      color: var(--Dark-08);
-      font-family: Inter;
-      font-size: 1.4rem;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 150%;
    }
 }

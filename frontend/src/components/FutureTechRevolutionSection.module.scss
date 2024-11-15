@@ -13,6 +13,10 @@
       padding: 8rem;
       gap: 5rem;
    }
+   @include respond(desktop) {
+      padding: 12rem 16.2rem;
+      gap: 10rem;
+   }
 }
 
 .futureTechRevolutionCard {
@@ -27,6 +31,9 @@
       justify-content: flex-start;
       align-items: center;
       gap: 6rem;
+   }
+   @include respond(desktop) {
+      gap: 8rem;
    }
 }
 .futureTechRevolutionCardHeaderIcon {
@@ -63,6 +70,10 @@
       font-size: 1.6rem;
       letter-spacing: -0.048rem;
    }
+   @include respond(desktop) {
+      font-size: 2rem;
+      letter-spacing: -0.06rem;
+   }
 }
 .futureTechRevolutionCardTextBox {
    display: flex;
@@ -77,6 +88,9 @@
       justify-content: flex-start;
       gap: 6rem;
       flex-shrink: 0;
+   }
+   @include respond(desktop) {
+      gap: 8rem;
    }
 }
 .futureTechRevolutionCardHeading {
@@ -105,6 +119,10 @@
       font-size: 1.6rem;
       letter-spacing: -0.048rem;
    }
+   @include respond(desktop) {
+      font-size: 1.8rem;
+      letter-spacing: -0.054rem;
+   }
 }
 .futureTechRevolutionCardDetails {
    border-radius: 1rem;
@@ -118,6 +136,11 @@
    align-self: stretch;
    @include respond(laptop) {
       flex-direction: row;
+   }
+   @include respond(desktop) {
+      padding: 2rem;
+      border-radius: 1.2rem;
+      gap: 2rem;
    }
 }
 .futureTechRevolutionCardDetail {
@@ -133,7 +156,13 @@
    @include respond(laptop) {
       padding: 3rem;
       gap: 1.6rem;
+      align-self: auto;
       flex: 1 0 0;
+   }
+   @include respond(desktop) {
+      padding: 4rem;
+      gap: 2rem;
+      border-radius: 1.2rem;
    }
 }
 .futureTechRevolutionCardDetailHeading {
@@ -141,6 +170,9 @@
    align-items: center;
    gap: 1.6rem;
    align-self: stretch;
+   @include respond(desktop) {
+      gap: 2rem;
+   }
 }
 .futureTechRevolutionCardDetailHeadingHeader {
    color: var(--Absolute-White);
@@ -155,8 +187,13 @@
       font-size: 1.8rem;
       letter-spacing: -0.054rem;
    }
+   @include respond(desktop) {
+      font-size: 2.2rem;
+      letter-spacing: -0.066rem;
+   }
 }
 .futureTechRevolutionCardDetailIconBox {
+   cursor: pointer;
    border-radius: 10rem;
    background: var(--Yellow-55);
    display: flex;
@@ -166,10 +203,17 @@
    @include respond(laptop) {
       padding: 1.2rem;
    }
+   @include respond(desktop) {
+      padding: 1.4rem;
+   }
 }
 .futureTechRevolutionCardDetailIcon {
    width: 2rem;
    height: 2rem;
+   @include respond(desktop) {
+      width: 2.4rem;
+      height: 2.4rem;
+   }
 }
 .futureTechRevolutionCardDetailP {
    color: var(--Grey-60);
@@ -184,14 +228,22 @@
       font-size: 1.6rem;
       letter-spacing: -0.048rem;
    }
+   @include respond(desktop) {
+      font-size: 1.8rem;
+      letter-spacing: -0.054rem;
+   }
 }
 
 .futureTechRevolutionCardHeaderIconBiggerScreen {
    display: none;
    @include respond(laptop) {
       display: block;
-      width: 11.9999rem;
+      width: 12rem;
       height: 12rem;
+   }
+   @include respond(desktop) {
+      width: 15rem;
+      height: 15rem;
    }
 }
 
@@ -207,6 +259,9 @@
       align-self: auto;
       flex-shrink: 0;
    }
+   @include respond(desktop) {
+      padding: 0.6rem 1rem;
+   }
 }
 .futureTechRevolutionCardHeadingBiggerScreen {
    @include respond(laptop) {
@@ -216,11 +271,13 @@
       font-style: normal;
       font-weight: 500;
       line-height: 130%;
-
       align-self: stretch;
-
       font-size: 4.4rem;
       letter-spacing: -0.132rem;
+   }
+   @include respond(desktop) {
+      font-size: 5.8rem;
+      letter-spacing: -0.174rem;
    }
 }
 
@@ -234,6 +291,9 @@
       gap: 1rem;
       align-self: stretch;
    }
+   @include respond(desktop) {
+      gap: 1.6rem;
+   }
 }
 .futureTechRevolutionCardHeaderTextBoxDetail {
    @include respond(laptop) {
@@ -243,5 +303,8 @@
       align-items: flex-start;
       gap: 2rem;
       flex: 1 0 0;
+   }
+   @include respond(desktop) {
+      gap: 3rem;
    }
 }

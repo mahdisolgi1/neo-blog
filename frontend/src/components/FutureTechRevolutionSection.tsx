@@ -23,7 +23,6 @@ const FutureTechRevolutionSection: FC = () => {
                   alt="futureTechRevolutionCard-Icon"
                />
                <div className={styles.futureTechRevolutionCardHeaderTextBoxDetail}>
-                  {" "}
                   <div className={styles.futureTechRevolutionCardHeaderTextBoxTitleBiggerScreen}>
                      <div className={styles.futureTechRevolutionCardHeaderTextBoxBiggerScreen}>
                         <p className={styles.futureTechRevolutionCardHeaderText}>Learn, Connect, and Innovate</p>
