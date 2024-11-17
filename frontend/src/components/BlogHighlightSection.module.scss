@@ -84,6 +84,7 @@
    }
 }
 .BlogHighlightCta {
+   text-decoration: none;
    cursor: pointer;
    display: flex;
    padding: 1.4rem 2rem;
@@ -445,6 +446,7 @@
    }
 }
 .tweetProfileCtaBiggerScreen {
+   text-decoration: none;
    display: none;
    @include respond(laptop) {
       cursor: pointer;

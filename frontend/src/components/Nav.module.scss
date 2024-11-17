@@ -81,7 +81,8 @@
       display: none;
    }
 }
-.ctaBtn {
+.ctaBtn,
+.ctaBtnLink {
    display: none;
    @include respond(laptop) {
       display: inline-block;

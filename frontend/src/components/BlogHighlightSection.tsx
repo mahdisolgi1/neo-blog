@@ -9,6 +9,7 @@ import { Article } from "@/services/generated/models";
 import { Category } from "@/services/generated/models";
 
 import { useGetCategories } from "@/services/generated/category/category";
+import { Link } from "react-router-dom";
 
 const BlogHighlightSection: FC = () => {
    const [selectedCategory, setSelectedCategory] = useState<string>("All");
@@ -70,11 +71,11 @@ const BlogHighlightSection: FC = () => {
                </div>
                <h2 className={styles.BlogHighlightHeadingHeader}>Explore FutureTech's In-Depth Blog Posts</h2>
             </div>
-            <div className={styles.BlogHighlightCta}>
+            <Link to="/blogs" className={styles.BlogHighlightCta}>
                <span className={styles.BlogHighlightCtaText}>View All Blogs</span>
 
                <PiArrowUpRight className={styles.BlogHighlightCtaIcon} color="gold" aria-label="arrow-icon" />
-            </div>
+            </Link>
          </div>
          <div className={styles.Topics}>
             <div
@@ -108,10 +109,10 @@ const BlogHighlightSection: FC = () => {
                            <p className={styles.tweetProfileTopic}>{article?.category?.name}</p>
                         </div>
                      </div>
-                     <div className={styles.tweetProfileCta}>
+                     <Link to={`/blogs/${article.id}`} className={styles.tweetProfileCta}>
                         <span className={styles.tweetProfileIconText}>View Blog</span>
                         <PiArrowUpRight className={styles.tweetProfileIcon} color="gold" aria-label="arrow-icon" />
-                     </div>
+                     </Link>
                   </div>
                   <div className={styles.tweetDetailsBiggerScreen}>
                      <div className={styles.tweetDetails}>
@@ -151,10 +152,10 @@ const BlogHighlightSection: FC = () => {
                            </div>
                         </div>
                      </div>
-                     <div className={styles.tweetProfileCtaBiggerScreen}>
+                     <Link to={`/blogs/${article.id}`} className={styles.tweetProfileCtaBiggerScreen}>
                         <span className={styles.tweetProfileIconText}>View Blog</span>
                         <PiArrowUpRight className={styles.tweetProfileIcon} color="gold" aria-label="arrow-icon" />
-                     </div>
+                     </Link>
                   </div>
                </div>
             ))}
@@ -168,10 +169,10 @@ const BlogHighlightSection: FC = () => {
                   Unlock Valuable Knowledge with FutureTech's Resources
                </h2>
             </div>
-            <div className={styles.BlogHighlightCta}>
+            <Link to="/resources" className={styles.BlogHighlightCta}>
                <span className={styles.BlogHighlightCtaText}>View All Resources</span>
                <PiArrowUpRight className={styles.BlogHighlightCtaIcon} color="gold" aria-label="arrow-icon" />
-            </div>
+            </Link>
          </div>
       </>
    );

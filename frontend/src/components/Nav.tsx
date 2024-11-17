@@ -49,9 +49,11 @@ const Nav: FC = () => {
 
          <HiOutlineMenuAlt3 color="white" className={styles.hamburgarMenu} aria-label="hamburgar-menu" />
 
-         <Button size="md" type="primary" className={styles.ctaBtn}>
-            Contact Us
-         </Button>
+         <Link to="/contact" className={styles.ctaBtnLink}>
+            <Button size="md" type="primary" className={styles.ctaBtn}>
+               Contact Us
+            </Button>
+         </Link>
       </div>
    );
 };

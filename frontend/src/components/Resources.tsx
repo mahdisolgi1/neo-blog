@@ -3,6 +3,7 @@ import styles from "./Resources.module.scss";
 import { useGetAuthors } from "@/services/generated/author/author";
 import getRandomObjects from "@/helpers/getRandomObjects";
 import { PiArrowUpRight } from "react-icons/pi";
+import { Link } from "react-router-dom";
 
 const Resources: FC = () => {
    const { data } = useGetAuthors();
@@ -27,10 +28,10 @@ const Resources: FC = () => {
             <h3 className={styles.titleHeading}>Explore 1000+ resources</h3>
             <p className={styles.titleP}>Over 1,000 articles on emerging tech trends and breakthroughs.</p>
          </div>
-         <div className={styles.cta}>
+         <Link to="/resources" className={styles.cta}>
             <p className={styles.ctaP}>Explore Resources</p>{" "}
             <PiArrowUpRight className={styles.ctaIcon} color="gold" aria-label="arrow-to-up-right-icon" />
-         </div>
+         </Link>
       </section>
    );
 };
