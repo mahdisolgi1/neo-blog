@@ -35,7 +35,7 @@
 
    align-items: center;
    padding: 2rem;
-   gap: 4rem;
+   gap: 5rem;
    transition: right 0.3s ease-in-out;
    &.navBarLinksMobile {
       right: 0;
@@ -124,5 +124,15 @@
    display: none;
    @include respond(laptop) {
       display: inline-block;
+   }
+}
+.closeMenu {
+   cursor: pointer;
+   z-index: 999999999;
+   width: 5.4rem;
+   height: 5.4rem;
+
+   @include respond(laptop) {
+      display: none;
    }
 }
