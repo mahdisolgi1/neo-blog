@@ -79,10 +79,11 @@ const Nav: FC = () => {
                aria-label="hamburgar-menu"
             />
          )}
-
-         <Button size="md" type="primary" className={styles.ctaBtn}>
-            Contact Us
-         </Button>
+         <Link to='/contact' className={styles.contact}>
+            <Button size="md" type="primary" className={styles.ctaBtn}>
+               Contact Us
+            </Button>
+         </Link>
       </div>
    );
 };

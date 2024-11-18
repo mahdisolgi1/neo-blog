@@ -120,7 +120,7 @@
       display: none;
    }
 }
-.ctaBtn {
+.ctaBtnlLink {
    display: none;
    @include respond(laptop) {
       display: inline-block;

@@ -33,7 +33,7 @@ const router = createBrowserRouter([
          { path: "blog/:id", element: <BlogOpenPage /> },
          { path: "news", element: <NewsPage /> },
          { path: "resources", element: <ResourcesPage /> },
-         { path: "contact ", element: <ContactPage /> },
+         { path: "contact", element: <ContactPage /> },
          { path: "podcasts", element: <PodcastsPage /> },
          ...(enableDevRoutes ? [{ path: "dev-tools", element: <DevTools /> }] : []),
          {
