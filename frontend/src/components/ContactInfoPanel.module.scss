@@ -1,0 +1,179 @@
+.ContactInfoPanelDetails {
+   display: flex;
+   padding: 0rem 1.6rem;
+   flex-direction: column;
+   align-items: flex-start;
+   align-self: stretch;
+   @include respond(laptop) {
+      flex-direction: row;
+      padding: 0rem 8rem;
+      gap: 3rem;
+   }
+   @include respond(desktop) {
+      padding: 0rem 16.2rem;
+      gap: 5rem;
+   }
+}
+.ContactInfoPanelDetail {
+   display: flex;
+   padding: 2rem 0rem;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: 2rem;
+   align-self: stretch;
+   @include respond(laptop) {
+      padding: 6rem 0rem;
+      gap: 3rem;
+      flex: 1 0 0;
+   }
+   @include respond(desktop) {
+      padding: 8rem 0rem;
+      gap: 5rem;
+   }
+}
+.ContactInfoPanelDetailHeading {
+   color: var(--Absolute-White);
+   font-family: Inter;
+   font-size: 1.6rem;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 130%;
+   letter-spacing: -0.048rem;
+   align-self: stretch;
+   @include respond(laptop) {
+      font-size: 1.8rem;
+      letter-spacing: -0.054rem;
+   }
+   @include respond(desktop) {
+      font-size: 2rem;
+      letter-spacing: -0.06rem;
+   }
+}
+.ContactInfoPanelDetailLinks {
+   display: flex;
+   padding-left: 5rem;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: 1rem;
+   align-self: stretch;
+   @include respond(laptop) {
+      gap: 1rem;
+      padding-left: 0;
+   }
+   @include respond(desktop) {
+      gap: 1.5rem;
+   }
+}
+.ContactInfoPanelDetailLink {
+   cursor: pointer;
+   text-decoration: none;
+   display: flex;
+   padding: 1.4rem 2rem;
+   justify-content: center;
+   align-items: center;
+   gap: 0.4rem;
+   border-radius: 0.6rem;
+   border: 1px solid var(--Dark-15);
+   background: var(--Dark-10);
+   @include respond(laptop) {
+      gap: 0.4rem;
+   }
+   @include respond(desktop) {
+      padding: 1.8rem 2.4rem;
+      gap: 1rem;
+      border-radius: 0.8rem;
+   }
+}
+.ContactInfoPanelDetailLinkText {
+   color: var(--Grey-60, #98989a);
+   font-family: Inter;
+   font-size: 1.4rem;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 150%; /* 2.1rem */
+   letter-spacing: -0.042rem;
+
+   @include respond(desktop) {
+      font-size: 1.8rem;
+      letter-spacing: -0.054rem;
+   }
+}
+.ContactInfoPanelDetailLinkCta {
+   width: 2rem;
+   height: 2rem;
+
+   @include respond(desktop) {
+      width: 2.4rem;
+      height: 2.4rem;
+   }
+}
+.ContactInfoPanelDetailAddressBox {
+   display: flex;
+   padding-left: 5rem;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: 1.2rem;
+   align-self: stretch;
+
+   @include respond(laptop) {
+      padding-left: 0;
+   }
+   @include respond(desktop) {
+      gap: 1.5rem;
+   }
+}
+.ContactInfoPanelDetailAddress {
+   color: var(--Grey-60, #98989a);
+   font-family: Inter;
+   font-size: 1.6rem;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 150%; /* 2.4rem */
+   letter-spacing: -0.048rem;
+
+   align-self: stretch;
+
+   @include respond(desktop) {
+      font-size: 1.8rem;
+      letter-spacing: -0.054rem;
+   }
+}
+
+.socialMediasBox {
+   display: flex;
+   padding-left: 5rem;
+   align-items: flex-start;
+   gap: 1rem;
+   align-self: stretch;
+   @include respond(laptop) {
+      padding-left: 0;
+   }
+   @include respond(desktop) {
+      gap: 2rem;
+   }
+}
+.socialMediaBox {
+   display: flex;
+   cursor: pointer;
+   padding: 1.4rem 2.4rem;
+   justify-content: center;
+   align-items: center;
+   gap: 1rem;
+   flex: 1 0 0;
+   border-radius: 0.6rem;
+   border: 1px solid var(--Dark-15, #262626);
+   background: var(--Dark-10, #1a1a1a);
+
+   @include respond(desktop) {
+      padding: 1.8rem 3rem;
+   }
+}
+.socialMediaIcon {
+   width: 2rem;
+   height: 2rem;
+
+   @include respond(desktop) {
+      width: 2.4rem;
+      height: 2.4rem;
+   }
+}

@@ -1,7 +1,12 @@
+import ContactInfoPanel from "@/components/ContactInfoPanel";
 import { FC } from "react";
 
 const ContactPage: FC = () => {
-   return <div>ContactPage</div>;
+   return (
+      <>
+         <ContactInfoPanel />
+      </>
+   );
 };
 
 export default ContactPage;
