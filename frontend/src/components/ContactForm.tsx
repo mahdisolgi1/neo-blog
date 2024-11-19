@@ -44,7 +44,7 @@ const ContactForm: FC = () => {
                   <input type="checkbox" className={styles.ContactFormCtaPrivacyPloicyCheckBox} />
                   <p className={styles.ContactFormCtaPrivacyPloicyText}>I agree with Terms of Use and Privacy Policy</p>
                </div>
-               <Button type="primary" className={styles.ContactFormCtaBtn} size="md">
+               <Button type="primary" className={styles.ContactFormCtaBtn} size="lg">
                   Send
                </Button>
             </div>
