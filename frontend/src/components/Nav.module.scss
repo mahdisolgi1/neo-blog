@@ -120,12 +120,6 @@
       display: none;
    }
 }
-.ctaBtnlLink {
-   display: none;
-   @include respond(laptop) {
-      display: inline-block;
-   }
-}
 .closeMenu {
    cursor: pointer;
    z-index: 999999999;
@@ -134,5 +128,11 @@
 
    @include respond(laptop) {
       display: none;
+   }
+}
+.contact {
+   display: none;
+   @include respond(laptop) {
+      display: inline-block;
    }
 }
