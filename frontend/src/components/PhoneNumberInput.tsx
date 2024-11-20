@@ -63,6 +63,8 @@ const PhoneNumberInput: React.FC<PhoneNumberInputProps> = ({ onChange }) => {
             placeholder="Enter phone number"
             value={phoneNumber}
             onChange={handlePhoneNumberChange}
+            required
+            pattern="^(\+?[1-9]{1,4}[\s\-]?)?(\(?\d{1,4}\)?[\s\-]?)?[\d\s\-]{6,14}$"
          />
       </div>
    );

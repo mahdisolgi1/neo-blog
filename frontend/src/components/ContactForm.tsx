@@ -39,11 +39,9 @@ const ContactForm: FC = () => {
          return;
       }
 
-      // Submission logic
       console.log("Form submitted:", formData);
       alert("Form submitted successfully!");
 
-      // Reset form
       setFormData({
          firstName: "",
          lastName: "",
@@ -72,6 +70,8 @@ const ContactForm: FC = () => {
                   placeholder="Enter First Name"
                   value={formData.firstName}
                   onChange={handleChange}
+                  required
+                  pattern="^[A-Za-z]+([A-Za-z ]+)*$"
                />
             </div>
             <div className={styles.ContactFormBox}>
@@ -85,6 +85,8 @@ const ContactForm: FC = () => {
                   placeholder="Enter Last Name"
                   value={formData.lastName}
                   onChange={handleChange}
+                  required
+                  pattern="^[A-Za-z]+([A-Za-z ]+)*$"
                />
             </div>
             <div className={styles.ContactFormBox}>
@@ -98,6 +100,8 @@ const ContactForm: FC = () => {
                   placeholder="Enter your Email"
                   value={formData.email}
                   onChange={handleChange}
+                  required
+                  pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
                />
             </div>
             <div className={styles.ContactFormBox}>
