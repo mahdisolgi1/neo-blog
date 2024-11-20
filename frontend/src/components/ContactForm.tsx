@@ -1,6 +1,7 @@
 import { FC } from "react";
 import styles from "./ContactForm.module.scss";
 import Button from "./Button";
+import PhoneNumberInput from "./PhoneNumberInput";
 
 const ContactForm: FC = () => {
    return (
@@ -32,6 +33,7 @@ const ContactForm: FC = () => {
                <label className={styles.ContactFormLabel} htmlFor="phoneNumber">
                   Phone Number
                </label>
+               <PhoneNumberInput />
             </div>
             <div className={styles.ContactFormBox}>
                <label className={styles.ContactFormLabel} htmlFor="message">

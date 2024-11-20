@@ -1,0 +1,112 @@
+.phoneNumberInputContainer {
+   display: flex;
+
+   align-items: center;
+
+   gap: 1.2rem;
+   align-self: stretch;
+
+   @include respond(desktop) {
+      gap: 1.6rem;
+   }
+}
+
+.countrySelectContainer {
+   position: relative;
+   cursor: pointer;
+   display: flex;
+   padding: 1rem 1.2rem;
+   align-items: center;
+   gap: 0.4rem;
+   align-self: stretch;
+   border-radius: 0.7rem;
+   border: 1px solid var(--Dark-15);
+   background: var(--Dark-10);
+   @include respond(desktop) {
+      padding: 0.8rem 1.8rem;
+      gap: 0.6rem;
+   }
+}
+
+.selectedCountry {
+   display: flex;
+   align-items: center;
+   border-radius: 0.7rem;
+   border: 1px solid var(--Dark-15);
+}
+
+.countryFlag {
+   width: 3rem;
+   height: 3rem;
+   margin-right: 0.8px;
+   border-radius: 10rem;
+
+   @include respond(desktop) {
+      width: 3.4rem;
+      height: 3.4rem;
+   }
+}
+
+.dropdownOptions {
+   position: absolute;
+   top: 100%;
+   left: 0;
+   right: 0;
+   border-radius: 0.7rem;
+   border: 1px solid var(--Dark-15);
+   background: var(--Dark-10);
+   border-radius: 4px;
+   z-index: 10;
+}
+
+.dropdownOption {
+   display: flex;
+   align-items: center;
+   padding: 0.8rem;
+   cursor: pointer;
+   @include respond(laptop) {
+      padding: 1rem;
+   }
+   @include respond(desktop) {
+      padding: 1.2rem;
+   }
+}
+
+.dropdownOption:hover {
+   border: 1px solid;
+}
+
+.phoneNumberInput {
+   align-self: stretch;
+   border-radius: 0.6rem;
+   border: 1px solid var(--Dark-15);
+   background: var(--Dark-10);
+   padding: 1.6rem;
+   @include respond(desktop) {
+      border-radius: 0.8rem;
+      padding: 2rem;
+   }
+}
+.phoneNumberInput::placeholder {
+   color: var(--Dark-40);
+   font-family: Inter;
+   font-size: 1.4rem;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 150%;
+   flex: 1 0 0;
+
+   @include respond(desktop) {
+      font-size: 1.8rem;
+   }
+}
+
+.deopDownIcon {
+   width: 2rem;
+   height: 2rem;
+
+   @include respond(desktop) {
+      width: 2.4rem;
+      height: 2.4rem;
+   }
+}
