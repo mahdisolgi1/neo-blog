@@ -82,9 +82,12 @@
    border: 1px solid var(--Dark-15);
    background: var(--Dark-10);
    padding: 1.6rem;
+   color: #fff;
+   font-size: 1.4rem;
    @include respond(desktop) {
       border-radius: 0.8rem;
       padding: 2rem;
+      font-size: 1.8rem;
    }
 }
 .phoneNumberInput::placeholder {
