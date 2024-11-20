@@ -85,12 +85,12 @@
    }
 }
 .ContactInfoPanelDetailLinkText {
-   color: var(--Grey-60, #98989a);
+   color: var(--Grey-60);
    font-family: Inter;
    font-size: 1.4rem;
    font-style: normal;
    font-weight: 400;
-   line-height: 150%; /* 2.1rem */
+   line-height: 150%;
    letter-spacing: -0.042rem;
 
    @include respond(desktop) {
@@ -123,12 +123,12 @@
    }
 }
 .ContactInfoPanelDetailAddress {
-   color: var(--Grey-60, #98989a);
+   color: var(--Grey-60);
    font-family: Inter;
    font-size: 1.6rem;
    font-style: normal;
    font-weight: 400;
-   line-height: 150%; /* 2.4rem */
+   line-height: 150%;
    letter-spacing: -0.048rem;
 
    align-self: stretch;
@@ -161,8 +161,8 @@
    gap: 1rem;
    flex: 1 0 0;
    border-radius: 0.6rem;
-   border: 1px solid var(--Dark-15, #262626);
-   background: var(--Dark-10, #1a1a1a);
+   border: 1px solid var(--Dark-15);
+   background: var(--Dark-10);
 
    @include respond(desktop) {
       padding: 1.8rem 3rem;
