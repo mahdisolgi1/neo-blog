@@ -79,8 +79,8 @@ const Nav: FC = () => {
                aria-label="hamburgar-menu"
             />
          )}
-         <Link to='/contact' className={styles.contact}>
-            <Button size="md" type="primary" className={styles.ctaBtn}>
+         <Link to="/contact" className={styles.contact}>
+            <Button size="md" type="primary">
                Contact Us
             </Button>
          </Link>

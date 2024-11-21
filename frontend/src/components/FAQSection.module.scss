@@ -1,0 +1,239 @@
+.fAQSection {
+   display: flex;
+   padding: 0rem 1.6rem;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+   align-self: stretch;
+   border-top: 1px solid var(--Dark-15);
+   @include respond(laptop) {
+      padding: 0rem 8rem;
+      align-items: center;
+      justify-content: flex-start;
+      flex-direction: row;
+      gap: 6rem;
+   }
+   @include respond(desktop) {
+      padding: 0rem 16.2rem;
+      gap: 8rem;
+   }
+}
+.fAQSectionIntro {
+   display: flex;
+   padding: 4rem 0rem;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+   gap: 2.4rem;
+   align-self: stretch;
+   @include respond(laptop) {
+      width: 27%;
+      gap: 3rem;
+   }
+   @include respond(desktop) {
+      gap: 5rem;
+   }
+}
+.fAQSectionIntroIcon {
+   width: 5rem;
+   height: 5rem;
+   @include respond(laptop) {
+      width: 6rem;
+      height: 6rem;
+   }
+   @include respond(desktop) {
+      width: 8rem;
+      height: 8rem;
+   }
+}
+.fAQSectionIntroText {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+   gap: 0.6rem;
+   align-self: stretch;
+   @include respond(laptop) {
+      gap: 1.6rem;
+   }
+   @include respond(desktop) {
+      gap: 3rem;
+   }
+}
+.fAQSectionIntroTextHeading {
+   align-self: stretch;
+   color: var(--Absolute-White);
+   font-family: "Kumbh Sans";
+   font-size: 2rem;
+   font-style: normal;
+   font-weight: 600;
+   line-height: 150%;
+   letter-spacing: -0.06rem;
+   @include respond(laptop) {
+      font-size: 2.8rem;
+      letter-spacing: -0.084rem;
+   }
+   @include respond(desktop) {
+      font-size: 4rem;
+      letter-spacing: -0.12rem;
+   }
+}
+.fAQSectionIntroTextP {
+   align-self: stretch;
+   color: var(--Grey-60);
+   font-family: Inter;
+   font-size: 1.4rem;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 150%;
+   letter-spacing: -0.042rem;
+   @include respond(laptop) {
+      font-size: 1.6rem;
+      letter-spacing: -0.048rem;
+   }
+   @include respond(desktop) {
+      font-size: 1.8rem;
+      letter-spacing: -0.054rem;
+   }
+}
+.fAQSectionIntroCta {
+   display: flex;
+   cursor: pointer;
+   padding: 1.4rem 2rem;
+   justify-content: center;
+   align-items: center;
+   gap: 0.4rem;
+   align-self: stretch;
+   border-radius: 0.6rem;
+   border: 1px solid var(--Dark-15);
+   background: var(--Dark-10);
+
+   @include respond(laptop) {
+      align-self: auto;
+   }
+   @include respond(desktop) {
+      padding: 1.8rem 2.4rem;
+      gap: 1rem;
+      border-radius: 0.8rem;
+   }
+}
+.fAQSectionIntroCtaText {
+   color: var(--Grey-60);
+   font-family: Inter;
+   font-size: 1.4rem;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 150%;
+   letter-spacing: -0.042rem;
+   @include respond(laptop) {
+      font-size: 1.4rem;
+      letter-spacing: -0.042rem;
+   }
+   @include respond(desktop) {
+      font-size: 1.8rem;
+      letter-spacing: -0.054rem;
+   }
+}
+.fAQSectionIntroCtaIcon {
+   width: 2rem;
+   height: 2rem;
+
+   @include respond(desktop) {
+      width: 2.4rem;
+      height: 2.4rem;
+   }
+}
+.fAQSectionAccordion {
+   display: flex;
+   padding: 4rem 0rem;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: 2rem;
+   align-self: stretch;
+   border-top: 1px solid var(--Dark-15);
+   @include respond(laptop) {
+      border-left: 1px solid var(--Dark-15);
+      border-top: none;
+      padding: 6rem;
+      gap: 2.4rem;
+      flex: 1 0 0;
+   }
+   @include respond(desktop) {
+      padding: 8rem 0rem 8rem 8rem;
+      gap: 3rem;
+   }
+}
+.fAQSectionAccordionItem {
+   display: flex;
+   padding: 2.4rem;
+   align-items: flex-start;
+   gap: 2rem;
+   align-self: stretch;
+   border-radius: 1rem;
+   border: 1px solid var(--Dark-15);
+   background: var(--Dark-10);
+
+   @include respond(desktop) {
+      padding: 3.4rem;
+
+      border-radius: 1.2rem;
+   }
+}
+.fAQSectionAccordionItemHeader {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+
+   gap: 1.6rem;
+   flex: 1 0 0;
+   align-self: stretch;
+   @include respond(laptop) {
+      gap: 2rem;
+   }
+   @include respond(desktop) {
+      gap: 2.4rem;
+   }
+}
+.fAQSectionAccordionItemHeaderHeading {
+   align-self: stretch;
+   color: var(--Absolute-White);
+   font-family: Inter;
+   font-size: 1.6rem;
+   font-style: normal;
+   font-weight: 500;
+   line-height: normal;
+   @include respond(laptop) {
+      font-size: 1.8rem;
+   }
+   @include respond(desktop) {
+      font-size: 2rem;
+   }
+}
+
+.fAQSectionAccordionItemContentP {
+   padding-top: 1rem;
+   border-top: 1px solid #262626;
+   align-self: stretch;
+   color: var(--Grey-50);
+   font-family: Inter;
+   font-size: 1.4rem;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 150%;
+   @include respond(laptop) {
+      font-size: 1.6rem;
+   }
+   @include respond(desktop) {
+      font-size: 1.8rem;
+   }
+}
+.fAQSectionAccordionItemIcon {
+   cursor: pointer;
+   width: 2.5rem;
+   height: 2.5rem;
+
+   @include respond(desktop) {
+      width: 3rem;
+      height: 3rem;
+   }
+}
