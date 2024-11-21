@@ -4,6 +4,7 @@ import { useGetAuthors } from "@/services/generated/author/author";
 import getRandomObjects from "@/helpers/getRandomObjects";
 import { PiArrowUpRight } from "react-icons/pi";
 import { IoEyeOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const EbookHero: FC = () => {
    const { data } = useGetAuthors();
@@ -24,14 +25,14 @@ const EbookHero: FC = () => {
                         Explore our collection of ebooks covering a wide spectrum of future technology topics.
                      </p>
                   </div>
-                  <div className={styles.ebookHeroIntroHeadingCta}>
+                  <Link to="resources" className={styles.ebookHeroIntroHeadingCta}>
                      <span className={styles.ebookHeroIntroHeadingCtaText}>Download Ebooks Now</span>
                      <PiArrowUpRight
                         color="gold"
                         className={styles.ebookHeroIntroHeadingCtaIcon}
                         aria-label="arrow-to-up-right.svg"
                      />
-                  </div>
+                  </Link>
                </div>
                <div className={styles.ebookHeroIntroDetails}>
                   <div className={styles.ebookHeroIntroDetailText}>
@@ -99,14 +100,14 @@ const EbookHero: FC = () => {
                         Dive into comprehensive reports and analyses with our collection of whitepapers.
                      </p>
                   </div>
-                  <div className={styles.ebookHeroIntroHeadingCta}>
-                     <span className={styles.ebookHeroIntroHeadingCtaText}> Download Ebooks Now</span>
+                  <Link to="/resources" className={styles.ebookHeroIntroHeadingCta}>
+                     <span className={styles.ebookHeroIntroHeadingCtaText}>Download Whitepapers Now</span>
                      <PiArrowUpRight
                         className={styles.ebookHeroIntroHeadingCtaIcon}
                         color="gold"
                         aria-label="arrow-to-up-right.svg"
                      />
-                  </div>
+                  </Link>
                </div>
                <div className={styles.ebookHeroIntroDetails}>
                   <div className={styles.ebookHeroIntroDetailText}>

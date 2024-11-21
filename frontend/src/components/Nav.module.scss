@@ -15,49 +15,86 @@
       padding: 2.4rem 16.2rem;
    }
 }
-.navBarLinksBox {
-   display: none;
-   @include respond(laptop) {
-      display: inline-block;
-   }
-}
-.navBarLinks {
-   display: flex;
-   list-style: none;
-   justify-content: center;
-   align-items: center;
-   border-radius: 1.2rem;
-   gap: 2.4rem;
-   @include respond(desktop) {
-      gap: 4rem;
-   }
-}
 
-.navBarLink {
-   color: var(--Grey-50);
+.navBarLinks {
+   display: inline-block;
+   position: fixed;
+   top: 0px;
+   right: -100%;
+   width: 60%;
+   z-index: 999999;
+   height: 100vh;
+
+   background-color: rgba(0, 0, 0, 0.5);
+   backdrop-filter: blur(10px);
+   display: flex;
    text-decoration: none;
-   font-family: Inter;
-   font-size: 1.4rem;
-   font-style: normal;
-   font-weight: 400;
-   line-height: 150%;
+
+   flex-direction: column;
+   justify-content: center;
+
+   align-items: center;
+   padding: 2rem;
+   gap: 5rem;
+   transition: right 0.3s ease-in-out;
+   &.navBarLinksMobile {
+      right: 0;
+   }
+
+   .navBarLink {
+      color: #fff;
+      text-decoration: none;
+
+      font-size: 6rem;
+   }
+
    @include respond(laptop) {
-      &.activeLink {
-         padding: 1rem 1.8rem;
-         border-radius: 0.6rem;
-         border: 1px solid var(--Dark-20);
-         background: var(--Dark-08);
-         color: var(--Absolute-White);
-         font-weight: 500;
+      position: static;
+      height: auto;
+      width: auto;
+      display: flex;
+      flex-direction: row;
+      background-color: transparent;
+      list-style: none;
+      justify-content: center;
+      align-items: center;
+      border-radius: 1.2rem;
+      gap: 2.4rem;
+      .navBarLink {
+         color: initial;
+         font-size: in;
       }
    }
    @include respond(desktop) {
-      font-size: 1.8rem;
+      gap: 4rem;
+   }
 
-      &.activeLink {
-         padding: 1.4rem 2.4rem;
-         border-radius: 1rem;
-         font-weight: 500;
+   .navBarLink {
+      @include respond(laptop) {
+         color: var(--Grey-50);
+         text-decoration: none;
+         font-family: Inter;
+         font-size: 1.4rem;
+         font-style: normal;
+         font-weight: 400;
+         line-height: 150%;
+         &.activeLink {
+            padding: 1rem 1.8rem;
+            border-radius: 0.6rem;
+            border: 1px solid var(--Dark-20);
+            background: var(--Dark-08);
+            color: var(--Absolute-White);
+            font-weight: 500;
+         }
+      }
+      @include respond(desktop) {
+         font-size: 1.8rem;
+
+         &.activeLink {
+            padding: 1.4rem 2.4rem;
+            border-radius: 1rem;
+            font-weight: 500;
+         }
       }
    }
 }
@@ -74,6 +111,8 @@
    }
 }
 .hamburgarMenu {
+   cursor: pointer;
+   z-index: 999999999;
    width: 3.4rem;
    height: 3.4rem;
 
@@ -81,9 +120,19 @@
       display: none;
    }
 }
-.ctaBtn {
+.ctaBtnlLink {
    display: none;
    @include respond(laptop) {
       display: inline-block;
+   }
+}
+.closeMenu {
+   cursor: pointer;
+   z-index: 999999999;
+   width: 5.4rem;
+   height: 5.4rem;
+
+   @include respond(laptop) {
+      display: none;
    }
 }

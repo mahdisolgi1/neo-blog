@@ -1,21 +1,40 @@
-import { FC } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 import styles from "./Nav.module.scss";
 import { Link, useLocation } from "react-router-dom";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import Button from "./Button";
+import { IoClose } from "react-icons/io5";
 
 const Nav: FC = () => {
    const location = useLocation();
+   const [menuOpen, setMenuOpen] = useState(false);
 
+   const toggleMenu = () => setMenuOpen((prev) => !prev);
+
+   const closeMenu = () => setMenuOpen(false);
+   const menuRef = useRef<HTMLDivElement>(null);
+
+   useEffect(() => {
+      const handleClickOutside = (event: MouseEvent) => {
+         if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+            setMenuOpen(false);
+         }
+      };
+
+      document.addEventListener("mousedown", handleClickOutside);
+
+      return () => document.removeEventListener("mousedown", handleClickOutside);
+   }, []);
    return (
       <div className={styles.navBar}>
          <img className={styles.logo} src="/logo.svg" alt="logo" />
-         <nav className={styles.navBarLinksBox}>
-            <ul className={styles.navBarLinks}>
+         <nav ref={menuRef} className={styles.navBarLinksBox}>
+            <ul className={`${styles.navBarLinks} ${menuOpen ? styles.navBarLinksMobile : ""}`}>
                <li className={styles.navBarLinkItem}>
                   <Link
                      to="/home"
                      className={`${styles.navBarLink} ${location.pathname === "/home" ? styles.activeLink : ""}`}
+                     onClick={closeMenu}
                   >
                      Home
                   </Link>
@@ -23,6 +42,7 @@ const Nav: FC = () => {
                <li className={styles.navBarLinkItem}>
                   <Link
                      to="/news"
+                     onClick={closeMenu}
                      className={`${styles.navBarLink} ${location.pathname === "/news" ? styles.activeLink : ""}`}
                   >
                      News
@@ -31,6 +51,7 @@ const Nav: FC = () => {
                <li className={styles.navBarLinkItem}>
                   <Link
                      to="/podcasts"
+                     onClick={closeMenu}
                      className={`${styles.navBarLink} ${location.pathname === "/podcasts" ? styles.activeLink : ""}`}
                   >
                      Podcasts
@@ -39,6 +60,7 @@ const Nav: FC = () => {
                <li className={styles.navBarLinkItem}>
                   <Link
                      to="/resources"
+                     onClick={closeMenu}
                      className={`${styles.navBarLink} ${location.pathname === "/resources" ? styles.activeLink : ""}`}
                   >
                      Resources
@@ -47,11 +69,21 @@ const Nav: FC = () => {
             </ul>
          </nav>
 
-         <HiOutlineMenuAlt3 color="white" className={styles.hamburgarMenu} aria-label="hamburgar-menu" />
-
-         <Button size="md" type="primary" className={styles.ctaBtn}>
-            Contact Us
-         </Button>
+         {menuOpen ? (
+            <IoClose color="white" aria-label="close-hamburgar-menu" onClick={closeMenu} className={styles.closeMenu} />
+         ) : (
+            <HiOutlineMenuAlt3
+               onClick={toggleMenu}
+               color="white"
+               className={styles.hamburgarMenu}
+               aria-label="hamburgar-menu"
+            />
+         )}
+         <Link to='/contact' className={styles.contact}>
+            <Button size="md" type="primary" className={styles.ctaBtn}>
+               Contact Us
+            </Button>
+         </Link>
       </div>
    );
 };
