@@ -14,6 +14,13 @@ const Nav: FC = () => {
    const closeMenu = () => setMenuOpen(false);
    const menuRef = useRef<HTMLDivElement>(null);
 
+   const handleLogoClick = () => {
+      window.scrollTo({
+         top: 0,
+         behavior: "smooth",
+      });
+   };
+
    useEffect(() => {
       const handleClickOutside = (event: MouseEvent) => {
          if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
@@ -27,7 +34,7 @@ const Nav: FC = () => {
    }, []);
    return (
       <div className={styles.navBar}>
-         <img className={styles.logo} src="/logo.svg" alt="logo" />
+         <img onClick={handleLogoClick} className={styles.logo} src="/logo.svg" alt="logo" />
          <nav ref={menuRef} className={styles.navBarLinksBox}>
             <ul className={`${styles.navBarLinks} ${menuOpen ? styles.navBarLinksMobile : ""}`}>
                <li className={styles.navBarLinkItem}>
