@@ -427,6 +427,7 @@
 }
 
 .ebookHeroDetailWithPerviewLink {
+   text-decoration: none;
    display: flex;
    padding: 1.4rem 2rem;
    align-items: center;
@@ -553,6 +554,7 @@
    }
 }
 .ourReadersSayCardCta {
+   text-decoration: none;
    cursor: pointer;
    border-radius: 0.8rem;
    border: 1px solid var(--Dark-15);

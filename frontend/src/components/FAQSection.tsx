@@ -4,6 +4,7 @@ import { FC, useState } from "react";
 import { PiArrowUpRight } from "react-icons/pi";
 import { FaPlus } from "react-icons/fa";
 import { GoDash } from "react-icons/go";
+import { Link } from "react-router-dom";
 
 const accordionData = [
    {
@@ -51,10 +52,10 @@ const FAQSection: FC = () => {
                   If the question is not available on our FAQ section, feel free to contact us personally.
                </p>
             </div>
-            <div className={styles.fAQSectionIntroCta}>
+            <Link to="/not-implemented" className={styles.fAQSectionIntroCta}>
                <span className={styles.fAQSectionIntroCtaText}>Ask Qustion</span>
                <PiArrowUpRight color="gold" className={styles.fAQSectionIntroCtaIcon} />
-            </div>
+            </Link>
          </div>
          <div className={styles.fAQSectionAccordion}>
             {accordionData.map((item, i) => (
