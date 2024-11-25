@@ -9,9 +9,14 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "codegen": " orval --config ./orval.config.ts"
+    "codegen": " orval --config ./orval.config.ts",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@storybook/addon-essentials": "^8.4.5",
+    "@storybook/addon-links": "^8.4.5",
+    "@storybook/react": "^8.4.5",
     "axios": "^1.7.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -21,7 +26,13 @@
     "vite-tsconfig-paths": "^5.0.1"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "3.2.2",
     "@eslint/js": "^9.14.0",
+    "@storybook/addon-interactions": "8.4.5",
+    "@storybook/addon-onboarding": "8.4.5",
+    "@storybook/blocks": "8.4.5",
+    "@storybook/react-vite": "8.4.5",
+    "@storybook/test": "8.4.5",
     "@types/node": "^22.8.7",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
@@ -30,11 +41,18 @@
     "eslint": "^9.14.0",
     "eslint-plugin-react-hooks": "5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",
+    "eslint-plugin-storybook": "^0.11.1",
     "globals": "^15.11.0",
     "orval": "^7.2.0",
     "sass": "^1.80.6",
+    "storybook": "8.4.5",
     "typescript": "^5.6.3",
     "typescript-eslint": "^8.12.2",
     "vite": "^5.4.10"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
   }
 }
