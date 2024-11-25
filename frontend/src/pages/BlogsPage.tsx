@@ -1,7 +1,8 @@
+import NotImplemented from "@/components/NotImplemented";
 import { FC } from "react";
 
 const BlogsPage: FC = () => {
-   return <div>BlogsPage</div>;
+   return <NotImplemented />;
 };
 
 export default BlogsPage;
