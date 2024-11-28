@@ -6,7 +6,7 @@ import { PiArrowUpRight } from "react-icons/pi";
 import { Link } from "react-router-dom";
 
 const Resources: FC = () => {
-   const { data } = useGetAuthors();
+   const { data } = useGetAuthors({ populate: "avatar" });
    const res = data?.data?.data;
 
    const fourRandomAuthors = getRandomObjects(res, 4);
