@@ -7,7 +7,7 @@ import { IoEyeOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
 const EbookHero: FC = () => {
-   const { data } = useGetAuthors();
+   const { data } = useGetAuthors({ populate: "avatar" });
    const res = data?.data?.data;
 
    const fourRandomAuthors = getRandomObjects(res, 4);
