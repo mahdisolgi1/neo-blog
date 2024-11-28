@@ -6,9 +6,16 @@ This is **neo blog**, a web application built with **React**, **typeScript**, an
 
 ## Tech Stack
 
+codegen (Orval): API code generation from OpenAPI specs
+Axios: HTTP client for making requests
+SWR: Data fetching library with caching and revalidation
+
 - **React**: Frontend framework
 - **strapi**: Backend headless CMS
 - **TypeScript**: For static typing
+- **codegen (Orval)**: API code generation from OpenAPI specs
+- **Axios**:HTTP client for making requests
+- **SWR**:Data fetching library with caching and revalidation
 - **SCSS**: for Styling
 - **React Icons**: for Icons
 - **React Router**: For routing
@@ -43,7 +50,14 @@ To get started with this project on your local machine, follow the steps below:
    pnpm install
    ```
 
-3. **Run the frontend development server**:
+3. **add services(codegen)**:
+   run the following command to generate the necessary API code using Orval:
+
+   ```bash
+   pnpm run codegen
+   ```
+
+4. **Run the frontend development server**:
    Start the app in frontend development mode with:
 
    ```bash
@@ -52,7 +66,7 @@ To get started with this project on your local machine, follow the steps below:
 
    This will open the app in your browser at `http://localhost:5173/`.
 
-4. **Run the backend development server (strapi)**:
+5. **Run the backend development server (strapi)**:
    Start the backend server with:
 
    ```bash
