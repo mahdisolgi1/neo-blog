@@ -7,13 +7,14 @@ interface ButtonProps {
    children: React.ReactNode;
    className?: string;
    onClick?: () => void;
+   [key: string]: any;
 }
 
-const Button: FC<ButtonProps> = ({ type, size, children, className, onClick }) => {
+const Button: FC<ButtonProps> = ({ type, size, children, className, onClick, ...rest }) => {
    const buttonClass = `${styles.button} ${styles[type]} ${styles[size]} ${className || ""}`;
 
    return (
-      <button onClick={onClick} className={buttonClass}>
+      <button onClick={onClick} className={buttonClass} {...rest}>
          {children}
       </button>
    );
