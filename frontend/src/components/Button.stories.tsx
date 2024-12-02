@@ -2,7 +2,7 @@ import { Meta, StoryFn } from "@storybook/react";
 import Button from "./Button";
 
 export default {
-   title: "Components/Button",
+   title: "UI/Button",
    component: Button,
    args: {
       children: "Click Me",
@@ -14,7 +14,7 @@ const Template: StoryFn<typeof Button> = (args) => <Button {...args} />;
 export const Default = Template.bind({});
 Default.args = {
    children: "Default Button",
-   type: "primary",
+   variant: "primary",
 };
 
 export const WithAction = Template.bind({});
