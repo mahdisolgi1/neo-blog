@@ -1,6 +1,7 @@
 import { FC } from "react";
 import styles from "./FutureTechRevolutionSection.module.scss";
 import { PiArrowUpRight } from "react-icons/pi";
+import { Link } from "react-router-dom";
 
 const FutureTechRevolutionSection: FC = () => {
    return (
@@ -42,13 +43,13 @@ const FutureTechRevolutionSection: FC = () => {
             <div className={styles.futureTechRevolutionCardDetail}>
                <div className={styles.futureTechRevolutionCardDetailHeading}>
                   <strong className={styles.futureTechRevolutionCardDetailHeadingHeader}>Resource Access</strong>
-                  <div className={styles.futureTechRevolutionCardDetailIconBox}>
+                  <Link to="/not-implemented" className={styles.futureTechRevolutionCardDetailIconBox}>
                      <PiArrowUpRight
                         color="black"
                         className={styles.futureTechRevolutionCardDetailIcon}
                         aria-label="arrow-to-up-right-black"
                      />
-                  </div>
+                  </Link>
                </div>
                <p className={styles.futureTechRevolutionCardDetailP}>
                   Visitors can access a wide range of resources, including ebooks, whitepapers, reports.
@@ -57,13 +58,13 @@ const FutureTechRevolutionSection: FC = () => {
             <div className={styles.futureTechRevolutionCardDetail}>
                <div className={styles.futureTechRevolutionCardDetailHeading}>
                   <strong className={styles.futureTechRevolutionCardDetailHeadingHeader}>Community Forum</strong>
-                  <div className={styles.futureTechRevolutionCardDetailIconBox}>
+                  <Link to="/not-implemented" className={styles.futureTechRevolutionCardDetailIconBox}>
                      <PiArrowUpRight
                         color="black"
                         className={styles.futureTechRevolutionCardDetailIcon}
                         aria-label="arrow-to-up-right-black"
                      />
-                  </div>
+                  </Link>
                </div>
                <p className={styles.futureTechRevolutionCardDetailP}>
                   Join our active community forum to discuss industry trends and collaborate with peers.
@@ -72,13 +73,13 @@ const FutureTechRevolutionSection: FC = () => {
             <div className={styles.futureTechRevolutionCardDetail}>
                <div className={styles.futureTechRevolutionCardDetailHeading}>
                   <strong className={styles.futureTechRevolutionCardDetailHeadingHeader}>Tech Events</strong>
-                  <div className={styles.futureTechRevolutionCardDetailIconBox}>
+                  <Link to="/not-implemented" className={styles.futureTechRevolutionCardDetailIconBox}>
                      <PiArrowUpRight
                         color="black"
                         className={styles.futureTechRevolutionCardDetailIcon}
                         aria-label="arrow-to-up-right-black"
                      />
-                  </div>
+                  </Link>
                </div>
                <p className={styles.futureTechRevolutionCardDetailP}>
                   Stay updated on upcoming tech events, webinars and conferences to enhance your knowledge.

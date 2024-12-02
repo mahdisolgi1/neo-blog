@@ -1,0 +1,37 @@
+.notImplemented {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 1.5rem;
+   height: 75vh;
+   text-align: center;
+   color: #333;
+   font-family: sans-serif;
+}
+
+.notImplementedHeader {
+   font-size: 4rem;
+   font-weight: 700;
+   color: #e74c3c;
+   margin-bottom: 20px;
+   letter-spacing: 1px;
+}
+
+.notImplementedInfo {
+   font-size: 3rem;
+   color: #555;
+   max-width: 600px;
+   margin: 0 20px;
+}
+
+.notImplementedInfo a {
+   color: #3498db;
+   font-weight: bold;
+   text-decoration: none;
+   transition: color 0.3s ease;
+}
+
+.notImplementedInfo a:hover {
+   color: #e74c3c;
+}

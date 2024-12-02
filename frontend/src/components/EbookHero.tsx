@@ -7,7 +7,7 @@ import { IoEyeOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
 const EbookHero: FC = () => {
-   const { data } = useGetAuthors();
+   const { data } = useGetAuthors({ populate: "avatar" });
    const res = data?.data?.data;
 
    const fourRandomAuthors = getRandomObjects(res, 4);
@@ -72,14 +72,14 @@ const EbookHero: FC = () => {
                         <span className={styles.ebookHeroDetailSubText}>Download Formats</span>
                         <strong className={styles.ebookHeroDetailText}>PDF format for access.</strong>
                      </div>
-                     <div className={styles.ebookHeroDetailWithPerviewLink}>
+                     <Link to="/not-implemented" className={styles.ebookHeroDetailWithPerviewLink}>
                         <span className={styles.ebookHeroDetailWithPerviewLinkText}>Preview</span>
                         <IoEyeOutline
                            className={styles.ebookHeroDetailWithPerviewLinkIcon}
                            color="gold"
                            aria-label="yellow-eye"
                         />
-                     </div>
+                     </Link>
                   </div>
                   <div className={styles.ebookHeroDetail}>
                      <span className={styles.ebookHeroDetailSubText}>Average Author Expertise</span>
@@ -147,14 +147,14 @@ const EbookHero: FC = () => {
                         <span className={styles.ebookHeroDetailSubText}>Download Formats</span>
                         <strong className={styles.ebookHeroDetailText}>PDF format for access.</strong>
                      </div>
-                     <div className={styles.ebookHeroDetailWithPerviewLink}>
+                     <Link to="/not-implemented" className={styles.ebookHeroDetailWithPerviewLink}>
                         <span className={styles.ebookHeroDetailWithPerviewLinkText}>Preview</span>
                         <IoEyeOutline
                            className={styles.ebookHeroDetailWithPerviewLinkIcon}
                            color="gold"
                            aria-label="yellow-eye"
                         />
-                     </div>
+                     </Link>
                   </div>
                   <div className={styles.ebookHeroDetail}>
                      <span className={styles.ebookHeroDetailSubText}>Average Author Expertise</span>
@@ -173,14 +173,14 @@ const EbookHero: FC = () => {
                </div>
                <h3 className={styles.ourReadersSayCardHeader}>Real Words from Real Readers</h3>
             </div>
-            <div className={styles.ourReadersSayCardCta}>
+            <Link to="/not-implemented" className={styles.ourReadersSayCardCta}>
                <span className={styles.ourReadersSayCardCtaText}>View All Testimonials</span>
                <PiArrowUpRight
                   color="gold"
                   className={styles.ourReadersSayCardCtaIcon}
                   aria-label="arrow-to-up-right"
                />
-            </div>
+            </Link>
          </div>
       </>
    );

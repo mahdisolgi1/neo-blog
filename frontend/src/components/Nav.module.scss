@@ -7,6 +7,10 @@
    border-top: 1px solid var(--Dark-15);
    border-bottom: 1px solid var(--Dark-15);
    background: var(--Dark-10);
+   position: sticky;
+   top: 0;
+   width: 100%;
+   z-index: 99999;
 
    @include respond(laptop) {
       padding: 2rem 8rem;
@@ -99,6 +103,7 @@
    }
 }
 .logo {
+   cursor: pointer;
    width: 12.5234rem;
    height: 3.5rem;
    @include respond(laptop) {

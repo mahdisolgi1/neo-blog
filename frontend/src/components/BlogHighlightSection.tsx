@@ -26,7 +26,14 @@ const BlogHighlightSection: FC = () => {
       }
    }, [categoriesData, categoriesError]);
 
-   const { data: articlesData, error: articleError } = useGetArticles();
+   const { data: articlesData, error: articleError } = useGetArticles({
+      populate: {
+         category: true,
+         author: {
+            populate: { avatar: true },
+         },
+      },
+   });
 
    const handleTopicClick = (categoryName: string) => {
       setSelectedCategory(categoryName);
