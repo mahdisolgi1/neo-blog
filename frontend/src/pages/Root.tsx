@@ -17,7 +17,6 @@ const Root: FC = () => {
       const checkHealth = async () => {
          try {
             const response = await fetch("http://localhost:1337/api/healthcheck");
-            console.log(response.ok);
             if (response.ok) {
                toast.success(`Server is healthy`);
             } else {
