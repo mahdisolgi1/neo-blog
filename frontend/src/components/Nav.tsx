@@ -87,7 +87,7 @@ const Nav: FC = () => {
             />
          )}
          <Link to="/contact" className={styles.contact}>
-            <Button size="md" type="primary">
+            <Button size="md" variant="primary">
                Contact Us
             </Button>
          </Link>

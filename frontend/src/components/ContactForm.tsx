@@ -132,7 +132,7 @@ const ContactForm: FC = () => {
                   />
                   <p className={styles.ContactFormCtaPrivacyPloicyText}>I agree with Terms of Use and Privacy Policy</p>
                </div>
-               <Button type="primary" size="lg" className={styles.ContactFormCtaBtn}>
+               <Button variant="primary" size="lg" className={styles.ContactFormCtaBtn}>
                   Send
                </Button>
             </div>
