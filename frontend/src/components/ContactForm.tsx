@@ -14,7 +14,7 @@ const ContactForm: FC = () => {
    });
 
    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-      const { id, value, type, checked } = e.target;
+      const { id, value, type, checked } = e.target as HTMLInputElement;
       setFormData((prev) => ({
          ...prev,
          [id]: type === "checkbox" ? checked : value,
