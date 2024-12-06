@@ -5,15 +5,18 @@ import getRandomObjects from "@/helpers/getRandomObjects";
 import { PiArrowUpRight } from "react-icons/pi";
 import { FaRegComment, FaRegHeart } from "react-icons/fa";
 import { BsSend } from "react-icons/bs";
-import { Article } from "@/services/generated/models";
+import { Article, ArticleCategory } from "@/services/generated/models";
 import { Category } from "@/services/generated/models";
 
 import { useGetCategories } from "@/services/generated/category/category";
 import { Link } from "react-router-dom";
+interface ArticleWithCustomization extends Article {
+   category?: ArticleCategory & { name?: string };
+}
 
 const BlogHighlightSection: FC = () => {
    const [selectedCategory, setSelectedCategory] = useState<string>("All");
-   const [filteredArticles, setFilteredArticles] = useState<Article[]>([]);
+   const [filteredArticles, setFilteredArticles] = useState<ArticleWithCustomization[]>([]);
    const [categories, setCategories] = useState<Category[]>([]);
 
    const { data: categoriesData, error: categoriesError } = useGetCategories();
@@ -26,13 +29,17 @@ const BlogHighlightSection: FC = () => {
       }
    }, [categoriesData, categoriesError]);
 
-   const { data: articlesData, error: articleError } = useGetArticles({
-      populate: {
-         category: true,
-         author: {
-            populate: { avatar: true },
-         },
+   type PopulateType = string;
+
+   const populateValue = JSON.stringify({
+      category: true,
+      author: {
+         populate: { avatar: true },
       },
+   }) as PopulateType;
+
+   const { data: articlesData, error: articleError } = useGetArticles({
+      populate: populateValue,
    });
 
    const handleTopicClick = (categoryName: string) => {
@@ -44,18 +51,33 @@ const BlogHighlightSection: FC = () => {
       }
 
       const articles = articlesData?.data?.data ?? [];
-      const filteredArticles =
+      const enrichedArticles: ArticleWithCustomization[] = articles.map((article) => ({
+         ...article,
+         category: {
+            ...article.category,
+            name: categories.find((cat) => cat.id === article.category?.id)?.name || "Unknown",
+         },
+      }));
+
+      const filtered =
          categoryName === "All"
-            ? getRandomObjects(articles, 3)
-            : articles.filter((article) => article?.category?.name === categoryName);
+            ? getRandomObjects(enrichedArticles, 3)
+            : enrichedArticles.filter((article) => article?.category?.name === categoryName);
 
-      setFilteredArticles(filteredArticles);
+      setFilteredArticles(filtered);
    };
-
    useEffect(() => {
-      const res = articlesData?.data?.data;
-      if (res) setFilteredArticles(getRandomObjects(res, 3));
-   }, [articlesData]);
+      if (articlesData?.data?.data && categories) {
+         const enrichedArticles: ArticleWithCustomization[] = articlesData.data.data.map((article) => ({
+            ...article,
+            category: {
+               ...article.category,
+               name: categories.find((cat) => cat.id === article.category?.id)?.name || "Unknown",
+            },
+         }));
+         setFilteredArticles(getRandomObjects(enrichedArticles, 3));
+      }
+   }, [articlesData, categories]);
 
    const baseUrl = import.meta.env.VITE_BACK_END_BASE_URL;
 
@@ -132,9 +154,11 @@ const BlogHighlightSection: FC = () => {
                            <div className={styles.tweetExtraInfo}>
                               <FaRegHeart className={styles.tweetExtraInfoIcon} color="grey" aria-label="heart-icon" />
                               <span className={styles.tweetExtraInfoIconNum}>
-                                 {article?.likes > 1000
-                                    ? `${(article.likes / 1000).toFixed(article.likes % 1000 === 0 ? 0 : 1)}k`
-                                    : article?.likes}
+                                 {Number(article?.likes) && Number(article?.likes) > 1000
+                                    ? `${(Number(article.likes) / 1000).toFixed(
+                                         Number(article.likes) % 1000 === 0 ? 0 : 1
+                                      )}k`
+                                    : Number(article?.likes)}
                               </span>
                            </div>
                            <div className={styles.tweetExtraInfo}>
@@ -144,17 +168,21 @@ const BlogHighlightSection: FC = () => {
                                  aria-label="comment-icon"
                               />
                               <span className={styles.tweetExtraInfoIconNum}>
-                                 {article?.comments > 1000
-                                    ? `${(article.comments / 1000).toFixed(article.comments % 1000 === 0 ? 0 : 1)}k`
-                                    : article?.comments}
+                                 {Number(article?.comments) && Number(article?.comments) > 1000
+                                    ? `${(Number(article.comments) / 1000).toFixed(
+                                         Number(article.comments) % 1000 === 0 ? 0 : 1
+                                      )}k`
+                                    : Number(article?.comments)}
                               </span>
                            </div>
                            <div className={styles.tweetExtraInfo}>
                               <BsSend className={styles.tweetExtraInfoIcon} color="grey" aria-label="share-icon" />
                               <span className={styles.tweetExtraInfoIconNum}>
-                                 {article?.shares > 1000
-                                    ? `${(article.shares / 1000).toFixed(article.shares % 1000 === 0 ? 0 : 1)}k`
-                                    : article?.shares}
+                                 {Number(article?.shares) && Number(article?.shares) > 1000
+                                    ? `${(Number(article.shares) / 1000).toFixed(
+                                         Number(article.shares) % 1000 === 0 ? 0 : 1
+                                      )}k`
+                                    : Number(article?.shares)}
                               </span>
                            </div>
                         </div>
