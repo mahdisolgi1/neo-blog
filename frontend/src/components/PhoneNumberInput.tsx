@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "./PhoneNumberInput.module.scss";
 import { IoIosArrowDown } from "react-icons/io";
+import Input from "./Input";
 
 const countries = [
    { code: "+1", country: "United States", flagUrl: "https://flagcdn.com/w320/us.png" },
@@ -57,9 +58,8 @@ const PhoneNumberInput: React.FC<PhoneNumberInputProps> = ({ onChange }) => {
             )}
          </div>
 
-         <input
+         <Input
             type="text"
-            className={styles.phoneNumberInput}
             placeholder="Enter phone number"
             value={phoneNumber}
             onChange={handlePhoneNumberChange}
