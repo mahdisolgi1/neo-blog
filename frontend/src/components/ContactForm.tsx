@@ -2,6 +2,7 @@ import { FC, useState } from "react";
 import styles from "./ContactForm.module.scss";
 import Button from "./Button";
 import PhoneNumberInput from "./PhoneNumberInput";
+import Input from "./Input";
 
 const ContactForm: FC = () => {
    const [formData, setFormData] = useState({
@@ -62,8 +63,7 @@ const ContactForm: FC = () => {
                <label className={styles.ContactFormLabel} htmlFor="firstName">
                   First Name
                </label>
-               <input
-                  className={styles.ContactFormInput}
+               <Input
                   type="text"
                   id="firstName"
                   placeholder="Enter First Name"
@@ -77,8 +77,7 @@ const ContactForm: FC = () => {
                <label className={styles.ContactFormLabel} htmlFor="lastName">
                   Last Name
                </label>
-               <input
-                  className={styles.ContactFormInput}
+               <Input
                   type="text"
                   id="lastName"
                   placeholder="Enter Last Name"
@@ -92,8 +91,7 @@ const ContactForm: FC = () => {
                <label className={styles.ContactFormLabel} htmlFor="email">
                   Email
                </label>
-               <input
-                  className={styles.ContactFormInput}
+               <Input
                   type="email"
                   id="email"
                   placeholder="Enter your Email"
