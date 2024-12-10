@@ -12,6 +12,11 @@ const Root: FC = () => {
    useEffect(() => {
       window.scrollTo(0, 0);
    }, [pathname]);
+   useEffect(() => {
+      const path = pathname.slice(1);
+      const pageTitle = path.charAt(0).toUpperCase() + path.slice(1);
+      document.title = `Neo Blog / ${pageTitle}`;
+   }, [pathname]);
 
    useEffect(() => {
       const checkHealth = async () => {
