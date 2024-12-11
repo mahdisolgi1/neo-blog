@@ -99,9 +99,7 @@
             }
           }
         },
-        "tags": [
-          "About"
-        ],
+        "tags": ["About"],
         "parameters": [
           {
             "name": "sort",
@@ -271,9 +269,7 @@
             }
           }
         },
-        "tags": [
-          "About"
-        ],
+        "tags": ["About"],
         "parameters": [],
         "operationId": "put/about",
         "requestBody": {
@@ -351,9 +347,7 @@
             }
           }
         },
-        "tags": [
-          "About"
-        ],
+        "tags": ["About"],
         "parameters": [],
         "operationId": "delete/about"
       }
@@ -422,9 +416,7 @@
             }
           }
         },
-        "tags": [
-          "Article"
-        ],
+        "tags": ["Article"],
         "parameters": [
           {
             "name": "sort",
@@ -503,7 +495,10 @@
             "deprecated": false,
             "required": false,
             "schema": {
-              "type": "string"
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             }
           },
           {
@@ -594,9 +589,7 @@
             }
           }
         },
-        "tags": [
-          "Article"
-        ],
+        "tags": ["Article"],
         "parameters": [],
         "operationId": "post/articles",
         "requestBody": {
@@ -675,9 +668,7 @@
             }
           }
         },
-        "tags": [
-          "Article"
-        ],
+        "tags": ["Article"],
         "parameters": [
           {
             "name": "id",
@@ -755,9 +746,7 @@
             }
           }
         },
-        "tags": [
-          "Article"
-        ],
+        "tags": ["Article"],
         "parameters": [
           {
             "name": "id",
@@ -846,9 +835,7 @@
             }
           }
         },
-        "tags": [
-          "Article"
-        ],
+        "tags": ["Article"],
         "parameters": [
           {
             "name": "id",
@@ -928,9 +915,7 @@
             }
           }
         },
-        "tags": [
-          "Author"
-        ],
+        "tags": ["Author"],
         "parameters": [
           {
             "name": "sort",
@@ -1100,9 +1085,7 @@
             }
           }
         },
-        "tags": [
-          "Author"
-        ],
+        "tags": ["Author"],
         "parameters": [],
         "operationId": "post/authors",
         "requestBody": {
@@ -1181,9 +1164,7 @@
             }
           }
         },
-        "tags": [
-          "Author"
-        ],
+        "tags": ["Author"],
         "parameters": [
           {
             "name": "id",
@@ -1261,9 +1242,7 @@
             }
           }
         },
-        "tags": [
-          "Author"
-        ],
+        "tags": ["Author"],
         "parameters": [
           {
             "name": "id",
@@ -1352,9 +1331,7 @@
             }
           }
         },
-        "tags": [
-          "Author"
-        ],
+        "tags": ["Author"],
         "parameters": [
           {
             "name": "id",
@@ -1434,9 +1411,7 @@
             }
           }
         },
-        "tags": [
-          "Category"
-        ],
+        "tags": ["Category"],
         "parameters": [
           {
             "name": "sort",
@@ -1606,9 +1581,7 @@
             }
           }
         },
-        "tags": [
-          "Category"
-        ],
+        "tags": ["Category"],
         "parameters": [],
         "operationId": "post/categories",
         "requestBody": {
@@ -1687,9 +1660,7 @@
             }
           }
         },
-        "tags": [
-          "Category"
-        ],
+        "tags": ["Category"],
         "parameters": [
           {
             "name": "id",
@@ -1767,9 +1738,7 @@
             }
           }
         },
-        "tags": [
-          "Category"
-        ],
+        "tags": ["Category"],
         "parameters": [
           {
             "name": "id",
@@ -1858,9 +1827,7 @@
             }
           }
         },
-        "tags": [
-          "Category"
-        ],
+        "tags": ["Category"],
         "parameters": [
           {
             "name": "id",
@@ -1940,9 +1907,7 @@
             }
           }
         },
-        "tags": [
-          "Global"
-        ],
+        "tags": ["Global"],
         "parameters": [
           {
             "name": "sort",
@@ -2112,9 +2077,7 @@
             }
           }
         },
-        "tags": [
-          "Global"
-        ],
+        "tags": ["Global"],
         "parameters": [],
         "operationId": "put/global",
         "requestBody": {
@@ -2192,9 +2155,7 @@
             }
           }
         },
-        "tags": [
-          "Global"
-        ],
+        "tags": ["Global"],
         "parameters": [],
         "operationId": "delete/global"
       }
@@ -2211,9 +2172,7 @@
     "schemas": {
       "Error": {
         "type": "object",
-        "required": [
-          "error"
-        ],
+        "required": ["error"],
         "properties": {
           "data": {
             "nullable": true,
@@ -2250,9 +2209,7 @@
       },
       "AboutRequest": {
         "type": "object",
-        "required": [
-          "data"
-        ],
+        "required": ["data"],
         "properties": {
           "data": {
             "type": "object",
@@ -2819,9 +2776,7 @@
       },
       "ArticleRequest": {
         "type": "object",
-        "required": [
-          "data"
-        ],
+        "required": ["data"],
         "properties": {
           "data": {
             "type": "object",
@@ -4215,9 +4170,7 @@
       },
       "AuthorRequest": {
         "type": "object",
-        "required": [
-          "data"
-        ],
+        "required": ["data"],
         "properties": {
           "data": {
             "type": "object",
@@ -5521,9 +5474,7 @@
       },
       "CategoryRequest": {
         "type": "object",
-        "required": [
-          "data"
-        ],
+        "required": ["data"],
         "properties": {
           "data": {
             "type": "object",
@@ -6693,15 +6644,10 @@
       },
       "GlobalRequest": {
         "type": "object",
-        "required": [
-          "data"
-        ],
+        "required": ["data"],
         "properties": {
           "data": {
-            "required": [
-              "siteName",
-              "siteDescription"
-            ],
+            "required": ["siteName", "siteDescription"],
             "type": "object",
             "properties": {
               "siteName": {
@@ -6782,10 +6728,7 @@
       },
       "Global": {
         "type": "object",
-        "required": [
-          "siteName",
-          "siteDescription"
-        ],
+        "required": ["siteName", "siteDescription"],
         "properties": {
           "id": {
             "type": "number"
