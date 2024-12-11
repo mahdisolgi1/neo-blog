@@ -29,19 +29,9 @@ const BlogHighlightSection: FC = () => {
       }
    }, [categoriesData, categoriesError]);
 
-   type PopulateType = string;
-
-   const populateValue = JSON.stringify({
-      category: true,
-      author: {
-         populate: { avatar: true },
-      },
-   }) as PopulateType;
-
    const { data: articlesData, error: articleError } = useGetArticles({
-      populate: populateValue,
+      populate: ["category", "author.avatar"],
    });
-
    const handleTopicClick = (categoryName: string) => {
       setSelectedCategory(categoryName);
 
