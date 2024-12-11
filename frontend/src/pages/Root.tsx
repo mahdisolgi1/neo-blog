@@ -21,7 +21,7 @@ const Root: FC = () => {
    useEffect(() => {
       const checkHealth = async () => {
          try {
-            const response = await fetch("http://localhost:1337/api/healthcheck");
+            const response = await fetch("https://neo-blog-production.up.railway.app/api/healthcheck");
             if (response.ok) {
                toast.success(`Server is healthy`);
             } else {
