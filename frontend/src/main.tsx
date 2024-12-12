@@ -11,9 +11,9 @@ import BlogsPage from "./pages/BlogsPage";
 import BlogOpenPage from "./pages/BlogOpenPage";
 import NewsPage from "./pages/NewsPage";
 import ResourcesPage from "./pages/ResourcesPage";
-import PodcastsPage from "./pages/PodcastsPage";
 import ContactPage from "./pages/ContactPage";
 import NotImplemented from "./components/NotImplemented";
+import CreateArticle from "./pages/CreateArticle";
 
 const enableDevRoutes = import.meta.env.VITE_ENABLE_DEV_ROUTES === "true";
 
@@ -36,7 +36,7 @@ const router = createBrowserRouter([
          { path: "resources", element: <ResourcesPage /> },
          { path: "contact", element: <ContactPage /> },
          { path: "not-implemented", element: <NotImplemented /> },
-         { path: "podcasts", element: <PodcastsPage /> },
+         { path: "create-article", element: <CreateArticle /> },
          ...(enableDevRoutes ? [{ path: "dev-tools", element: <DevTools /> }] : []),
          {
             path: "*",
