@@ -1,8 +1,8 @@
 import NotImplemented from "@/components/NotImplemented";
 import { FC } from "react";
 
-const PodcastsPage: FC = () => {
+const CreateArticle: FC = () => {
    return <NotImplemented />;
 };
 
-export default PodcastsPage;
+export default CreateArticle;
