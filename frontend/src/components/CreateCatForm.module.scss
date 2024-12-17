@@ -1,0 +1,120 @@
+.categoryDescription {
+   align-self: stretch;
+   height: 14vh;
+   padding: 1.6rem;
+   border-radius: 0.6rem;
+   border: 1px solid var(--Dark-15);
+   background: var(--Dark-10);
+   color: #fff;
+   font-size: 1.4rem;
+   @include respond(laptop) {
+      height: 20vh;
+   }
+   @include respond(desktop) {
+      font-size: 1.8rem;
+      padding: 2rem;
+      border-radius: 0.8rem;
+   }
+}
+.categoryDescription::placeholder {
+   color: var(--Dark-40);
+   font-family: Inter;
+   font-size: 1.4rem;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 150%;
+   flex: 1 0 0;
+
+   @include respond(desktop) {
+      font-size: 1.8rem;
+   }
+}
+.catForm {
+   border: 3px solid var(--Dark-15);
+   padding: 3rem;
+   border-radius: 2rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: 2rem;
+}
+.catHeader {
+   color: var(--Absolute-White);
+   font-family: Inter;
+   font-size: 1.8rem;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 150%;
+   letter-spacing: -0.042rem;
+   @include respond(laptop) {
+      font-size: 2rem;
+      letter-spacing: -0.048rem;
+   }
+   @include respond(desktop) {
+      font-size: 2.4rem;
+      letter-spacing: -0.06rem;
+   }
+}
+.catInputBox {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.catLabel {
+   align-self: stretch;
+   color: var(--Absolute-White);
+   font-family: Inter;
+   font-size: 1.6rem;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 150%;
+
+   @include respond(desktop) {
+      font-size: 1.8rem;
+   }
+}
+.catTextAreaBox {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.catSelectBox {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 1rem;
+   @include respond(laptop) {
+      gap: 2rem;
+   }
+}
+
+.catSelect {
+   background-color: #f0f0f0;
+   font-size: 16px;
+   padding: 8px;
+   border-radius: 4px;
+   border: 1px solid #ccc;
+}
+
+.catOption {
+   color: #333;
+   background-color: #fff;
+   padding: 5px;
+}
+.catSelectedP {
+   align-self: stretch;
+   color: var(--Absolute-White);
+   font-family: Inter;
+   font-size: 1.4rem;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 150%;
+
+   @include respond(desktop) {
+      font-size: 1.6rem;
+   }
+}
