@@ -3,8 +3,8 @@ import styles from "./CreateArticleForm.module.scss";
 import Button from "./Button";
 import Input from "./Input";
 import { usePostArticles } from "@/services/generated/article/article";
-import AutocompleteAuthor from "./AutocompleteAuthor";
-import AutocompleteCat from "./AutocompleteCat";
+import CreateAuthor from "./CreateAuthorForm";
+import CreateCat from "./CreateCatForm";
 
 interface FormData {
    title: string;
@@ -82,8 +82,8 @@ const CreateArticleForm: FC = () => {
 
    return (
       <section className={styles.createArticleSection}>
-         <AutocompleteAuthor onAuthorChange={handleAuthorChange} />
-         <AutocompleteCat onCategoryChange={handleCategoryChange} />
+         <CreateAuthor onAuthorChange={handleAuthorChange} />
+         <CreateCat onCategoryChange={handleCategoryChange} />
          <form className={styles.createArticleForm} onSubmit={handleSubmit}>
             <h2 className={styles.articleHeader}>Create or Select a Article</h2>
             <div className={styles.createArticleInputBox}>
