@@ -7,9 +7,9 @@ import Root from "./pages/Root";
 import NotFound from "./pages/NotFound";
 import HomePage from "./pages/HomePage";
 import DevTools from "./pages/DevTools";
-import BlogsPage from "./pages/BlogsPage";
+
 import BlogOpenPage from "./pages/BlogOpenPage";
-import NewsPage from "./pages/NewsPage";
+import ArticlePage from "./pages/ArticlePage";
 import ResourcesPage from "./pages/ResourcesPage";
 import ContactPage from "./pages/ContactPage";
 import NotImplemented from "./components/NotImplemented";
@@ -30,9 +30,9 @@ const router = createBrowserRouter([
             path: "home",
             element: <HomePage />,
          },
-         { path: "blogs", element: <BlogsPage /> },
-         { path: "blog/:id", element: <BlogOpenPage /> },
-         { path: "news", element: <NewsPage /> },
+
+         { path: "articles", element: <ArticlePage /> },
+         { path: "article/:id", element: <BlogOpenPage /> },
          { path: "resources", element: <ResourcesPage /> },
          { path: "contact", element: <ContactPage /> },
          { path: "not-implemented", element: <NotImplemented /> },
