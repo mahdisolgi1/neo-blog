@@ -1,8 +1,12 @@
-import NotImplemented from "@/components/NotImplemented";
+import CreateArticleForm from "@/components/CreateArticleForm";
 import { FC } from "react";
 
 const CreateArticle: FC = () => {
-   return <NotImplemented />;
+   return (
+      <section>
+         <CreateArticleForm />
+      </section>
+   );
 };
 
 export default CreateArticle;
