@@ -1,0 +1,100 @@
+.authorHeader {
+   color: var(--Absolute-White);
+   font-family: Inter;
+   font-size: 1.8rem;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 150%;
+   letter-spacing: -0.042rem;
+   @include respond(laptop) {
+      font-size: 2rem;
+      letter-spacing: -0.048rem;
+   }
+   @include respond(desktop) {
+      font-size: 2.4rem;
+      letter-spacing: -0.06rem;
+   }
+}
+.authorForm {
+   border: 3px solid var(--Dark-15);
+   padding: 3rem;
+   border-radius: 2rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: 2rem;
+}
+.authorInputBox {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.authorLoading {
+   align-self: stretch;
+   color: var(--Absolute-White);
+   font-family: Inter;
+   font-size: 1.4rem;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 150%;
+
+   @include respond(desktop) {
+      font-size: 1.6rem;
+   }
+}
+.authorSelectBox {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 1rem;
+   @include respond(laptop) {
+      gap: 2rem;
+   }
+}
+.authorLabel {
+   align-self: stretch;
+   color: var(--Absolute-White);
+   font-family: Inter;
+   font-size: 1.6rem;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 150%;
+
+   @include respond(desktop) {
+      font-size: 1.8rem;
+   }
+}
+.authorSelect {
+   background-color: #f0f0f0;
+   font-size: 16px;
+   padding: 8px;
+   border-radius: 4px;
+   border: 1px solid #ccc;
+   @include respond(laptop) {
+   }
+}
+.authorOption {
+   color: #333;
+   background-color: #fff;
+   padding: 0.5rem;
+   @include respond(laptop) {
+      padding: 1rem;
+   }
+}
+
+.authorSelectedP {
+   align-self: stretch;
+   color: var(--Absolute-White);
+   font-family: Inter;
+   font-size: 1.4rem;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 150%;
+
+   @include respond(desktop) {
+      font-size: 1.6rem;
+   }
+}
