@@ -120,7 +120,11 @@ const BlogHighlightSection: FC = () => {
                      <div className={styles.tweetProfileDetails}>
                         <img
                            className={styles.tweetProfileImg}
-                           src={`${baseUrl}${article?.author?.avatar?.url}`}
+                           src={
+                              article?.author?.avatar?.url
+                                 ? `${baseUrl}${article.author.avatar.url}`
+                                 : "/emptyAuthor.svg"
+                           }
                            alt={article?.author?.name}
                         />
                         <div>
@@ -128,7 +132,7 @@ const BlogHighlightSection: FC = () => {
                            <p className={styles.tweetProfileTopic}>{article?.category?.name}</p>
                         </div>
                      </div>
-                     <Link to={`/blogs/${article.id}`} className={styles.tweetProfileCta}>
+                     <Link to={`/article/${article.id}`} className={styles.tweetProfileCta}>
                         <span className={styles.tweetProfileIconText}>View Blog</span>
                         <PiArrowUpRight className={styles.tweetProfileIcon} color="gold" aria-label="arrow-icon" />
                      </Link>
@@ -177,7 +181,7 @@ const BlogHighlightSection: FC = () => {
                            </div>
                         </div>
                      </div>
-                     <Link to={`/blogs/${article.id}`} className={styles.tweetProfileCtaBiggerScreen}>
+                     <Link to={`/article/${article.id}`} className={styles.tweetProfileCtaBiggerScreen}>
                         <span className={styles.tweetProfileIconText}>View Blog</span>
                         <PiArrowUpRight className={styles.tweetProfileIcon} color="gold" aria-label="arrow-icon" />
                      </Link>
