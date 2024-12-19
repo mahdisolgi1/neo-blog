@@ -48,20 +48,22 @@ const Nav: FC = () => {
                </li>
                <li className={styles.navBarLinkItem}>
                   <Link
-                     to="/news"
+                     to="/articles"
                      onClick={closeMenu}
-                     className={`${styles.navBarLink} ${location.pathname === "/news" ? styles.activeLink : ""}`}
+                     className={`${styles.navBarLink} ${location.pathname === "/articles" ? styles.activeLink : ""}`}
                   >
-                     News
+                     Show All Articles
                   </Link>
                </li>
                <li className={styles.navBarLinkItem}>
                   <Link
-                     to="/podcasts"
+                     to="/create-article"
                      onClick={closeMenu}
-                     className={`${styles.navBarLink} ${location.pathname === "/podcasts" ? styles.activeLink : ""}`}
+                     className={`${styles.navBarLink} ${
+                        location.pathname === "/create-article" ? styles.activeLink : ""
+                     }`}
                   >
-                     Podcasts
+                     Create Articles
                   </Link>
                </li>
                <li className={styles.navBarLinkItem}>
