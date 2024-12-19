@@ -101,7 +101,7 @@ const BlogHighlightSection: FC = () => {
                className={`${styles.Topic} ${selectedCategory === "All" ? styles.activelink : ""}`}
                onClick={() => handleTopicClick("All")}
             >
-               <p className={styles.TopicName}>All</p>
+               <p className={styles.TopicName}>Random</p>
             </div>
             {categories?.map((category) => (
                <div

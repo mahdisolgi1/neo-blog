@@ -19,7 +19,7 @@ const Resources: FC = () => {
                <img
                   key={author?.id}
                   className={styles.facesBehindImg}
-                  src={`${baseUrl}${author?.avatar?.url}`}
+                  src={author?.avatar?.url ? `${baseUrl}${author.avatar.url}` : "/emptyAuthor.svg"}
                   alt={author?.name}
                />
             ))}
