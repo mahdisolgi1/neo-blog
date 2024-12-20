@@ -8,7 +8,7 @@ import NotFound from "./pages/NotFound";
 import HomePage from "./pages/HomePage";
 import DevTools from "./pages/DevTools";
 
-import BlogOpenPage from "./pages/BlogOpenPage";
+import ArticlesPage from "./pages/ArticlesPage";
 import ArticlePage from "./pages/ArticlePage";
 import ResourcesPage from "./pages/ResourcesPage";
 import ContactPage from "./pages/ContactPage";
@@ -31,8 +31,8 @@ const router = createBrowserRouter([
             element: <HomePage />,
          },
 
-         { path: "articles", element: <ArticlePage /> },
-         { path: "article/:id", element: <BlogOpenPage /> },
+         { path: "articles", element: <ArticlesPage /> },
+         { path: "article/:id", element: <ArticlePage /> },
          { path: "resources", element: <ResourcesPage /> },
          { path: "contact", element: <ContactPage /> },
          { path: "not-implemented", element: <NotImplemented /> },
