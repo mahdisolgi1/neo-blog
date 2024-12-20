@@ -1,0 +1,222 @@
+.articleDetailsSection {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 2rem 1.6rem;
+   gap: 3rem;
+   @include respond(laptop) {
+      flex-direction: row;
+      gap: 4rem;
+      padding: 2.4rem 8rem;
+   }
+   @include respond(desktop) {
+      gap: 5rem;
+      padding: 3rem 16.2rem;
+   }
+}
+
+.cover {
+   width: 40%;
+   height: 100%;
+}
+.articleDetails {
+   display: flex;
+   gap: 2rem;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   @include respond(laptop) {
+      gap: 3rem;
+   }
+   @include respond(desktop) {
+      gap: 4rem;
+   }
+}
+.articleDetailsHeader {
+   display: flex;
+   width: 100%;
+   align-items: center;
+   gap: 9rem;
+   justify-content: center;
+   @include respond(laptop) {
+      justify-content: space-between;
+      gap: 3rem;
+   }
+   @include respond(desktop) {
+      gap: 4rem;
+   }
+}
+.articleDetailsHeaderProfile {
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+   @include respond(laptop) {
+      width: 30.5rem;
+      gap: 1.4rem;
+   }
+   @include respond(desktop) {
+      width: 38.4rem;
+      gap: 2rem;
+   }
+}
+
+.authorAvatar {
+   width: 6rem;
+   height: 6rem;
+   flex-shrink: 0;
+   border-radius: 4.2rem;
+
+   @include respond(desktop) {
+      width: 8rem;
+      height: 8rem;
+      flex-shrink: 0;
+   }
+}
+.author {
+   color: var(--Absolute-White);
+   font-family: Inter;
+   font-size: 1.8rem;
+   font-style: normal;
+   font-weight: 600;
+   line-height: 150%;
+   letter-spacing: -0.054rem;
+   @include respond(desktop) {
+      font-size: 2rem;
+      letter-spacing: -0.06rem;
+   }
+}
+.category {
+   color: var(--Grey-60);
+   font-family: Inter;
+   font-size: 1.4rem;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 150%;
+   letter-spacing: -0.042rem;
+   @include respond(laptop) {
+      font-size: 1.6rem;
+      letter-spacing: -0.048rem;
+   }
+   @include respond(desktop) {
+      font-size: 1.8rem;
+      letter-spacing: -0.054rem;
+   }
+}
+.createdAtAndInfosBox {
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
+   justify-content: center;
+   align-items: center;
+}
+.createdAt {
+   color: var(--Grey-60);
+   font-family: Inter;
+   font-size: 1.6rem;
+   font-style: normal;
+   font-weight: 600;
+   line-height: 150%;
+   letter-spacing: -0.048rem;
+   align-self: stretch;
+   @include respond(laptop) {
+      font-size: 1.8rem;
+      letter-spacing: -0.054rem;
+   }
+   @include respond(desktop) {
+      font-size: 2rem;
+      letter-spacing: -0.06rem;
+   }
+}
+.tweetExtraInfos {
+   display: flex;
+   align-items: flex-start;
+   gap: 0.8rem;
+   @include respond(desktop) {
+      gap: 1rem;
+   }
+}
+.tweetExtraInfo {
+   display: flex;
+   padding: 0.6rem 1.2rem;
+   justify-content: center;
+   align-items: center;
+   gap: 0.2rem;
+   border-radius: 10rem;
+   border: 1px solid var(--Dark-15);
+   background: var(--Dark-10);
+   @include respond(desktop) {
+      padding: 0.8rem 1.6rem;
+      gap: 0.4rem;
+   }
+}
+.tweetExtraInfoIcon {
+   width: 2rem;
+   height: 2rem;
+   @include respond(desktop) {
+      width: 2.4rem;
+      height: 2.4rem;
+   }
+}
+.tweetExtraInfoIconNum {
+   color: var(--Grey-60);
+   font-family: "Kumbh Sans";
+   font-size: 1.4rem;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 150%;
+   letter-spacing: -0.042rem;
+   @include respond(desktop) {
+      font-size: 1.8rem;
+      letter-spacing: -0.054rem;
+   }
+}
+.article {
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+   text-align: center;
+   @include respond(laptop) {
+      text-align: start;
+      gap: 1.4rem;
+   }
+   @include respond(desktop) {
+      gap: 2rem;
+   }
+}
+.title {
+   color: var(--Absolute-White);
+   font-family: Inter;
+   font-size: 1.8rem;
+   font-style: normal;
+   font-weight: 600;
+   line-height: 150%;
+   letter-spacing: -0.054rem;
+   align-self: stretch;
+   @include respond(laptop) {
+      font-size: 2.2rem;
+      letter-spacing: -0.066rem;
+   }
+   @include respond(desktop) {
+      font-size: 2.6rem;
+      letter-spacing: -0.078rem;
+   }
+}
+.description {
+   color: var(--Grey-60);
+   font-family: Inter;
+   font-size: 1.4rem;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 150%;
+   letter-spacing: -0.042rem;
+   align-self: stretch;
+   @include respond(laptop) {
+      font-size: 1.6rem;
+      letter-spacing: -0.048rem;
+   }
+   @include respond(desktop) {
+      font-size: 1.8rem;
+      letter-spacing: -0.054rem;
+   }
+}
