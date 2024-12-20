@@ -10,6 +10,7 @@ import { Category } from "@/services/generated/models";
 
 import { useGetCategories } from "@/services/generated/category/category";
 import { Link } from "react-router-dom";
+import truncateTextByWords from "@/helpers/truncateTextByWords";
 interface ArticleWithCustomization extends Article {
    category?: ArticleCategory & { name?: string };
 }
@@ -142,7 +143,7 @@ const BlogHighlightSection: FC = () => {
                         <span className={styles.tweetDate}>{formatDate(article?.createdAt)}</span>
                         <div className={styles.tweetText}>
                            <h3 className={styles.tweetTextHeader}>{article?.title}</h3>
-                           <p className={styles.tweetTextP}>{article?.description}</p>
+                           <p className={styles.tweetTextP}>{truncateTextByWords(article?.description,40)}</p>
                         </div>
                         <div className={styles.tweetExtraInfos}>
                            <div className={styles.tweetExtraInfo}>

@@ -8,6 +8,8 @@ import { Link } from "react-router-dom";
 import { Article, ArticleCategory, Author, Category } from "@/services/generated/models";
 import { BsSend } from "react-icons/bs";
 import { FaRegComment, FaRegHeart } from "react-icons/fa";
+import truncateTextByWords from "@/helpers/truncateTextByWords";
+import formatDate from "@/helpers/formatDate";
 
 interface ArticleWithCustomization extends Article {
    category?: ArticleCategory & { name?: string };
@@ -88,12 +90,6 @@ const ArticleMenu: FC = () => {
    };
 
    const baseUrl = import.meta.env.VITE_BACK_END_BASE_URL;
-
-   const formatDate = (dateString?: string): string => {
-      if (!dateString) return "Invalid date";
-      const date = new Date(dateString);
-      return new Intl.DateTimeFormat("en-US", { month: "long", day: "numeric", year: "numeric" }).format(date);
-   };
 
    return (
       <section>
@@ -185,7 +181,7 @@ const ArticleMenu: FC = () => {
                            <p className={styles.tweetProfileTopic}>{article?.category?.name}</p>
                         </div>
                      </div>
-                     <Link to={`/blogs/${article.id}`} className={styles.tweetProfileCta}>
+                     <Link to={`/article/${article.id}`} className={styles.tweetProfileCta}>
                         <span className={styles.tweetProfileIconText}>View Blog</span>
                         <PiArrowUpRight className={styles.tweetProfileIcon} color="gold" aria-label="arrow-icon" />
                      </Link>
@@ -195,7 +191,7 @@ const ArticleMenu: FC = () => {
                         <span className={styles.tweetDate}>{formatDate(article?.createdAt)}</span>
                         <div className={styles.tweetText}>
                            <h3 className={styles.tweetTextHeader}>{article?.title}</h3>
-                           <p className={styles.tweetTextP}>{article?.description}</p>
+                           <p className={styles.tweetTextP}>{truncateTextByWords(article?.description, 40)}</p>
                         </div>
                         <div className={styles.tweetExtraInfos}>
                            <div className={styles.tweetExtraInfo}>
@@ -234,7 +230,7 @@ const ArticleMenu: FC = () => {
                            </div>
                         </div>
                      </div>
-                     <Link to={`/blogs/${article.id}`} className={styles.tweetProfileCtaBiggerScreen}>
+                     <Link to={`/article/${article.id}`} className={styles.tweetProfileCtaBiggerScreen}>
                         <span className={styles.tweetProfileIconText}>View Blog</span>
                         <PiArrowUpRight className={styles.tweetProfileIcon} color="gold" aria-label="arrow-icon" />
                      </Link>
