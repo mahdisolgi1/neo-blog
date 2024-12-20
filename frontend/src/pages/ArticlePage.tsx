@@ -1,8 +1,8 @@
-import ArticleMenu from "@/components/ArticleMenu";
+import ArticleDetails from "@/components/ArticleDetails";
 import { FC } from "react";
 
 const ArticlePage: FC = () => {
-   return <ArticleMenu />;
+   return <ArticleDetails />;
 };
 
 export default ArticlePage;
