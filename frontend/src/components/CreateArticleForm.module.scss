@@ -75,6 +75,25 @@
       font-size: 1.8rem;
    }
 }
+.articleFile {
+   cursor: pointer;
+   align-self: stretch;
+   color: var(--Absolute-White);
+   font-family: Inter;
+   font-size: 1.4rem;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 150%;
+   margin: 1rem 0 0 1rem;
+   @include respond(desktop) {
+      font-size: 1.6rem;
+      margin-top: 0;
+   }
+}
+.articleFilePreview {
+   width: 10rem;
+   margin-bottom: 1rem;
+}
 .articleHeader {
    color: var(--Absolute-White);
    font-family: Inter;
