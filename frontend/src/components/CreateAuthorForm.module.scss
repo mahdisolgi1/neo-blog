@@ -84,7 +84,26 @@
       padding: 1rem;
    }
 }
-
+.authorFile {
+   cursor: pointer;
+   align-self: stretch;
+   color: var(--Absolute-White);
+   font-family: Inter;
+   font-size: 1.4rem;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 150%;
+   margin-top: 1rem;
+   margin-left: 1rem;
+   @include respond(desktop) {
+      font-size: 1.6rem;
+      margin-top: 0;
+   }
+}
+.authorFilePreview {
+   width: 10rem;
+   margin-bottom: 1rem;
+}
 .authorSelectedP {
    align-self: stretch;
    color: var(--Absolute-White);
