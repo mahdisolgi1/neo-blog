@@ -4,6 +4,7 @@ import { useGetAuthors, usePostAuthors } from "@/services/generated/author/autho
 import Input from "./Input";
 import Button from "./Button";
 import styles from "./CreateAuthorForm.module.scss";
+import toast, { Toaster } from "react-hot-toast";
 
 interface CreateAuthorFormProps {
    onAuthorChange?: (author: { id: string; name: string }) => void;
@@ -14,6 +15,7 @@ const CreateAuthorForm: React.FC<CreateAuthorFormProps> = ({ onAuthorChange }) =
    const [selectedAuthorId, setSelectedAuthorId] = useState<string | null>(null);
    const [createdAuthors, setCreatedAuthors] = useState<Author[]>([]);
    const [selectedFile, setSelectedFile] = useState<File | null>(null);
+   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
 
    const { data: authorsData, error: authorsError, isLoading: isLoadingAuthors } = useGetAuthors();
    const { trigger: createAuthor, isMutating: isCreating } = usePostAuthors();
@@ -30,9 +32,11 @@ const CreateAuthorForm: React.FC<CreateAuthorFormProps> = ({ onAuthorChange }) =
 
    const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
       const file = e.target.files?.[0] || null;
-      setSelectedFile(file);
+      if (file) {
+         setPreviewUrl(URL.createObjectURL(file));
+         setSelectedFile(file);
+      }
    };
-
    const uploadAvatar = async (): Promise<string | null> => {
       if (!selectedFile) return null;
 
@@ -46,7 +50,7 @@ const CreateAuthorForm: React.FC<CreateAuthorFormProps> = ({ onAuthorChange }) =
          });
 
          const result = await response.json();
-         return result[0]?.url || null;
+         return result[0]?.id || null;
       } catch (error) {
          console.error("Failed to upload avatar:", error);
          return null;
@@ -61,27 +65,24 @@ const CreateAuthorForm: React.FC<CreateAuthorFormProps> = ({ onAuthorChange }) =
          return;
       }
 
-      let uploadedAvatarUrl = null;
+      let uploadedAvatarID = null;
       if (selectedFile) {
-         uploadedAvatarUrl = await uploadAvatar();
-         console.log(String(uploadedAvatarUrl));
+         uploadedAvatarID = await uploadAvatar();
+         console.log(String(uploadedAvatarID));
       }
 
       try {
-         const baseUrl = import.meta.env.VITE_BACK_END_BASE_URL;
-
          const authorRequest: AuthorRequest = {
             data: {
                name: authorName,
-               avatar: { url: String(baseUrl + uploadedAvatarUrl) },
+               avatar: uploadedAvatarID !== null ? uploadedAvatarID : undefined,
             },
          };
-         console.log(baseUrl + uploadedAvatarUrl);
          const response = await createAuthor(authorRequest);
 
          const createdAuthor = response?.data?.data;
          if (createdAuthor) {
-            alert("Author created successfully!");
+            toast.success("Author created successfully!");
 
             onAuthorChange?.({
                id: createdAuthor.id?.toString() || "",
@@ -90,18 +91,21 @@ const CreateAuthorForm: React.FC<CreateAuthorFormProps> = ({ onAuthorChange }) =
 
             resetForm();
          } else {
-            alert("Failed to create author.");
+            toast.error("Failed to create author.");
          }
       } catch (error) {
          console.error("Failed to create author:", error);
-         alert("Failed to create author.");
+         toast.error("Failed to create author.");
       }
    };
-
    const resetForm = () => {
+      if (previewUrl) {
+         URL.revokeObjectURL(previewUrl);
+      }
       setAuthorName("");
       setSelectedAuthorId(null);
       setSelectedFile(null);
+      setPreviewUrl(null);
    };
 
    const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -120,6 +124,15 @@ const CreateAuthorForm: React.FC<CreateAuthorFormProps> = ({ onAuthorChange }) =
 
    return (
       <form className={styles.authorForm}>
+         {" "}
+         <Toaster
+            position="bottom-right"
+            toastOptions={{
+               style: {
+                  fontSize: "2rem",
+               },
+            }}
+         />
          <h2 className={styles.authorHeader}>Create or Select an Author</h2>
          {!selectedAuthorId && (
             <>
@@ -134,10 +147,16 @@ const CreateAuthorForm: React.FC<CreateAuthorFormProps> = ({ onAuthorChange }) =
                   />
                </div>
 
-               <div className={styles.authorFileBox}>
+               <div>
                   <label className={styles.authorLabel}>Avatar:</label>
-                  <input type="file" accept="image/*" onChange={handleFileChange} />
+                  <input type="file" accept="image/*" onChange={handleFileChange} className={styles.authorFile} />
                </div>
+               {previewUrl && (
+                  <div className={styles.previewContainer}>
+                     <p className={styles.authorLabel}>Preview:</p>
+                     <img src={previewUrl} alt="Avatar Preview" className={styles.authorFilePreview} />
+                  </div>
+               )}
 
                <Button variant="primary" size="md" onClick={handleSubmit} type="button" disabled={isCreating}>
                   {isCreating ? "Creating..." : "Create Author"}
