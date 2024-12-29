@@ -674,7 +674,7 @@
             "deprecated": false,
             "required": true,
             "schema": {
-              "type": "number"
+              "type": "string"
             }
           }
         ],
@@ -752,7 +752,7 @@
             "deprecated": false,
             "required": true,
             "schema": {
-              "type": "number"
+              "type": "string"
             }
           }
         ],
@@ -841,7 +841,7 @@
             "deprecated": false,
             "required": true,
             "schema": {
-              "type": "number"
+              "type": "string"
             }
           }
         ],
@@ -2840,17 +2840,17 @@
                 }
               },
               "likes": {
-                "type": "string",
+                "type": "number",
                 "pattern": "^\\d*$",
                 "example": "123456789"
               },
               "comments": {
-                "type": "string",
+                "type": "number",
                 "pattern": "^\\d*$",
                 "example": "123456789"
               },
               "shares": {
-                "type": "string",
+                "type": "number",
                 "pattern": "^\\d*$",
                 "example": "123456789"
               },
@@ -3935,17 +3935,17 @@
                       }
                     },
                     "likes": {
-                      "type": "string",
+                      "type": "number",
                       "pattern": "^\\d*$",
                       "example": "123456789"
                     },
                     "comments": {
-                      "type": "string",
+                      "type": "number",
                       "pattern": "^\\d*$",
                       "example": "123456789"
                     },
                     "shares": {
-                      "type": "string",
+                      "type": "number",
                       "pattern": "^\\d*$",
                       "example": "123456789"
                     },
@@ -4087,17 +4087,17 @@
             }
           },
           "likes": {
-            "type": "string",
+            "type": "number",
             "pattern": "^\\d*$",
             "example": "123456789"
           },
           "comments": {
-            "type": "string",
+            "type": "number",
             "pattern": "^\\d*$",
             "example": "123456789"
           },
           "shares": {
-            "type": "string",
+            "type": "number",
             "pattern": "^\\d*$",
             "example": "123456789"
           },
@@ -5337,17 +5337,17 @@
                   }
                 },
                 "likes": {
-                  "type": "string",
+                  "type": "number",
                   "pattern": "^\\d*$",
                   "example": "123456789"
                 },
                 "comments": {
-                  "type": "string",
+                  "type": "number",
                   "pattern": "^\\d*$",
                   "example": "123456789"
                 },
                 "shares": {
-                  "type": "string",
+                  "type": "number",
                   "pattern": "^\\d*$",
                   "example": "123456789"
                 },
@@ -6504,17 +6504,17 @@
                   }
                 },
                 "likes": {
-                  "type": "string",
+                  "type": "number",
                   "pattern": "^\\d*$",
                   "example": "123456789"
                 },
                 "comments": {
-                  "type": "string",
+                  "type": "number",
                   "pattern": "^\\d*$",
                   "example": "123456789"
                 },
                 "shares": {
-                  "type": "string",
+                  "type": "number",
                   "pattern": "^\\d*$",
                   "example": "123456789"
                 },
