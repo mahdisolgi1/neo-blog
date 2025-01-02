@@ -3,14 +3,13 @@ import styles from "./BlogHighlightSection.module.scss";
 import { useGetArticles } from "@/services/generated/article/article";
 import getRandomObjects from "@/helpers/getRandomObjects";
 import { PiArrowUpRight } from "react-icons/pi";
-import { FaRegComment, FaRegHeart } from "react-icons/fa";
-import { BsSend } from "react-icons/bs";
 import { Article, ArticleCategory } from "@/services/generated/models";
 import { Category } from "@/services/generated/models";
 
 import { useGetCategories } from "@/services/generated/category/category";
 import { Link } from "react-router-dom";
 import truncateTextByWords from "@/helpers/truncateTextByWords";
+import ArticleActions from "./ArticleActions";
 interface ArticleWithCustomization extends Article {
    category?: ArticleCategory & { name?: string };
 }
@@ -143,44 +142,14 @@ const BlogHighlightSection: FC = () => {
                         <span className={styles.tweetDate}>{formatDate(article?.createdAt)}</span>
                         <div className={styles.tweetText}>
                            <h3 className={styles.tweetTextHeader}>{article?.title}</h3>
-                           <p className={styles.tweetTextP}>{truncateTextByWords(article?.description,40)}</p>
+                           <p className={styles.tweetTextP}>{truncateTextByWords(article?.description, 40)}</p>
                         </div>
-                        <div className={styles.tweetExtraInfos}>
-                           <div className={styles.tweetExtraInfo}>
-                              <FaRegHeart className={styles.tweetExtraInfoIcon} color="grey" aria-label="heart-icon" />
-                              <span className={styles.tweetExtraInfoIconNum}>
-                                 {Number(article?.likes) && Number(article?.likes) > 1000
-                                    ? `${(Number(article.likes) / 1000).toFixed(
-                                         Number(article.likes) % 1000 === 0 ? 0 : 1
-                                      )}k`
-                                    : Number(article?.likes)}
-                              </span>
-                           </div>
-                           <div className={styles.tweetExtraInfo}>
-                              <FaRegComment
-                                 className={styles.tweetExtraInfoIcon}
-                                 color="grey"
-                                 aria-label="comment-icon"
-                              />
-                              <span className={styles.tweetExtraInfoIconNum}>
-                                 {Number(article?.comments) && Number(article?.comments) > 1000
-                                    ? `${(Number(article.comments) / 1000).toFixed(
-                                         Number(article.comments) % 1000 === 0 ? 0 : 1
-                                      )}k`
-                                    : Number(article?.comments)}
-                              </span>
-                           </div>
-                           <div className={styles.tweetExtraInfo}>
-                              <BsSend className={styles.tweetExtraInfoIcon} color="grey" aria-label="share-icon" />
-                              <span className={styles.tweetExtraInfoIconNum}>
-                                 {Number(article?.shares) && Number(article?.shares) > 1000
-                                    ? `${(Number(article.shares) / 1000).toFixed(
-                                         Number(article.shares) % 1000 === 0 ? 0 : 1
-                                      )}k`
-                                    : Number(article?.shares)}
-                              </span>
-                           </div>
-                        </div>
+                        <ArticleActions
+                           documentId={article?.documentId}
+                           likes={article.likes}
+                           comments={article.comments}
+                           shares={article.shares}
+                        />
                      </div>
                      <Link to={`/article/${article.id}`} className={styles.tweetProfileCtaBiggerScreen}>
                         <span className={styles.tweetProfileIconText}>View Blog</span>

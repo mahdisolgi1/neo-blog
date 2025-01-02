@@ -6,10 +6,10 @@ import { useGetAuthors } from "@/services/generated/author/author";
 import { PiArrowUpRight } from "react-icons/pi";
 import { Link } from "react-router-dom";
 import { Article, ArticleCategory, Author, Category } from "@/services/generated/models";
-import { BsSend } from "react-icons/bs";
-import { FaRegComment, FaRegHeart } from "react-icons/fa";
+
 import truncateTextByWords from "@/helpers/truncateTextByWords";
 import formatDate from "@/helpers/formatDate";
+import ArticleActions from "./ArticleActions";
 
 interface ArticleWithCustomization extends Article {
    category?: ArticleCategory & { name?: string };
@@ -24,7 +24,8 @@ const ArticleMenu: FC = () => {
    const [authors, setAuthors] = useState<Author[]>([]);
 
    const { data: categoriesData, error: categoriesError } = useGetCategories();
-   const { data: authorsData, error: authorsError } = useGetAuthors({ populate: "avatar" });
+   const { data: authorsData, error: authorsError } = useGetAuthors({ populate: ["avatar"] });
+
    const { data: articlesData } = useGetArticles({
       populate: ["category", "author.avatar"],
    });
@@ -181,7 +182,7 @@ const ArticleMenu: FC = () => {
                            <p className={styles.tweetProfileTopic}>{article?.category?.name}</p>
                         </div>
                      </div>
-                     <Link to={`/article/${article.id}`} className={styles.tweetProfileCta}>
+                     <Link to={`/article/${article.documentId}`} className={styles.tweetProfileCta}>
                         <span className={styles.tweetProfileIconText}>View Blog</span>
                         <PiArrowUpRight className={styles.tweetProfileIcon} color="gold" aria-label="arrow-icon" />
                      </Link>
@@ -193,44 +194,14 @@ const ArticleMenu: FC = () => {
                            <h3 className={styles.tweetTextHeader}>{article?.title}</h3>
                            <p className={styles.tweetTextP}>{truncateTextByWords(article?.description, 40)}</p>
                         </div>
-                        <div className={styles.tweetExtraInfos}>
-                           <div className={styles.tweetExtraInfo}>
-                              <FaRegHeart className={styles.tweetExtraInfoIcon} color="grey" aria-label="heart-icon" />
-                              <span className={styles.tweetExtraInfoIconNum}>
-                                 {Number(article?.likes) && Number(article?.likes) > 1000
-                                    ? `${(Number(article.likes) / 1000).toFixed(
-                                         Number(article.likes) % 1000 === 0 ? 0 : 1
-                                      )}k`
-                                    : Number(article?.likes)}
-                              </span>
-                           </div>
-                           <div className={styles.tweetExtraInfo}>
-                              <FaRegComment
-                                 className={styles.tweetExtraInfoIcon}
-                                 color="grey"
-                                 aria-label="comment-icon"
-                              />
-                              <span className={styles.tweetExtraInfoIconNum}>
-                                 {Number(article?.comments) && Number(article?.comments) > 1000
-                                    ? `${(Number(article.comments) / 1000).toFixed(
-                                         Number(article.comments) % 1000 === 0 ? 0 : 1
-                                      )}k`
-                                    : Number(article?.comments)}
-                              </span>
-                           </div>
-                           <div className={styles.tweetExtraInfo}>
-                              <BsSend className={styles.tweetExtraInfoIcon} color="grey" aria-label="share-icon" />
-                              <span className={styles.tweetExtraInfoIconNum}>
-                                 {Number(article?.shares) && Number(article?.shares) > 1000
-                                    ? `${(Number(article.shares) / 1000).toFixed(
-                                         Number(article.shares) % 1000 === 0 ? 0 : 1
-                                      )}k`
-                                    : Number(article?.shares)}
-                              </span>
-                           </div>
-                        </div>
+                        <ArticleActions
+                           documentId={article?.documentId}
+                           likes={article.likes}
+                           comments={article.comments}
+                           shares={article.shares}
+                        />
                      </div>
-                     <Link to={`/article/${article.id}`} className={styles.tweetProfileCtaBiggerScreen}>
+                     <Link to={`/article/${article.documentId}`} className={styles.tweetProfileCtaBiggerScreen}>
                         <span className={styles.tweetProfileIconText}>View Blog</span>
                         <PiArrowUpRight className={styles.tweetProfileIcon} color="gold" aria-label="arrow-icon" />
                      </Link>
