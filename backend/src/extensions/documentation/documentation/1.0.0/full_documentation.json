@@ -178,7 +178,14 @@
             "deprecated": false,
             "required": false,
             "schema": {
-              "type": "string"
+              "type": "array",
+              "items": {
+                "oneOf": [
+                  {
+                    "type": "string"
+                  }
+                ]
+              }
             }
           },
           {
@@ -495,7 +502,14 @@
             "deprecated": false,
             "required": false,
             "schema": {
-              "type": "string"
+              "type": "array",
+              "items": {
+                "oneOf": [
+                  {
+                    "type": "string"
+                  }
+                ]
+              }
             }
           },
           {
@@ -991,7 +1005,14 @@
             "deprecated": false,
             "required": false,
             "schema": {
-              "type": "string"
+              "type": "array",
+              "items": {
+                "oneOf": [
+                  {
+                    "type": "string"
+                  }
+                ]
+              }
             }
           },
           {
@@ -1487,7 +1508,14 @@
             "deprecated": false,
             "required": false,
             "schema": {
-              "type": "string"
+              "type": "array",
+              "items": {
+                "oneOf": [
+                  {
+                    "type": "string"
+                  }
+                ]
+              }
             }
           },
           {
@@ -1983,7 +2011,14 @@
             "deprecated": false,
             "required": false,
             "schema": {
-              "type": "string"
+              "type": "array",
+              "items": {
+                "oneOf": [
+                  {
+                    "type": "string"
+                  }
+                ]
+              }
             }
           },
           {
