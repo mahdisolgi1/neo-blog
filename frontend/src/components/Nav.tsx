@@ -75,6 +75,13 @@ const Nav: FC = () => {
                      Resources
                   </Link>
                </li>
+               <li className={styles.navBarLinkButton}>
+                  <Link to="/contact">
+                     <Button size="xl" variant="primary">
+                        Contact Us
+                     </Button>
+                  </Link>
+               </li>
             </ul>
          </nav>
 
