@@ -10,6 +10,7 @@ import { useGetCategories } from "@/services/generated/category/category";
 import { Link } from "react-router-dom";
 import truncateTextByWords from "@/helpers/truncateTextByWords";
 import ArticleActions from "./ArticleActions";
+import NoArticlesFound from "./NoArticlesFound";
 interface ArticleWithCustomization extends Article {
    category?: ArticleCategory & { name?: string };
 }
@@ -96,69 +97,86 @@ const BlogHighlightSection: FC = () => {
                <PiArrowUpRight className={styles.BlogHighlightCtaIcon} color="gold" aria-label="arrow-icon" />
             </Link>
          </div>
-         <div className={styles.Topics}>
-            <div
-               className={`${styles.Topic} ${selectedCategory === "All" ? styles.activelink : ""}`}
-               onClick={() => handleTopicClick("All")}
-            >
-               <p className={styles.TopicName}>Random</p>
-            </div>
-            {categories?.map((category) => (
-               <div
-                  key={category?.id}
-                  className={`${styles.Topic} ${selectedCategory === category?.name ? styles.activelink : ""}`}
-                  onClick={() => handleTopicClick(category?.name || "")}
-               >
-                  <p className={styles.TopicName}>{category?.name}</p>
+
+         {!articleError && articlesData?.data?.data ? (
+            <>
+               <div className={styles.Topics}>
+                  <div
+                     className={`${styles.Topic} ${selectedCategory === "All" ? styles.activelink : ""}`}
+                     onClick={() => handleTopicClick("All")}
+                  >
+                     <p className={styles.TopicName}>Random</p>
+                  </div>
+                  {categories?.map((category) => (
+                     <div
+                        key={category?.id}
+                        className={`${styles.Topic} ${selectedCategory === category?.name ? styles.activelink : ""}`}
+                        onClick={() => handleTopicClick(category?.name || "")}
+                     >
+                        <p className={styles.TopicName}>{category?.name}</p>
+                     </div>
+                  ))}
                </div>
-            ))}
-         </div>
-         <div className={styles.tweets}>
-            {filteredArticles.map((article) => (
-               <div key={article.id} className={styles.tweet}>
-                  <div className={styles.tweetProfile}>
-                     <div className={styles.tweetProfileDetails}>
-                        <img
-                           className={styles.tweetProfileImg}
-                           src={
-                              article?.author?.avatar?.url
-                                 ? `${baseUrl}${article.author.avatar.url}`
-                                 : "/emptyAuthor.svg"
-                           }
-                           alt={article?.author?.name}
-                        />
-                        <div>
-                           <h4 className={styles.tweetProfileName}>{article?.author?.name}</h4>
-                           <p className={styles.tweetProfileTopic}>{article?.category?.name}</p>
+
+               <div className={styles.tweets}>
+                  {filteredArticles.map((article) => (
+                     <div key={article.id} className={styles.tweet}>
+                        <div className={styles.tweetProfile}>
+                           <div className={styles.tweetProfileDetails}>
+                              <img
+                                 className={styles.tweetProfileImg}
+                                 src={
+                                    article?.author?.avatar?.url
+                                       ? `${baseUrl}${article.author.avatar.url}`
+                                       : "/emptyAuthor.svg"
+                                 }
+                                 alt={article?.author?.name}
+                              />
+                              <div>
+                                 <h4 className={styles.tweetProfileName}>{article?.author?.name}</h4>
+                                 <p className={styles.tweetProfileTopic}>{article?.category?.name}</p>
+                              </div>
+                           </div>
+                           <Link to={`/article/${article.id}`} className={styles.tweetProfileCta}>
+                              <span className={styles.tweetProfileIconText}>View Blog</span>
+                              <PiArrowUpRight
+                                 className={styles.tweetProfileIcon}
+                                 color="gold"
+                                 aria-label="arrow-icon"
+                              />
+                           </Link>
+                        </div>
+                        <div className={styles.tweetDetailsBiggerScreen}>
+                           <div className={styles.tweetDetails}>
+                              <span className={styles.tweetDate}>{formatDate(article?.createdAt)}</span>
+                              <div className={styles.tweetText}>
+                                 <h3 className={styles.tweetTextHeader}>{article?.title}</h3>
+                                 <p className={styles.tweetTextP}>{truncateTextByWords(article?.description, 40)}</p>
+                              </div>
+                              <ArticleActions
+                                 documentId={article?.documentId}
+                                 likes={article.likes}
+                                 comments={article.comments}
+                                 shares={article.shares}
+                              />
+                           </div>
+                           <Link to={`/article/${article.id}`} className={styles.tweetProfileCtaBiggerScreen}>
+                              <span className={styles.tweetProfileIconText}>View Blog</span>
+                              <PiArrowUpRight
+                                 className={styles.tweetProfileIcon}
+                                 color="gold"
+                                 aria-label="arrow-icon"
+                              />
+                           </Link>
                         </div>
                      </div>
-                     <Link to={`/article/${article.id}`} className={styles.tweetProfileCta}>
-                        <span className={styles.tweetProfileIconText}>View Blog</span>
-                        <PiArrowUpRight className={styles.tweetProfileIcon} color="gold" aria-label="arrow-icon" />
-                     </Link>
-                  </div>
-                  <div className={styles.tweetDetailsBiggerScreen}>
-                     <div className={styles.tweetDetails}>
-                        <span className={styles.tweetDate}>{formatDate(article?.createdAt)}</span>
-                        <div className={styles.tweetText}>
-                           <h3 className={styles.tweetTextHeader}>{article?.title}</h3>
-                           <p className={styles.tweetTextP}>{truncateTextByWords(article?.description, 40)}</p>
-                        </div>
-                        <ArticleActions
-                           documentId={article?.documentId}
-                           likes={article.likes}
-                           comments={article.comments}
-                           shares={article.shares}
-                        />
-                     </div>
-                     <Link to={`/article/${article.id}`} className={styles.tweetProfileCtaBiggerScreen}>
-                        <span className={styles.tweetProfileIconText}>View Blog</span>
-                        <PiArrowUpRight className={styles.tweetProfileIcon} color="gold" aria-label="arrow-icon" />
-                     </Link>
-                  </div>
+                  ))}
                </div>
-            ))}
-         </div>
+            </>
+         ) : (
+            <NoArticlesFound />
+         )}
+
          <div className={styles.BlogHighlightIntro}>
             <div className={styles.BlogHighlightHeading}>
                <div className={styles.BlogHighlightTitleBox}>
